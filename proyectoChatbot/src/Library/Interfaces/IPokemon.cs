@@ -5,7 +5,7 @@ public interface IPokemon
     string Nombre { get; }
     double VidaActual { get; }
     double VidaMax { get; set; }
-    TipoPokemon Tipo { get; }
+    Itipo Tipo { get; }
 
     List<IAtaque> GetAtaques();
 
@@ -14,7 +14,7 @@ public interface IPokemon
         
     }
 
-    void CurarPokemon(double curacion)
+    void Curar()
     {
         
     }

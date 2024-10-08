@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{405FA43D-4B1
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "src\Library\Library.csproj", "{63D01B4F-0FEE-4755-AA32-C81819384509}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Program", "src\Program\Program.csproj", "{833A6D0B-FD11-4EA0-A03B-496D9EA14760}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Batalla", "src\Batalla\Batalla.csproj", "{833A6D0B-FD11-4EA0-A03B-496D9EA14760}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{72F2135A-5499-40CB-9779-D0773EB61C16}"
 EndProject
