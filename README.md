@@ -3,7 +3,7 @@
 
 Grupo 13
 
-![App Screenshot](https://i.pinimg.com/originals/cb/65/84/cb65844f3256da34ab56b4c773e1fc4d.png)
+<img src="https://i.pinimg.com/originals/cb/65/84/cb65844f3256da34ab56b4c773e1fc4d.png" width="100" />
 
 
 ## Documentation
