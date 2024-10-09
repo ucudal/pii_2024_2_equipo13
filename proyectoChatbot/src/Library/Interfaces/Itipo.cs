@@ -4,14 +4,8 @@ public interface Itipo
 {
     string Nombre { get; }
 
-    bool FuerteContra()
-    {
-        
-    }
+    bool FuerteContra();
 
-    bool DebilContra()
-    {
-        
-    }
-    
+    bool DebilContra();
+
 }
