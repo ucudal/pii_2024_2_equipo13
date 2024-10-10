@@ -2,13 +2,15 @@ namespace Library;
 
 public class Turno
 {
-    public int NumeroTurno { get;}
-    public bool EsTurnoDelJugador { get;}
+    public int NumeroTurno { get;} //Getter del Numero de Turno, para manejar el flujo del juego, ataques especiales,etc.
+    public bool EsTurnoDelJugador { get;} //Getter que es un bool, que devuelve si es un turno del jugador
+    
+    //Constructor
 
     public Turno()
     {
         this.NumeroTurno = 0;
-        this.EsTurnoDelJugador=null;
+        this.EsTurnoDelJugador=false; 
     }
     public void CambiarTurno()
     {
@@ -29,10 +31,12 @@ public class Turno
     {
         /*Este metodo, lo que hace es, usando el Numero Turno, se válida si se puede usar el ataque especial
         o el jugador tiene que esperar al siguiente turno*/
+        return false;
     }
 
     public bool BatallaFinalizada()
     {
         //Este método, lo que hace es verificar si la batalla termino , o si continua.
+        return false;
     }
 }
