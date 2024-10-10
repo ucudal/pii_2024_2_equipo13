@@ -6,6 +6,7 @@ public class Jugador
     private IPokemon pokemonActivo; //Es el Pokemon que esta activo en batalla, y que tambien al inicio de la batalla, se defince como el inicial
     public string Nombre { get; } //Getter que devuelve el nombre del jugador, se usa pra mostrar el nombre de jugador por pantalla
     public IPokemon PokemonActivo { get; } //Este Getter, devuelve cual es el Pokemon activo en batalla  del jugador
+    private List<IPokemon> PokemonsDisponibles; //Esta lista, contiene los pokemons dispoinbles del juego
     public Jugador(string nombre)
     {
         this.Nombre = nombre;
@@ -16,7 +17,21 @@ public class Jugador
     }
     
     public void SeleccionarPokemonInicial()
-    {
+    { 
+        Console.WriteLine("Elige a tu pokemon Inicial");
+        string pokemonInicial=Console.ReadLine();
+        foreach (IPokemon pokemon in Pokemons)
+        {
+            if (pokemon.Nombre.Equals(pokemonInicial,StringComparison.OrdinalIgnoreCase))
+            {
+                pokemonActivo=pokemon;
+            }
+            else
+            {
+                Console.WriteLine("El pokemon ingresado, no se encuntra dentro de tus Pokemon");
+            }
+        }
+        
         //Este metodo, lo que hace es definir, con que Pokemon inicia la batalla el jugador y lo asigna al pokemonActivo.
     }
     public void ElegirPokemons()

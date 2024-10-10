@@ -27,16 +27,16 @@ public class Alakazam:IPokemon
     public List<IAtaque> GetAtaquesBasicos()
     {
         //Este metodo devuelve la lista de ataques basicos del Pokemon
-        return null;
+        return this.AtaquesBasicos;
     }
 
     public List<IAtaque> GetAtaqueEspecial()
     {
         //Devuelve una lista con el ataque especial
-        return null;
+        return this.AtaqueEspecial;
     }
     
-    void DañoRecibido(double daño)  
+    void DañoRecibido(double daño)
     {
         /*Este método, lo que hace es modificar la vida del pokemon, gestionando segun el ataque
          y la efectividad de los tipos, que efecto tiene en la salud del pokemon*/
