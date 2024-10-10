@@ -28,7 +28,7 @@ public class Jugador
             }
             else
             {
-                Console.WriteLine("El pokemon ingresado, no se encuntra dentro de tus Pokemon");
+                Console.WriteLine("El pokemon ingresado, no se encuentra dentro de tus Pokemon");
             }
         }
         
