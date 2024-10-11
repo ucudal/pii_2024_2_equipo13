@@ -10,7 +10,7 @@ Grupo 13
 
 [Diagrama de CRC - Documento word](https://correoucuedu-my.sharepoint.com/:w:/g/personal/constantino_lopez_correo_ucu_edu_uy/EaBbEkjXhjhKp9GzORs6cK4BdVNVZJhkPcsrcyOinupa0w?e=9lNIFy)
 
-[Diagrama UML](https://drive.google.com/file/d/1SyK5yBzzXE_IvjA-esYbiim1rB69fDgx/view?usp=sharing)
+[Diagrama UML](https://drive.google.com/file/d/1ZW4nQkFf42lIQLbjpktZknB4T7T_6yoH/view?usp=sharing)
 
 ## Desafíos
 Uno de los mayores retos durante el desarrollo del proyecto fue la implementación de las funcionalidades teniendo en cuenta los principios de diseño SOLID y GRASP, tales como Expert, SRP (Single Responsibility Principle), entre otros. Este enfoque nos llevó a replantear y rediseñar varias veces diferentes aspectos del sistema, lo cual aumentó la complejidad del desarrollo.
