@@ -1,22 +1,22 @@
-namespace Library.TiposPokemon;
+using Library;
+using Library.TiposPokemon;
 
-public class Psiquico:Itipo
+public class Psiquico : Itipo
 {
     public string Nombre { get; }
-    
+
     public Psiquico()
     {
         this.Nombre = "Psiquico";
     }
-    bool FuerteContra()
+
+    public bool FuerteContra(Itipo otroTipo)
     {
-        // Este metodo, comprueba contra que otros tipos de pokemon, el pokemon es efectivo.
-        return true;
+        return otroTipo is Lucha || otroTipo is Veneno;
     }
 
-    bool DebilContra()
+    public bool DebilContra(Itipo otroTipo)
     {
-        // Este metodo, comprueba contra que otros tipos de pokemon, el pokemon es debil.
-        return true;
+        return otroTipo is Bicho;
     }
 }

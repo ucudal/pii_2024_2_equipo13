@@ -9,6 +9,5 @@ class Program
     {
         Console.WriteLine("Hello, World!");
         IPokemon charr = new Charizard();
-        charr.A
     }
 }

@@ -12,11 +12,4 @@ public class AtaqueBasico:IAtaque
         //constructor de ataque basico de un pokemon, donde se establece el nombre y el Daño. Ej:Impactrueno,30.
     }
     
-    public double Atacar(IPokemon objetivo, IAtaque AtaqueBasico)
-    {
-        Console.WriteLine($"");
-        //metodo de ataque definido en la Interfaz IPokemon,  donde se tiene como parametro, otro Pokemon
-        //de tipo IPokemon llamado objetivo.
-        return 0;
-    }
 }

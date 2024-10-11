@@ -35,11 +35,6 @@ public interface IPokemon
     double AtaqueEspecial(IPokemon objetivo);//Este metodo, se encarga del Ataque Especial de los pokemon
 
     double AtaqueBasico(IPokemon objetivo); //Este metodo, se encarga de los Ataques Basicos de los Pokemon
-    bool PokemonEnCombate()
-    {
-        //Este método, determina si el Pokemon, esta apto para poder ser seleccionado, para disputar la batalla o no.
-        return false;
-    }
     
 
 }
