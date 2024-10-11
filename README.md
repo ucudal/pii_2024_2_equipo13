@@ -11,3 +11,11 @@ Grupo 13
 [Diagrama de CRC - Documento word](https://correoucuedu-my.sharepoint.com/:w:/g/personal/constantino_lopez_correo_ucu_edu_uy/EaBbEkjXhjhKp9GzORs6cK4BdVNVZJhkPcsrcyOinupa0w?e=9lNIFy)
 
 [Diagrama UML](https://drive.google.com/file/d/1SyK5yBzzXE_IvjA-esYbiim1rB69fDgx/view?usp=sharing)
+
+## Desafíos
+
+## Aprendizajes
+
+# Recursos adicionales
+
+## Comentarios adicionales
