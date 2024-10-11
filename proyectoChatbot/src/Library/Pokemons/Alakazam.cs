@@ -22,8 +22,8 @@ public class Alakazam : IPokemon
         this.VidaMax = 100;
         this.Tipos = new List<Itipo> { new Psiquico() };
         this.AptoParaBatalla = true;
-        this.AtaquesBasicos = new List<IAtaque>();
-        this.ataqueEspecial = new List<IAtaque>();
+        this.AtaquesBasicos = new List<IAtaque>{new AtaqueBasico("Confusión", 50)};
+        this.ataqueEspecial = new List<IAtaque>{new AtaqueEspecial("Poder Psíquico", 100)};
     }
 
     public List<IAtaque> GetAtaquesBasicos()

@@ -19,6 +19,18 @@ namespace Library
             this.JugadorActual = jugador1;
             this.JugadorRival = jugador2;
             this.Finalizado = false;
+            // previene excepcion de Test
+            if (jugador1.PokemonActivo == null && jugador1.Pokemons.Any())
+            {
+                // Asignar el primer Pokémon del jugador si no se ha seleccionado uno aún
+                jugador1.PokemonActivo = jugador1.Pokemons.First();
+            }
+
+            if (jugador2.PokemonActivo == null && jugador2.Pokemons.Any())
+            {
+                // Asignar el primer Pokémon del jugador si no se ha seleccionado uno aún
+                jugador2.PokemonActivo = jugador2.Pokemons.First();
+            }
         }
         private void InicializarPokemonsDisponibles()
         {
@@ -115,6 +127,11 @@ namespace Library
 
         public void CambiarTurno()
         {
+            // Asegurarse de que los jugadores y sus Pokémon activos estén correctamente inicializados
+            if (JugadorActual == null || JugadorRival == null || JugadorActual.PokemonActivo == null || JugadorRival.PokemonActivo == null)
+            {
+                throw new InvalidOperationException("Los jugadores o sus Pokémon activos no están correctamente inicializados.");
+            }
             // Cambiar turno: Intercambia JugadorActual con JugadorRival y aumenta el número de turno del JugadorActual
             if (Finalizado)
             {
@@ -179,6 +196,25 @@ namespace Library
             }
 
             FinalizarTurno(); // Al terminar el ataque, finalizar el turno actual
+        }
+        public void CambiarPokemonActivo(Jugador jugador, string nombreNuevoPokemon)
+        {
+            // Buscar el nuevo Pokémon en la lista de Pokémon del jugador
+            IPokemon nuevoPokemon = jugador.Pokemons
+                .FirstOrDefault(p => p.Nombre.Equals(nombreNuevoPokemon, StringComparison.OrdinalIgnoreCase));
+
+            // Verificar si el Pokémon fue encontrado y está apto para la batalla
+            if (nuevoPokemon != null && nuevoPokemon.AptoParaBatalla)
+            {
+                // Cambiar el Pokémon activo del jugador
+                jugador.PokemonActivo = nuevoPokemon;
+                Console.WriteLine($"{jugador.Nombre} ha cambiado a {nuevoPokemon.Nombre} como su Pokémon activo.");
+            }
+            else
+            {
+                // Si el Pokémon no fue encontrado o no está apto para la batalla
+                Console.WriteLine($"{nombreNuevoPokemon} no está disponible o no es apto para la batalla.");
+            }
         }
 
         public bool ValidarAtaqueEspecial()
