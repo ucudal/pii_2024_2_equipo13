@@ -8,15 +8,15 @@ public class Agua:Itipo
     {
         this.Nombre = "Agua";
     }
-    bool FuerteContra()
+    bool FuerteContra(Itipo otroTipo)
     {
         // Este metodo, comprueba contra que otros tipos de pokemon, el pokemon es efectivo.
-        return true;
+        return otroTipo is Fuego || otroTipo is Tierra;
     }
 
-    bool DebilContra()
+    bool DebilContra(Itipo otroTipo)
     {
         // Este metodo, comprueba contra que otros tipos de pokemon, el pokemon es debil.
-        return true;
+        return otroTipo is Planta || otroTipo is Electrico;
     }
 }
