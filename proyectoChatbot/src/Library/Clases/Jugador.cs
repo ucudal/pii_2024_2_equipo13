@@ -6,6 +6,12 @@ public class Jugador
 {
     private List<IPokemon> pokemons; //lista de Pokemons, del jugador
     private List<IItem> itemsJugador; //lista de items del jugador
+    public List<IItem> ItemsJugador
+    {
+        get { return itemsJugador; }
+        set { itemsJugador = value; }
+    } // getter y setter de la lista de items del jugador
+
 
     public List<IPokemon> Pokemons
     {

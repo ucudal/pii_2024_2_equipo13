@@ -1,3 +1,4 @@
+using Library.Items;
 using Library.Pokemons;
 
 namespace Library
@@ -157,6 +158,84 @@ namespace Library
             else
             {
                 Console.WriteLine("El turno actual no ha sido finalizado.");
+            }
+        }
+
+        public void UsarItem(Jugador jugador)
+        {
+            Console.WriteLine("¿Que item desea usar?\n 1-Superpocion.\n 2-Revivir.\n 3-Cura Total");
+            string opcion = Console.ReadLine();
+            if (opcion == "1")
+            {
+                Console.WriteLine("¿A que pokemon desea darle la superpocion?");
+                string nombrePokemon = Console.ReadLine();
+                IPokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+                IItem superPocion = jugador.ItemsJugador.FirstOrDefault(item => item is Superpocion);
+                if (superPocion == null)
+                {
+                    Console.WriteLine("No quedan Super Pociones en la lista de items.");
+                }
+                else
+                {
+                    if (jugador.Pokemons.Contains(pokemonSeleccionado))
+                    {
+                        pokemonSeleccionado.VidaActual += 70;
+                        JugadorActual.ItemsJugador.Remove(superPocion);
+                        Console.WriteLine($"La super poción, fue usada para {pokemonSeleccionado}");
+                        FinalizarTurno();
+                        CambiarTurno();
+                    }
+                }
+            }
+            else if (opcion == "2")
+            {
+                Console.WriteLine("¿A que pokemon desea darle el Revivir?");
+                string nombrePokemon = Console.ReadLine();
+                IItem revivir = jugador.ItemsJugador.FirstOrDefault(item => item is Revivir);
+                if (revivir == null)
+                {
+                    Console.WriteLine("No quedan items Revivir en la lista.");
+                }
+                else
+                {
+                    IPokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+                    if (jugador.Pokemons.Contains(pokemonSeleccionado))
+                    {
+                        if (pokemonSeleccionado.AptoParaBatalla == false)
+                        {
+                            pokemonSeleccionado.AptoParaBatalla = true;
+                            jugador.ItemsJugador.Remove(revivir);
+                            Console.WriteLine($"El item Revivir ha sido usado para {pokemonSeleccionado}.");
+                            FinalizarTurno();
+                            CambiarTurno();
+
+                        }
+                        else
+                        {
+                            Console.WriteLine($"{pokemonSeleccionado} esta vivo, no es posible usar el item Revivir");
+                        }
+                    }
+                }
+                
+            }
+            else if (opcion=="3")
+            {
+                Console.WriteLine("¿A que pokemon desea darle la Cura Total?");
+                string nombrePokemon = Console.ReadLine();
+                IPokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+                IItem curaTotal = jugador.ItemsJugador.FirstOrDefault(item => item is CuraTotal);
+                if (curaTotal == null)
+                {
+                    Console.WriteLine("No quedan items Cura Total en la lista.");
+                }
+                else
+                {
+                    pokemonSeleccionado.VidaActual = pokemonSeleccionado.VidaMax;
+                    jugador.ItemsJugador.Remove(curaTotal);
+                    Console.WriteLine($"El item Cura Total ha sido usado en {pokemonSeleccionado}");
+                    FinalizarTurno();
+                    CambiarTurno();
+                }
             }
         }
 
