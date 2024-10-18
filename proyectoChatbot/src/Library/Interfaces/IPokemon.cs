@@ -3,7 +3,7 @@ namespace Library;
 public interface IPokemon
 {
     string Nombre { get;}//Este getter, devuelve el nombre del Pokemon
-    double VidaActual { get;} //Este getter, devuelve la vida actual del pokemon en el combate
+    double VidaActual { get; set; } //Este getter, devuelve la vida actual del pokemon en el combate
     double VidaMax { get;} //Este getter, devuelve la vida máxima del Pokemon
     List<Itipo> Tipos { get; } //Este Getter, devuelve el tipo o tipos del Pokemon.
     

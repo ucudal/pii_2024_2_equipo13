@@ -1,8 +1,11 @@
+using Library.Items;
+
 namespace Library;
 
 public class Jugador
 {
     private List<IPokemon> pokemons; //lista de Pokemons, del jugador
+    private List<IItem> itemsJugador; //lista de items del jugador
 
     public List<IPokemon> Pokemons
     {
@@ -20,6 +23,14 @@ public class Jugador
         this.Nombre = nombre;
         this.pokemons = new List<IPokemon>();
         this.pokemonActivo = null;
+        this.itemsJugador = new List<IItem>(); 
+        this.itemsJugador.Add(new Revivir());
+        this.itemsJugador.Add(new CuraTotal());
+        this.itemsJugador.Add(new CuraTotal());
+        for (int i = 0; i < 4; i++)
+        {
+            this.itemsJugador.Add(new Superpocion());
+        }
         /*Constructor del objeto jugador, que establece el nombre del jugador, y incializa una lista vacia.
          que contendra los pokemons del jugador*/
     }
