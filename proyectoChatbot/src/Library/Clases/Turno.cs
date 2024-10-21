@@ -40,17 +40,13 @@ namespace Library
                 PokemonsDisponibles = new List<IPokemon>
                 {
                     new Alakazam(),
-                    new Charizard(),
                     new Pikachu(),
-                    new Bulbasaur(),
                     new Machamp(),
                     new Snorlax(),
                     new Arbok(),
                     new Sandslash(),
-                    new Jigglypuff(),
                     new Scyther(),
                     new Blastoise(),
-                    new Pidgeot(),
                     new Arcanine()
                 };
             }

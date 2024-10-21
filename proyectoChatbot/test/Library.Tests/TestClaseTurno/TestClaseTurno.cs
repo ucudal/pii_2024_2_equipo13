@@ -8,7 +8,7 @@ public class TurnoTests
     private Jugador jugador1;
     private Jugador jugador2;
     private Alakazam alakazam;
-    private Charizard charizard;
+    private Arbok arbok;
     
     [SetUp]
     public void SetUp()
@@ -20,11 +20,11 @@ public class TurnoTests
 
         // Crear instancias reales de Pokémon
         alakazam = new Alakazam();
-        charizard = new Charizard();
+        arbok = new Arbok();
 
         // Asignar Pokémon a los jugadores
         jugador1.Pokemons.Add(alakazam);
-        jugador2.Pokemons.Add(charizard);
+        jugador2.Pokemons.Add(arbok);
 
         // Asegurarse de que los jugadores tienen un Pokémon activo
         jugador1.PokemonActivo = jugador1.Pokemons.FirstOrDefault();
@@ -60,10 +60,10 @@ public class TurnoTests
         Assert.AreEqual(alakazam, jugador1.PokemonActivo);
 
         // Cambiar el Pokémon activo de Jugador 2 a Charizard
-        turno.CambiarPokemonActivo(jugador2, "Charizard");
+        turno.CambiarPokemonActivo(jugador2, "Arbok");
 
         // Verificar que Charizard es el Pokémon activo del Jugador 2
-        Assert.AreEqual(charizard, jugador2.PokemonActivo);
+        Assert.AreEqual(arbok, jugador2.PokemonActivo);
     }
 
     [Test]
@@ -94,8 +94,8 @@ public class TurnoTests
     {  
         //Este test, lo que hace, es probar que verdaderamente el metodo de ataque funciona, y que se reduce la vida del pokemon Objetivo
         // Establecer la vida inicial del Pokémon del Jugador 2 (Charizard)
-        jugador2.PokemonActivo = charizard;
-        charizard.VidaActual = 100;
+        jugador2.PokemonActivo = arbok;
+        arbok.VidaActual = 100;
 
         // Simular la entrada de consola para un ataque básico (opción "1")
         using (var stringReader = new StringReader("1"))
@@ -107,6 +107,6 @@ public class TurnoTests
         }
 
         // Verificar que la vida de Charizard haya disminuido después del ataque básico
-        Assert.Less(charizard.VidaActual, 100);
+        Assert.Less(arbok.VidaActual, 100);
     }
 }
