@@ -9,10 +9,14 @@ public class Hada : Itipo
     {
         this.Nombre = "Hada";
     }
-
-    public bool FuerteContra(Itipo otroTipo)
+    
+    public bool InmuneContra(Itipo otroTipo)
     {
-        return otroTipo is Lucha;
+        return false;
+    }
+    public bool ResistenteContra(Itipo otroTipo)
+    {
+        return otroTipo is Lucha || otroTipo is Bicho;
     }
 
     public bool DebilContra(Itipo otroTipo)

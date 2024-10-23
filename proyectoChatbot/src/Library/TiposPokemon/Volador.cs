@@ -1,4 +1,5 @@
 using Library;
+using Library.TiposPokemon;
 
 public class Volador : Itipo
 {
@@ -8,14 +9,19 @@ public class Volador : Itipo
     {
         this.Nombre = "Volador";
     }
-
-    public bool FuerteContra(Itipo otroTipo)
+    
+    public bool InmuneContra(Itipo otroTipo)
     {
-        return otroTipo is Planta || otroTipo is Lucha || otroTipo is Bicho;
+        return otroTipo is Tierra;
+    }
+    
+    public bool ResistenteContra(Itipo otroTipo)
+    {
+        return otroTipo is Planta || otroTipo is Normal || otroTipo is Bicho;
     }
 
     public bool DebilContra(Itipo otroTipo)
     {
-        return otroTipo is Electrico;
+        return otroTipo is Electrico || otroTipo is Roca;
     }
 }

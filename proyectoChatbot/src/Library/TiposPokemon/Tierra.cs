@@ -9,10 +9,15 @@ public class Tierra : Itipo
     {
         this.Nombre = "Tierra";
     }
-
-    public bool FuerteContra(Itipo otroTipo)
+    
+    public bool InmuneContra(Itipo otroTipo)
     {
-        return otroTipo is Fuego || otroTipo is Electrico || otroTipo is Veneno;
+        return otroTipo is Electrico;
+    }
+    
+    public bool ResistenteContra(Itipo otroTipo)
+    {
+        return otroTipo is Roca || otroTipo is Veneno;
     }
 
     public bool DebilContra(Itipo otroTipo)

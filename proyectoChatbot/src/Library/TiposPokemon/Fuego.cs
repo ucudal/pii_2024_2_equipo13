@@ -10,12 +10,16 @@ public class Fuego : Itipo
         this.Nombre = "Fuego";
     }
 
-    public bool FuerteContra(Itipo otroTipo)
+    public bool InmuneContra(Itipo otroTipo)
     {
-        return otroTipo is Planta || otroTipo is Bicho;
+        return false;
+    }
+    public bool Resistentecontra(IList<Itipo> otroTipo)
+    {
+        return otroTipo is Planta || otroTipo is Bicho ||  otroTipo is Fuego;
     }
     public bool DebilContra(Itipo otroTipo)
     {
-        return otroTipo is Agua || otroTipo is Tierra;
+        return otroTipo is Agua || otroTipo is Tierra || otroTipo is Roca;
     }
 }

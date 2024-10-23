@@ -10,9 +10,13 @@ public class Electrico : Itipo
         this.Nombre = "Electrico";
     }
 
-    public bool FuerteContra(Itipo otroTipo)
+    public bool InmuneContra(Itipo otroTipo)
     {
-        return otroTipo is Agua || otroTipo is Volador;
+        return otroTipo is Electrico;
+    }
+    public bool ResitenteContra(IList<Itipo> otroTipo)
+    {
+        return otroTipo is Volador;
     }
 
     public bool DebilContra(Itipo otroTipo)

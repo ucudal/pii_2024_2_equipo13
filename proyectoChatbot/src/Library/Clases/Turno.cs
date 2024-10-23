@@ -72,8 +72,7 @@ namespace Library
                 string nombrePokemon = Console.ReadLine();
 
                 // Buscar el Pokémon en la lista de disponibles
-                IPokemon pokemonSeleccionado = PokemonsDisponibles
-                    .FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+                IPokemon pokemonSeleccionado = PokemonsDisponibles.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
 
                 // Validar que el Pokémon esté en la lista de disponibles y que no haya sido elegido antes
                 if (pokemonSeleccionado != null && !jugador.Pokemons.Contains(pokemonSeleccionado))
@@ -107,8 +106,7 @@ namespace Library
             string nombrePokemonInicial = Console.ReadLine();
 
             // Buscar el Pokémon en la lista del jugador
-            IPokemon pokemonInicial = jugador.Pokemons
-                .FirstOrDefault(p => p.Nombre.Equals(nombrePokemonInicial, StringComparison.OrdinalIgnoreCase));
+            IPokemon pokemonInicial = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemonInicial, StringComparison.OrdinalIgnoreCase));
 
             if (pokemonInicial != null)
             {
@@ -243,37 +241,43 @@ namespace Library
 
         public void Atacar()
         {
-            Console.WriteLine($"¿Qué ataque deseas realizar {JugadorActual.Nombre}?\n1- Ataque Básico\n2- Ataque Especial");
+            Console.WriteLine(
+                $"¿Qué ataque deseas realizar {JugadorActual.Nombre}?\n1- Ataque Básico\n2- Ataque Especial");
             string opcion = Console.ReadLine();
-
             IPokemon objetivo = JugadorRival.PokemonActivo;
-
-            if (opcion == "1")
-            {
-                // Ataque básico
-                double dañoReal = JugadorActual.PokemonActivo.AtaqueBasico(objetivo);
-                Console.WriteLine($"{JugadorActual.Nombre} ataca a {JugadorRival.Nombre} y le inflige {dañoReal} de daño.");
-                JugadorRival.PokemonActivo.DañoRecibido(dañoReal);
-            }
-            else if (opcion == "2")
-            {
-                // Ataque especial
-                if (ValidarAtaqueEspecial())
+                if (opcion == "1")
                 {
-                    double dañoReal = JugadorActual.PokemonActivo.AtaqueEspecial(objetivo);
-                    Console.WriteLine($"{JugadorActual.Nombre} realiza un ataque especial y le inflige {dañoReal} de daño a {JugadorRival.Nombre}.");
-                    JugadorRival.PokemonActivo.DañoRecibido(dañoReal);
+                    Console.WriteLine($"¿Qué ataque básico desea realizar?");
+                    string eleccion = Console.ReadLine();
+                    JugadorActual.PokemonActivo.GetAtaquesBasicos();
+                    Console.WriteLine("¿Cual de estos ataques desea realizar?");
+                    int ataqueSeleccionado = int.Parse(Console.ReadLine());
+                    double dañoReal=JugadorActual.PokemonActivo.AtaqueBasico(objetivo,ataqueSeleccionado);
+                    // Ataque básico
+                    Console.WriteLine($"{JugadorActual.Nombre} ataca a {JugadorRival.Nombre} y le inflige {dañoReal} de daño."); JugadorRival.PokemonActivo.DañoRecibido(dañoReal);
                 }
-                else
+                else if (opcion == "2")
                 {
-                    Console.WriteLine("No puedes usar un ataque especial en este turno.");
+                    // Ataque especial
+                    if (ValidarAtaqueEspecial())
+                    {
+                        Console.WriteLine($"¿Qué ataque especial desea realizar?");
+                        string eleccion = Console.ReadLine();
+                        JugadorActual.PokemonActivo.GetAtaqueEspecial();
+                        Console.WriteLine("¿Cual de estos ataques desea realizar?");
+                        int ataqueSeleccionado = int.Parse(Console.ReadLine());
+                        double dañoReal=JugadorActual.PokemonActivo.AtaqueEspecial(objetivo,ataqueSeleccionado);
+                        Console.WriteLine($"{JugadorActual.Nombre} ataca a {JugadorRival.Nombre} y le inflige {dañoReal} de daño.");
+                    }
+                    else
+                    {
+                        Console.WriteLine("No puedes usar un ataque especial en este turno.");
+                    }
                 }
-            }
-
-            FinalizarTurno(); // Al terminar el ataque, finalizar el turno actual
         }
+
         public void CambiarPokemonActivo(Jugador jugador, string nombreNuevoPokemon)
-        {
+            {
             // Buscar el nuevo Pokémon en la lista de Pokémon del jugador
             IPokemon nuevoPokemon = jugador.Pokemons
                 .FirstOrDefault(p => p.Nombre.Equals(nombreNuevoPokemon, StringComparison.OrdinalIgnoreCase));

@@ -9,14 +9,19 @@ public class Psiquico : Itipo
     {
         this.Nombre = "Psiquico";
     }
-
-    public bool FuerteContra(Itipo otroTipo)
+    
+    public bool InmuneContra(Itipo otroTipo)
+    {
+        return false;
+    }
+    
+    public bool ResistenteContra(Itipo otroTipo)
     {
         return otroTipo is Lucha || otroTipo is Veneno;
     }
 
     public bool DebilContra(Itipo otroTipo)
     {
-        return otroTipo is Bicho;
+        return otroTipo is Bicho || otroTipo is Fantasma;
     }
 }

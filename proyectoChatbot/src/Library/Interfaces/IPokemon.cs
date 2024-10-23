@@ -5,19 +5,21 @@ public interface IPokemon
     string Nombre { get;}//Este getter, devuelve el nombre del Pokemon
     double VidaActual { get; set; } //Este getter, devuelve la vida actual del pokemon en el combate
     double VidaMax { get;} //Este getter, devuelve la vida máxima del Pokemon
-    List<Itipo> Tipos { get; } //Este Getter, devuelve el tipo o tipos del Pokemon.
-    
+    Itipo Tipo { get; } //Este Getter, devuelve el tipo o tipos del Pokemon.
+    public bool EstaDormido { get; set; }
+    public bool EstaParalizado { get;  set; }
+    public bool EstaEnvenenado { get; set; }
+    public bool EstaQuemado { get;set; }
+    public bool EstaAfectadoPorEfecto();
     bool AptoParaBatalla { get; set; }
 
-    List<IAtaque> GetAtaquesBasicos()
+     void GetAtaquesBasicos()
     {
         // Devuelva una lista con los ataques básicos que tiene el Pokemon
-        return null;
     } 
-    List<IAtaque> GetAtaqueEspecial()
+    void GetAtaqueEspecial()
     {
         // Devuelva una lista con los ataques Especiales que tiene el Pokemon
-        return null;
     } 
     
     void DañoRecibido(double daño)  
@@ -32,9 +34,19 @@ public interface IPokemon
     }
     
     
-    double AtaqueEspecial(IPokemon objetivo);//Este metodo, se encarga del Ataque Especial de los pokemon
+    double AtaqueEspecial(IPokemon objetivo,int AtaqueElegido);//Este metodo, se encarga del Ataque Especial de los pokemon
 
-    double AtaqueBasico(IPokemon objetivo); //Este metodo, se encarga de los Ataques Basicos de los Pokemon
-    
+    double AtaqueBasico(IPokemon objetivo,int AtaqueElegido); //Este metodo, se encarga de los Ataques Basicos de los Pokemon
+
+    bool PuedeAtacarParalizado();
+
+    bool PuedeAtacarDormido();
+
+    void AplicarDañoVeneno();
+
+    void AplicarDañoQuemadura();
+
+
+
 
 }

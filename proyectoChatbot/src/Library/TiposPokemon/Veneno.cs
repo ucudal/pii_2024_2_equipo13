@@ -8,10 +8,14 @@ public class Veneno : Itipo
     {
         this.Nombre = "Veneno";
     }
-
-    public bool FuerteContra(Itipo otroTipo)
+    
+    public bool InmuneContra(Itipo otroTipo)
     {
-        return otroTipo is Planta || otroTipo is Hada;
+        return false;
+    }
+    public bool FuerteContra(IList<Itipo> otroTipo)
+    {
+        return otroTipo is Planta || otroTipo is Hada || otroTipo is Bicho || otroTipo is Veneno;
     }
 
     public bool DebilContra(Itipo otroTipo)

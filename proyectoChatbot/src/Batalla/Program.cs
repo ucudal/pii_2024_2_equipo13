@@ -8,6 +8,6 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello, World!");
-        IPokemon charr = new Charizard();
+        
     }
 }

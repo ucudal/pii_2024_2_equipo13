@@ -9,10 +9,15 @@ public class Lucha : Itipo
     {
         this.Nombre = "Lucha";
     }
-
-    public bool FuerteContra(Itipo otroTipo)
+    
+    public bool InmuneContra(Itipo otroTipo)
     {
-        return otroTipo is Normal;
+        return false;
+    }
+    
+    public bool ResistenteContra(Itipo otroTipo)
+    {
+        return otroTipo is Bicho || otroTipo is Roca;
     }
 
     public bool DebilContra(Itipo otroTipo)

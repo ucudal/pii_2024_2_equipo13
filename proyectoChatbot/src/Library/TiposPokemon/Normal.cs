@@ -8,15 +8,20 @@ public class Normal:Itipo
     {
         this.Nombre = "Normal";
     }
-    bool FuerteContra()
+    
+    public bool InmuneContra(Itipo otroTipo)
+    {
+        return otroTipo is Fantasma;
+    }
+    public bool FuerteContra(IList<Itipo> otroTipo)
     {
         // Este metodo, comprueba contra que otros tipos de pokemon, el pokemon es efectivo.
-        return true;
+        return false;
     }
 
-    bool DebilContra()
+    public bool DebilContra(Itipo otroTipo)
     {
         // Este metodo, comprueba contra que otros tipos de pokemon, el pokemon es debil.
-        return true;
+        return otroTipo is Lucha;
     }
 }

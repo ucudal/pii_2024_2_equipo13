@@ -10,9 +10,14 @@ public class Planta : Itipo
         this.Nombre = "Planta";
     }
 
-    public bool FuerteContra(Itipo otroTipo)
+    public bool InmuneContra(Itipo otroTipo)
     {
-        return otroTipo is Agua || otroTipo is Tierra;
+        return false;
+    }
+    
+    public bool ResistenteContra(Itipo otroTipo)
+    {
+        return otroTipo is Agua || otroTipo is Electrico || otroTipo is Tierra || otroTipo is Planta;
     }
 
     public bool DebilContra(Itipo otroTipo)
