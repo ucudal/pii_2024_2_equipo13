@@ -10,7 +10,7 @@ public class Dormir:IEfectoAtaque
         this.ProbabilidadEfecto = probabilidad;
     }
 
-    public  void AplicarEfecto(IPokemon objetivo)
+    public  void AplicarEfecto(Pokemon objetivo)
     {
         objetivo.EstaDormido = true;
         Random random = new Random();
@@ -18,7 +18,7 @@ public class Dormir:IEfectoAtaque
         Console.WriteLine($"{objetivo} esta dormido por {turnosDormido} turnos");
     }
 
-    public void ReducirTurno(IPokemon objetivo)
+    public void ReducirTurno(Pokemon objetivo)
     {
         if (objetivo.EstaDormido)
         {
@@ -30,13 +30,13 @@ public class Dormir:IEfectoAtaque
         }
     }
 
-    public void RemoverEfecto(IPokemon objetivo)
+    public void RemoverEfecto(Pokemon objetivo)
     {
          objetivo.EstaDormido= false;
         Console.WriteLine("El pokemon ha despertado");
     }
 
-    public bool EstaActivo(IPokemon objetivo)
+    public bool EstaActivo(Pokemon objetivo)
     {
         return objetivo.EstaDormido;
     }

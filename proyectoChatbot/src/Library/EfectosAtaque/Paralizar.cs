@@ -10,7 +10,7 @@ public class Paralizar:IEfectoAtaque
         this.ProbabilidadEfecto = probabilidad;
     }
 
-    public void AplicarEfecto(IPokemon objetivo)
+    public void AplicarEfecto(Pokemon objetivo)
     {
         objetivo.EstaParalizado = true;
         Console.WriteLine($"{objetivo} esta paralizado");
@@ -18,13 +18,13 @@ public class Paralizar:IEfectoAtaque
 
     
 
-    public void RemoverEfecto(IPokemon objetivo)
+    public void RemoverEfecto(Pokemon objetivo)
     {
         objetivo.EstaParalizado = false;
         Console.WriteLine($"{objetivo}, ya no tiene Paralisis");
     }
 
-    public bool EstaActivo(IPokemon objetivo)
+    public bool EstaActivo(Pokemon objetivo)
     {
         return this.EstaParalizado;
     }

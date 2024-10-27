@@ -9,13 +9,13 @@ public class Envenenar:IEfectoAtaque
         this.EstaEnvenenado = false;
         this.ProbabilidadEfecto = probabilidad;
     }
-    public void AplicarEfecto(IPokemon objetivo)
+    public void AplicarEfecto(Pokemon objetivo)
     {
         objetivo.EstaEnvenenado = true;
         Console.WriteLine($"{objetivo} esta envenado");
     }
 
-    public void DañoVeneno(IPokemon objetivo)
+    public void DañoVeneno(Pokemon objetivo)
     {
         if (objetivo.EstaEnvenenado)
         {
@@ -24,12 +24,12 @@ public class Envenenar:IEfectoAtaque
         }
     }
 
-    public void RemoverEfecto(IPokemon objetivo)
+    public void RemoverEfecto(Pokemon objetivo)
     {
         objetivo.EstaEnvenenado = false;
     }
 
-    public bool EstaActivo(IPokemon objetivo)
+    public bool EstaActivo(Pokemon objetivo)
     {
         return this.EstaEnvenenado;
     }

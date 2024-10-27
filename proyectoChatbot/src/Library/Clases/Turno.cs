@@ -7,7 +7,7 @@ namespace Library
     {
         public int TurnosJugador1 { get; private set; } // Contador de turnos para el Jugador 1
         public int TurnosJugador2 { get; private set; } // Contador de turnos para el Jugador 2
-        public static List<IPokemon> PokemonsDisponibles { get; private set; } // Lista de Pokémon disponible para todos los jugadores
+        public static List<Pokemon> PokemonsDisponibles { get; private set; } // Lista de Pokémon disponible para todos los jugadores
         public Jugador JugadorActual { get; private set; } // Jugador al que le corresponde el turno actual
         public Jugador JugadorRival { get; private set; } // Jugador que espera en este turno
         public bool Finalizado { get; private set; } // Estado de finalización del turno
@@ -37,7 +37,7 @@ namespace Library
         {
             if (PokemonsDisponibles == null) // Si la lista aún no fue inicializada
             {
-                PokemonsDisponibles = new List<IPokemon>
+                PokemonsDisponibles = new List<Pokemon>
                 {
                     new Alakazam(),
                     new Pikachu(),
@@ -72,7 +72,7 @@ namespace Library
                 string nombrePokemon = Console.ReadLine();
 
                 // Buscar el Pokémon en la lista de disponibles
-                IPokemon pokemonSeleccionado = PokemonsDisponibles.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+                Pokemon pokemonSeleccionado = PokemonsDisponibles.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
 
                 // Validar que el Pokémon esté en la lista de disponibles y que no haya sido elegido antes
                 if (pokemonSeleccionado != null && !jugador.Pokemons.Contains(pokemonSeleccionado))
@@ -97,7 +97,7 @@ namespace Library
         {
             Console.WriteLine($"{jugador.Nombre}, elige a tu Pokémon inicial de entre los siguientes:");
             // Mostrar los Pokémon del jugador
-            foreach (IPokemon pokemon in jugador.Pokemons)
+            foreach (Pokemon pokemon in jugador.Pokemons)
             {
                 Console.WriteLine($"- {pokemon.Nombre}");
             }
@@ -106,7 +106,7 @@ namespace Library
             string nombrePokemonInicial = Console.ReadLine();
 
             // Buscar el Pokémon en la lista del jugador
-            IPokemon pokemonInicial = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemonInicial, StringComparison.OrdinalIgnoreCase));
+            Pokemon pokemonInicial = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemonInicial, StringComparison.OrdinalIgnoreCase));
 
             if (pokemonInicial != null)
             {
@@ -163,7 +163,7 @@ namespace Library
             {
                 Console.WriteLine("¿A que pokemon desea darle la superpocion?");
                 string nombrePokemon = Console.ReadLine();
-                IPokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+                Pokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
                 IItem superPocion = jugador.ItemsJugador.FirstOrDefault(item => item is Superpocion);
                 if (superPocion == null)
                 {
@@ -192,7 +192,7 @@ namespace Library
                 }
                 else
                 {
-                    IPokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+                    Pokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
                     if (jugador.Pokemons.Contains(pokemonSeleccionado))
                     {
                         if (pokemonSeleccionado.AptoParaBatalla == false)
@@ -216,7 +216,7 @@ namespace Library
             {
                 Console.WriteLine("¿A que pokemon desea darle la Cura Total?");
                 string nombrePokemon = Console.ReadLine();
-                IPokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+                Pokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
                 IItem curaTotal = jugador.ItemsJugador.FirstOrDefault(item => item is CuraTotal);
                 if (curaTotal == null)
                 {
@@ -244,7 +244,7 @@ namespace Library
             Console.WriteLine(
                 $"¿Qué ataque deseas realizar {JugadorActual.Nombre}?\n1- Ataque Básico\n2- Ataque Especial");
             string opcion = Console.ReadLine();
-            IPokemon objetivo = JugadorRival.PokemonActivo;
+            Pokemon objetivo = JugadorRival.PokemonActivo;
                 if (opcion == "1")
                 {
                     Console.WriteLine($"¿Qué ataque básico desea realizar?");
@@ -267,7 +267,7 @@ namespace Library
                         Console.WriteLine("¿Cual de estos ataques desea realizar?");
                         int ataqueSeleccionado = int.Parse(Console.ReadLine());
                         double dañoReal=JugadorActual.PokemonActivo.AtaqueEspecial(objetivo,ataqueSeleccionado);
-                        Console.WriteLine($"{JugadorActual.Nombre} ataca a {JugadorRival.Nombre} y le inflige {dañoReal} de daño.");
+                        Console.WriteLine($"{JugadorActual.Nombre} ataca a {JugadorRival.Nombre} cony le inflige {dañoReal} de daño.");
                     }
                     else
                     {
@@ -279,7 +279,7 @@ namespace Library
         public void CambiarPokemonActivo(Jugador jugador, string nombreNuevoPokemon)
             {
             // Buscar el nuevo Pokémon en la lista de Pokémon del jugador
-            IPokemon nuevoPokemon = jugador.Pokemons
+            Pokemon nuevoPokemon = jugador.Pokemons
                 .FirstOrDefault(p => p.Nombre.Equals(nombreNuevoPokemon, StringComparison.OrdinalIgnoreCase));
 
             // Verificar si el Pokémon fue encontrado y está apto para la batalla

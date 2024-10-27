@@ -10,20 +10,20 @@ public class Quemar:IEfectoAtaque
         this.ProbabilidadEfecto = probabilidad;
     }
 
-    public void AplicarEfecto(IPokemon objetivo)
+    public void AplicarEfecto(Pokemon objetivo)
     {
         objetivo.EstaQuemado = true;
         Console.WriteLine($"{objetivo} esta quemado");
     }
     
 
-    public void RemoverEfecto(IPokemon objetivo)
+    public void RemoverEfecto(Pokemon objetivo)
     {
         objetivo.EstaQuemado = false;
         Console.WriteLine($"{objetivo} ya no esta quemado");
     }
 
-    public bool EstaActivo(IPokemon objetivo)
+    public bool EstaActivo(Pokemon objetivo)
     {
         return objetivo.EstaQuemado;
     }
