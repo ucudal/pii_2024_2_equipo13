@@ -259,6 +259,14 @@ public abstract class Pokemon
         }
     }
 
+    public void RemoverEfectos()
+    {
+        this.EstaDormido = false;
+        this.EstaParalizado = false;
+        this.EstaEnvenenado = false;
+        this.EstaQuemado = false;
+    }
+
 
 
 

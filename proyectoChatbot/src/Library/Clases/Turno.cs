@@ -1,7 +1,7 @@
 using Library.Items;
 using Library.Pokemons;
 
-namespace Library
+namespace Library.Clases
 {
     public class Turno
     {
@@ -157,7 +157,7 @@ namespace Library
 
         public void UsarItem(Jugador jugador)
         {
-            Console.WriteLine("¿Que item desea usar?\n 1-Superpocion.\n 2-Revivir.\n 3-Cura Total");
+            Console.WriteLine("¿Que item desea usar para curar a su pokemon?\n 1-Superpocion.\n 2-Revivir.\n 3-Cura Total");
             string opcion = Console.ReadLine();
             if (opcion == "1")
             {
@@ -198,6 +198,7 @@ namespace Library
                         if (pokemonSeleccionado.AptoParaBatalla == false)
                         {
                             pokemonSeleccionado.AptoParaBatalla = true;
+                            pokemonSeleccionado.VidaActual = pokemonSeleccionado.VidaMax * 0.5;
                             jugador.ItemsJugador.Remove(revivir);
                             Console.WriteLine($"El item Revivir ha sido usado para {pokemonSeleccionado}.");
                             FinalizarTurno();
@@ -225,6 +226,7 @@ namespace Library
                 else
                 {
                     pokemonSeleccionado.VidaActual = pokemonSeleccionado.VidaMax;
+                    pokemonSeleccionado.RemoverEfectos();
                     jugador.ItemsJugador.Remove(curaTotal);
                     Console.WriteLine($"El item Cura Total ha sido usado en {pokemonSeleccionado}");
                     FinalizarTurno();

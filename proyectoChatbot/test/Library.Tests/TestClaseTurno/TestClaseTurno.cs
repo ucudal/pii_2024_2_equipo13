@@ -1,3 +1,4 @@
+using Library.Clases;
 using Library.Pokemons;
 
 namespace Library.Tests;
