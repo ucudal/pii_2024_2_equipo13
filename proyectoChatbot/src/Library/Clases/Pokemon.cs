@@ -193,7 +193,8 @@ public abstract class Pokemon
             daño *= 1.2; // Aumentar el daño en un 20%
             Console.WriteLine("¡Golpe crítico!");
         }
-
+        //falta aplicar, que se aplique el efecto especial del ataque contra el pokemon efectivo
+        
         // Aplicar el daño al objetivo
         objetivo.DañoRecibido(daño);
         return daño; // Retornar el daño infligido
