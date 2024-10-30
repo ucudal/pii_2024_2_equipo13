@@ -124,7 +124,15 @@ public abstract class Pokemon
 
                 // Aplicar el daño al objetivo
                 objetivo.DañoRecibido(daño);
-                return daño; // Retornar el daño infligido
+                if (ataqueSeleccionado is AtaqueEspecial ataqueEspecial)
+                {
+                    // Determinar si el efecto se aplica basado en su probabilidad
+                    if (random.NextDouble() <= ataqueEspecial.Efecto.ProbabilidadEfecto)
+                    {
+                        ataqueEspecial.Efecto.AplicarEfecto(objetivo);
+                        Console.WriteLine($"{objetivo.Nombre} ha sido afectado por {ataqueEspecial.Efecto.GetType().Name}!");
+                    }
+                }
             }
             else
             {

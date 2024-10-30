@@ -55,13 +55,13 @@ public class TurnoTests
     { 
         //Este test, comprueba que no se puede cambiar a un pokemon, o que no se tiene, o que no esta disponible para la batalla
         // Cambiar el Pokémon activo de Jugador 1 a Alakazam
-        turno.CambiarPokemonActivo(jugador1, "Alakazam");
+        jugador1.CambiarPokemonActivo(jugador1, "Alakazam");
 
         // Verificar que Alakazam es el Pokémon activo del Jugador 1
         Assert.AreEqual(alakazam, jugador1.PokemonActivo);
 
         // Cambiar el Pokémon activo de Jugador 2 a Charizard
-        turno.CambiarPokemonActivo(jugador2, "Arbok");
+        jugador2.CambiarPokemonActivo(jugador2, "Arbok");
 
         // Verificar que Charizard es el Pokémon activo del Jugador 2
         Assert.AreEqual(arbok, jugador2.PokemonActivo);
@@ -71,7 +71,7 @@ public class TurnoTests
     public void Test_CambiarPokemonActivo_InvalidPokemonDoesNotChangeActivePokemon()
     { 
         // Cambiar el Pokémon activo de Jugador 1 a un Pokémon que no tiene (Pikachu)
-        turno.CambiarPokemonActivo(jugador1,"Pikachu");
+        jugador1.CambiarPokemonActivo(jugador1,"Pikachu");
 
         // Verificar que el Pokémon activo de Jugador 1 sigue siendo Alakazam, ya que Pikachu no está en su equipo
         Assert.AreEqual(alakazam, jugador1.PokemonActivo);
@@ -88,26 +88,5 @@ public class TurnoTests
 
         // Verificar que el turno ha sido marcado como finalizado
         Assert.IsTrue(turno.Finalizado);
-    }
-    
-    [Test]
-    public void Test_Atacar_BasicAttackReducesRivalHealth()
-    {  
-        //Este test, lo que hace, es probar que verdaderamente el metodo de ataque funciona, y que se reduce la vida del pokemon Objetivo
-        // Establecer la vida inicial del Pokémon del Jugador 2 (Charizard)
-        jugador2.PokemonActivo = arbok;
-        arbok.VidaActual = 100;
-
-        // Simular la entrada de consola para un ataque básico (opción "1")
-        using (var stringReader = new StringReader("1"))
-        {
-            Console.SetIn(stringReader);
-
-            // Ejecutar el ataque
-            turno.Atacar();
-        }
-
-        // Verificar que la vida de Charizard haya disminuido después del ataque básico
-        Assert.Less(arbok.VidaActual, 100);
     }
 }

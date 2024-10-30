@@ -93,33 +93,6 @@ namespace Library.Clases
             Console.WriteLine($"¡{jugador.Nombre} ha seleccionado a todos sus Pokémon para la batalla!");
         }
 
-        public void SeleccionarPokemonInicial(Jugador jugador)
-        {
-            Console.WriteLine($"{jugador.Nombre}, elige a tu Pokémon inicial de entre los siguientes:");
-            // Mostrar los Pokémon del jugador
-            foreach (Pokemon pokemon in jugador.Pokemons)
-            {
-                Console.WriteLine($"- {pokemon.Nombre}");
-            }
-
-            // Leer la selección del jugador
-            string nombrePokemonInicial = Console.ReadLine();
-
-            // Buscar el Pokémon en la lista del jugador
-            Pokemon pokemonInicial = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemonInicial, StringComparison.OrdinalIgnoreCase));
-
-            if (pokemonInicial != null)
-            {
-                jugador.PokemonActivo = pokemonInicial; // Asignar el Pokémon activo del jugador
-                Console.WriteLine($"{pokemonInicial.Nombre} ha sido seleccionado como Pokémon inicial para {jugador.Nombre}.");
-            }
-            else
-            {
-                Console.WriteLine("El Pokémon ingresado no se encuentra en tu equipo. Intenta nuevamente.");
-                SeleccionarPokemonInicial(jugador); // Reintentar la selección si no es válido
-            }
-        }
-
         public void CambiarTurno()
         {
             // Asegurarse de que los jugadores y sus Pokémon activos estén correctamente inicializados
@@ -154,150 +127,14 @@ namespace Library.Clases
                 Console.WriteLine("El turno actual no ha sido finalizado.");
             }
         }
-
-        public void UsarItem(Jugador jugador)
-        {
-            Console.WriteLine("¿Que item desea usar para curar a su pokemon?\n 1-Superpocion.\n 2-Revivir.\n 3-Cura Total");
-            string opcion = Console.ReadLine();
-            if (opcion == "1")
-            {
-                Console.WriteLine("¿A que pokemon desea darle la superpocion?");
-                string nombrePokemon = Console.ReadLine();
-                Pokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
-                IItem superPocion = jugador.ItemsJugador.FirstOrDefault(item => item is Superpocion);
-                if (superPocion == null)
-                {
-                    Console.WriteLine("No quedan Super Pociones en la lista de items.");
-                }
-                else
-                {
-                    if (jugador.Pokemons.Contains(pokemonSeleccionado))
-                    {
-                        pokemonSeleccionado.VidaActual += 70;
-                        JugadorActual.ItemsJugador.Remove(superPocion);
-                        Console.WriteLine($"La super poción, fue usada para {pokemonSeleccionado}");
-                        FinalizarTurno();
-                        CambiarTurno();
-                    }
-                }
-            }
-            else if (opcion == "2")
-            {
-                Console.WriteLine("¿A que pokemon desea darle el Revivir?");
-                string nombrePokemon = Console.ReadLine();
-                IItem revivir = jugador.ItemsJugador.FirstOrDefault(item => item is Revivir);
-                if (revivir == null)
-                {
-                    Console.WriteLine("No quedan items Revivir en la lista.");
-                }
-                else
-                {
-                    Pokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
-                    if (jugador.Pokemons.Contains(pokemonSeleccionado))
-                    {
-                        if (pokemonSeleccionado.AptoParaBatalla == false)
-                        {
-                            pokemonSeleccionado.AptoParaBatalla = true;
-                            pokemonSeleccionado.VidaActual = pokemonSeleccionado.VidaMax * 0.5;
-                            jugador.ItemsJugador.Remove(revivir);
-                            Console.WriteLine($"El item Revivir ha sido usado para {pokemonSeleccionado}.");
-                            FinalizarTurno();
-                            CambiarTurno();
-
-                        }
-                        else
-                        {
-                            Console.WriteLine($"{pokemonSeleccionado} esta vivo, no es posible usar el item Revivir");
-                        }
-                    }
-                }
-                
-            }
-            else if (opcion=="3")
-            {
-                Console.WriteLine("¿A que pokemon desea darle la Cura Total?");
-                string nombrePokemon = Console.ReadLine();
-                Pokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
-                IItem curaTotal = jugador.ItemsJugador.FirstOrDefault(item => item is CuraTotal);
-                if (curaTotal == null)
-                {
-                    Console.WriteLine("No quedan items Cura Total en la lista.");
-                }
-                else
-                {
-                    pokemonSeleccionado.VidaActual = pokemonSeleccionado.VidaMax;
-                    pokemonSeleccionado.RemoverEfectos();
-                    jugador.ItemsJugador.Remove(curaTotal);
-                    Console.WriteLine($"El item Cura Total ha sido usado en {pokemonSeleccionado}");
-                    FinalizarTurno();
-                    CambiarTurno();
-                }
-            }
-        }
+        
 
         public void FinalizarTurno()
         {
             Finalizado = true; // Marca el turno como finalizado
             Console.WriteLine($"Turno finalizado para {JugadorActual.Nombre}.");
         }
-
-        public void Atacar()
-        {
-            Console.WriteLine(
-                $"¿Qué ataque deseas realizar {JugadorActual.Nombre}?\n1- Ataque Básico\n2- Ataque Especial");
-            string opcion = Console.ReadLine();
-            Pokemon objetivo = JugadorRival.PokemonActivo;
-                if (opcion == "1")
-                {
-                    Console.WriteLine($"¿Qué ataque básico desea realizar?");
-                    string eleccion = Console.ReadLine();
-                    JugadorActual.PokemonActivo.GetAtaquesBasicos();
-                    Console.WriteLine("¿Cual de estos ataques desea realizar?");
-                    int ataqueSeleccionado = int.Parse(Console.ReadLine());
-                    double dañoReal=JugadorActual.PokemonActivo.AtaqueBasico(objetivo,ataqueSeleccionado);
-                    // Ataque básico
-                    Console.WriteLine($"{JugadorActual.Nombre} ataca a {JugadorRival.Nombre} y le inflige {dañoReal} de daño."); JugadorRival.PokemonActivo.DañoRecibido(dañoReal);
-                }
-                else if (opcion == "2")
-                {
-                    // Ataque especial
-                    if (ValidarAtaqueEspecial())
-                    {
-                        Console.WriteLine($"¿Qué ataque especial desea realizar?");
-                        string eleccion = Console.ReadLine();
-                        JugadorActual.PokemonActivo.GetAtaqueEspecial();
-                        Console.WriteLine("¿Cual de estos ataques desea realizar?");
-                        int ataqueSeleccionado = int.Parse(Console.ReadLine());
-                        double dañoReal=JugadorActual.PokemonActivo.AtaqueEspecial(objetivo,ataqueSeleccionado);
-                        Console.WriteLine($"{JugadorActual.Nombre} ataca a {JugadorRival.Nombre} cony le inflige {dañoReal} de daño.");
-                    }
-                    else
-                    {
-                        Console.WriteLine("No puedes usar un ataque especial en este turno.");
-                    }
-                }
-        }
-
-        public void CambiarPokemonActivo(Jugador jugador, string nombreNuevoPokemon)
-            {
-            // Buscar el nuevo Pokémon en la lista de Pokémon del jugador
-            Pokemon nuevoPokemon = jugador.Pokemons
-                .FirstOrDefault(p => p.Nombre.Equals(nombreNuevoPokemon, StringComparison.OrdinalIgnoreCase));
-
-            // Verificar si el Pokémon fue encontrado y está apto para la batalla
-            if (nuevoPokemon != null && nuevoPokemon.AptoParaBatalla)
-            {
-                // Cambiar el Pokémon activo del jugador
-                jugador.PokemonActivo = nuevoPokemon;
-                Console.WriteLine($"{jugador.Nombre} ha cambiado a {nuevoPokemon.Nombre} como su Pokémon activo.");
-            }
-            else
-            {
-                // Si el Pokémon no fue encontrado o no está apto para la batalla
-                Console.WriteLine($"{nombreNuevoPokemon} no está disponible o no es apto para la batalla.");
-            }
-        }
-
+        
         public bool ValidarAtaqueEspecial()
         {
             // Determina si el ataque especial es válido basado en el número de turnos del jugador actual
