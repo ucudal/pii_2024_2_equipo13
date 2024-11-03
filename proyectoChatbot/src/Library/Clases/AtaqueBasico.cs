@@ -10,11 +10,11 @@ public class AtaqueBasico:IAtaque
 
     public AtaqueBasico(string nombre, double daño,Itipo tipo,double precision)
     {
+        //Constructor del ataque basico de un pokemon, donde se establece el nombre, el daño, el tipo y la precision. 
         this.Nombre = nombre;
         this.Daño = daño;
         this.Tipo = tipo;
         this.Precision = precision;
-        //constructor de ataque basico de un pokemon, donde se establece el nombre y el Daño. Ej:Impactrueno,30.
     }
     
 }

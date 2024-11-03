@@ -11,12 +11,13 @@ public class AtaqueEspecial:IAtaque
 
     public AtaqueEspecial(string nombre, double daño,Itipo tipo,double precision,IEfectoAtaque efecto)
     {
+        //constructor de ataque especial de un pokemon, donde se establece el nombre, daño, tipo, prescision y efecto.
         this.Nombre = nombre;
         this.Daño = daño;
         this.Tipo = tipo;
         this.Precision = precision;
         this.Efecto = efecto;
-        //constructor de ataque especial de un pokemon, donde se establece el nombre y el Daño. Ej:Impactrueno,30
+        
     }
     
 }
