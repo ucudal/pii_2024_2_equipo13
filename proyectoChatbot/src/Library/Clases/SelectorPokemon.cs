@@ -5,7 +5,11 @@ namespace Library.Clases;
 public class SelectorPokemon
 {
     public static List<Pokemon> PokemonsDisponibles { get; private set; } // Lista de Pokémon disponible para todos los jugadores
-    
+
+    public SelectorPokemon()
+    {
+        InicializarPokemonsDisponibles();
+    }
     private void InicializarPokemonsDisponibles()
     {
         if (PokemonsDisponibles == null) // Si la lista aún no fue inicializada
