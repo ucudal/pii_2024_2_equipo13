@@ -8,7 +8,7 @@ public class CuraTotal : IItem
     public CuraTotal()
     {
         this.Nombre = "Cura Total";
-        this.Descripcion = "Cura toda la salud de tu Pokemón y remueve lso efectos especiales";
+        this.Descripcion = "Cura toda la salud de tu Pokemón y remueve los efectos especiales";
     }
 
     
