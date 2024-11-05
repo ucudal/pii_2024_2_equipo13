@@ -16,10 +16,10 @@ public class WaitList
         waitListJugador = new List<Jugador>();
     }
 
-    public void SalaDeEspera(Jugador jugador)
+    public string SalaDeEspera(Jugador jugador)
     {
         waitListJugador.Add(jugador);
-        Console.WriteLine($"{jugador.Nombre} ha sido agregado a la lista de espera.");
+        return $"{jugador.Nombre} ha sido agregado a la lista de espera."; //En vez de hacer un Console.WriteLine directamente, retorna un valor un string para que el sistema que interactúa con la clase WaitList pueda manejar la confirmación de manera más flexible.
     }
 
     public void StartBattle()
@@ -29,24 +29,29 @@ public class WaitList
             Console.WriteLine("No hay suficientes jugadores para iniciar una batalla.");
             return;
         }
+        
+        var jugadoresCon6Pokemons = waitListJugador.Where(j => j.Pokemons.Count == 6).ToList(); //Solo filtra aquellos jugadores que seleccionaron 6 pokemons
 
-        Console.WriteLine("Iniciando...");
-
-        Random RandomMatch = new Random();
-        Jugador primerJugadorSeleccionado = waitListJugador[RandomMatch.Next(waitListJugador.Count)];
-        Jugador segundoJugadorSeleccionado = waitListJugador.Find(jugador => jugador != primerJugadorSeleccionado);
-
-        Console.WriteLine(
-            $"{primerJugadorSeleccionado.Nombre} y {segundoJugadorSeleccionado.Nombre} han sido seleccionados para la batalla.");
-
-        Turno gestionDeTurnos = new Turno(primerJugadorSeleccionado, segundoJugadorSeleccionado);
-        if (RandomMatch.Next(2) == 0)
+        if (jugadoresCon6Pokemons.Count < 2)
         {
-            gestionDeTurnos.CambiarTurno(); // Asigna el turno inicial al primer jugador seleccionado
+            Console.WriteLine("No hay suficientes jugadores con 6 Pokémon para iniciar una batalla.");
+            return;
         }
+
+        //Solo entran los dos primeros jugadores de la lista de espera
+        Jugador primerJugadorSeleccionado = jugadoresCon6Pokemons[0]; 
+        Jugador segundoJugadorSeleccionado = jugadoresCon6Pokemons[1]; 
+
+        Console.WriteLine($"{primerJugadorSeleccionado.Nombre} y {segundoJugadorSeleccionado.Nombre} han sido seleccionados para la batalla.");
+
+        //Inicia la batalla
+        Turno gestionDeTurnos = new Turno(primerJugadorSeleccionado, segundoJugadorSeleccionado);
+
+        gestionDeTurnos.CambiarTurno();  //Asegura que el primer jugador tenga el primer turno.
 
         Console.WriteLine($"{gestionDeTurnos.JugadorActual.Nombre} tiene el primer turno.");
     }
+
     
     public void ImprimirLista()
     {

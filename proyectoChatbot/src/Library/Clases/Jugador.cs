@@ -83,6 +83,7 @@ public class Jugador
         {
             Console.WriteLine("¿Que item desea usar para curar a su pokemon?\n 1-Superpocion.\n 2-Revivir.\n 3-Cura Total");
             string opcion = Console.ReadLine();
+            
             if (opcion == "1")
             {
                 Console.WriteLine("¿A que pokemon desea darle la superpocion?");
@@ -93,15 +94,16 @@ public class Jugador
                 {
                     Console.WriteLine("No quedan Super Pociones en la lista de items.");
                 }
+                
+                else if (pokemonSeleccionado != null)
+                {
+                    pokemonSeleccionado.VidaActual += 70;
+                    jugador.ItemsJugador.Remove(superPocion);
+                    Console.WriteLine($"La superpoción fue usada en {pokemonSeleccionado.Nombre}.");
+                }
                 else
                 {
-                    if (jugador.Pokemons.Contains(pokemonSeleccionado))
-                    {
-                        pokemonSeleccionado.VidaActual += 70;
-                        jugador.ItemsJugador.Remove(superPocion);
-                        Console.WriteLine($"La super poción, fue usada para {pokemonSeleccionado}");
-                        
-                    }
+                    Console.WriteLine("Pokémon no encontrado.");
                 }
             }
             else if (opcion == "2")
@@ -172,6 +174,10 @@ public class Jugador
             // Si el Pokémon no fue encontrado o no está apto para la batalla
             Console.WriteLine($"{nombreNuevoPokemon} no está disponible o no es apto para la batalla.");
         }
+    }
+    public override string ToString()
+    {
+        return $"{Nombre} ({Pokemons.Count} Pokémon/Pokémons)";
     }
 
 }
