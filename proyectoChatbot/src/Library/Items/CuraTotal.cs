@@ -10,6 +10,5 @@ public class CuraTotal : IItem
         this.Nombre = "Cura Total";
         this.Descripcion = "Cura toda la salud de tu Pokemón y remueve los efectos especiales";
     }
-
     
 }

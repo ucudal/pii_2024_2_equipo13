@@ -12,7 +12,7 @@ public class Envenenar:IEfectoAtaque
     public void AplicarEfecto(Pokemon objetivo)
     {
         objetivo.EstaEnvenenado = true;
-        Console.WriteLine($"{objetivo} esta envenado");
+        Console.WriteLine($"{objetivo} esta envenenado");
     }
 
     public void DañoVeneno(Pokemon objetivo)

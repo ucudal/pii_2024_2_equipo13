@@ -1,6 +1,6 @@
 namespace Library.TiposPokemon;
 
-public class Roca
+public class Roca : Itipo
 {
     public string Nombre { get; }
     
