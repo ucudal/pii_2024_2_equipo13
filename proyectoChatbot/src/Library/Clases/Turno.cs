@@ -19,7 +19,8 @@ namespace Library.Clases
             this.JugadorActual = jugador1;
             this.JugadorRival = jugador2;
             this.Finalizado = false;
-            // previene excepcion de Test
+            
+            /*// previene excepcion de Test
             if (jugador1.PokemonActivo == null && jugador1.Pokemons.Any())
             {
                 // Asignar el primer Pokémon del jugador si no se ha seleccionado uno aún
@@ -30,7 +31,7 @@ namespace Library.Clases
             {
                 // Asignar el primer Pokémon del jugador si no se ha seleccionado uno aún
                 jugador2.PokemonActivo = jugador2.Pokemons.First();
-            }
+            }*/
         }
 
         public void CambiarTurno()

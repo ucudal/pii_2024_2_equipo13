@@ -1,3 +1,5 @@
+using Library.TiposPokemon;
+
 namespace Library;
 
 public class AtaqueEspecial:IAtaque
