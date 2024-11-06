@@ -166,8 +166,7 @@ public class Jugador
     public void CambiarPokemonActivo(Jugador jugador, string nombreNuevoPokemon)
     {
         // Buscar el nuevo Pokémon en la lista de Pokémon del jugador
-        Pokemon nuevoPokemon = jugador.Pokemons
-            .FirstOrDefault(p => p.Nombre.Equals(nombreNuevoPokemon, StringComparison.OrdinalIgnoreCase));
+        Pokemon nuevoPokemon = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombreNuevoPokemon, StringComparison.OrdinalIgnoreCase));
 
         // Verificar si el Pokémon fue encontrado y está apto para la batalla
         if (nuevoPokemon != null && nuevoPokemon.AptoParaBatalla)

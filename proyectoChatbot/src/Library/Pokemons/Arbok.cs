@@ -17,13 +17,14 @@ public class Arbok : Pokemon
         this.AptoParaBatalla = true;
         this.AtaquesBasicos = new Dictionary<int, IAtaque>
         {
-            {1, new AtaqueBasico("Envoltura", 15 ,new Normal(), 90)},
-            {2, new AtaqueBasico("Morder", 60, new Normal(), 100)}
+            {1,new AtaqueBasico("Mordisco", 55, new Veneno(),90)},
+            {2,new AtaqueBasico("Ácido", 50, new Veneno(),90)}
+            
         };
         this.AtaquesEspeciales = new Dictionary<int, IAtaque>
         {
-            {1, new AtaqueEspecial("Bomba de lodo", 65, new Tierra(), 85, new Paralizar(0.30))},
-            {2, new AtaqueEspecial("Disparo de porquería", 120, new Veneno(), 80, new Envenenar(0.30))}
+            {1,new AtaqueEspecial("Bomba Lodo", 90, new Veneno(),100,new Envenenar(0.3))},
+            {2,new AtaqueEspecial("Onda Tóxica", 95, new Veneno(),100,new Envenenar(0.1))}
         };
     }
 }

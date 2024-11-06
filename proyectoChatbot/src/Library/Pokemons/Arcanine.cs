@@ -18,13 +18,14 @@ public class Arcanine : Pokemon
         this.AptoParaBatalla = true;
         this.AtaquesBasicos = new Dictionary<int, IAtaque>
         {
-            {1, new AtaqueBasico("Velocidad Extrema ", 80, new Normal(), 100)},
-            {2, new AtaqueBasico("Rueda de llamas", 60, new Fuego(), 100)}
+            { 1, new AtaqueBasico("Golpe Roca", 50, new Lucha(), 90) },
+            { 2, new AtaqueBasico("Derribo",70, new Normal(), 90) }
         };
         this.AtaquesEspeciales = new Dictionary<int, IAtaque>
         {
-            {1, new AtaqueEspecial("Blitz de bengalas", 120, new Fuego(), 100, new Quemar(0.10))},
-            {2, new AtaqueEspecial("Crujido", 80, new Siniestro(), 100, new Paralizar(0.20))}
+            
+            {1,new AtaqueEspecial("Rueda Fuego", 80, new Veneno(),100,new Quemar(0.1))},
+            {2,new AtaqueEspecial("Colmillo Igneo", 85, new Veneno(),100,new Quemar(0.1))}
         };
     }
 
