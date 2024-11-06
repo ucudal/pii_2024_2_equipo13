@@ -1,6 +1,6 @@
 using Library.Items;
 
-namespace Library;
+namespace Library.Clases;
 /// <summary>
 /// Representa un jugador en el juego de Pokemón
 /// </summary>
@@ -17,25 +17,20 @@ public class Jugador
         set { itemsJugador = value; }
     }
     // Getter y setter para la lista de Pokemón del jugador
-    public List<Pokemon> Pokemons
-    {
-        get { return pokemons; }
-        set { pokemons = value; }
-    } 
+    public List<Pokemon> Pokemons { get { return pokemons; }
+        set { pokemons = value; } } 
     // Pokemón activo del jugador
     private Pokemon pokemonActivo;
     // Nombre del jugador
     public string Nombre { get; } 
     // Getter y setter para el Pokemón activo del jugador
     public Pokemon PokemonActivo { get;set; }
-    //Esta lista, contiene los pokemons dispoinbles del juego
-    private List<Pokemon> PokemonsDisponibles; 
     //constructor del jugador
     public Jugador(string nombre)
     {
         this.Nombre = nombre;
         this.pokemons = new List<Pokemon>();
-        this.pokemonActivo = null;
+        this.pokemonActivo = pokemons[1];
         this.itemsJugador = new List<IItem>(); 
         this.itemsJugador.Add(new Revivir());
         this.itemsJugador.Add(new CuraTotal());
@@ -49,15 +44,21 @@ public class Jugador
     }
     public void Atacar(Jugador oponente)
     {
-        if (PokemonActivo == null || !PokemonActivo.AptoParaBatalla)
+        if (!PokemonActivo.AptoParaBatalla)
         {
             Console.WriteLine($"{Nombre} no tiene un Pokémon apto para atacar.");
             return;
         }
-
+        
         Console.WriteLine($"¿Qué ataque deseas realizar {Nombre}?\n1- Ataque Básico\n2- Ataque Especial");
         string opcion = Console.ReadLine();
+        while (opcion!="1"|| opcion !="2")
+        {
+            Console.WriteLine($"¿Qué ataque deseas realizar {Nombre}?\n1- Ataque Básico\n2- Ataque Especial");
+            string lectura = Console.ReadLine();
+            opcion = (lectura == "1" || lectura == "2") ? lectura : opcion;
 
+        }
         Pokemon objetivo = oponente.PokemonActivo;
 
         if (opcion == "1")
@@ -65,24 +66,41 @@ public class Jugador
             Console.WriteLine("Ataques Básicos Disponibles:");
             PokemonActivo.GetAtaquesBasicos();
             Console.WriteLine("Ingresa el número del ataque que deseas realizar:");
-            int ataqueSeleccionado = int.Parse(Console.ReadLine());
-
-            double daño = PokemonActivo.AtaqueBasico(objetivo, ataqueSeleccionado);
-            Console.WriteLine($"{Nombre} ataca a {oponente.Nombre} con un ataque básico y le inflige {daño} de daño.");
+            try
+            {
+                int ataqueSeleccionado = int.Parse(Console.ReadLine());
+                double daño = PokemonActivo.AtaqueBasico(objetivo, ataqueSeleccionado);
+                Console.WriteLine(
+                    $"{Nombre} ataca a {oponente.Nombre} con un ataque básico y le inflige {daño} de daño.");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Entrada inválida. No se ingresó un número válido. Turno perdido.");
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("Se selecciono, un ataque no existente.Turno perdido");
+            }
         }
         else if (opcion == "2")
         {
             Console.WriteLine("Ataques Especiales Disponibles:");
             PokemonActivo.GetAtaqueEspecial();
             Console.WriteLine("Ingresa el número del ataque especial que deseas realizar:");
-            int ataqueSeleccionado = int.Parse(Console.ReadLine());
-
-            double daño = PokemonActivo.AtaqueEspecial(objetivo, ataqueSeleccionado);
-            Console.WriteLine($"{Nombre} ataca a {oponente.Nombre} con un ataque especial y le inflige {daño} de daño.");
-        }
-        else
-        {
-            Console.WriteLine("Opción inválida. Turno perdido.");
+            try
+            {
+                int ataqueSeleccionado = int.Parse(Console.ReadLine());
+                double daño = PokemonActivo.AtaqueEspecial(objetivo, ataqueSeleccionado);
+                Console.WriteLine($"{Nombre} ataca a {oponente.Nombre} con un ataque especial y le inflige {daño} de daño.");
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Entrada inválida. No se ingresó un número válido. Turno perdido.");
+            }
+            catch (ArgumentOutOfRangeException)
+            {
+                Console.WriteLine("Se selecciono, un ataque no existente.Turno perdido");
+            }
         }
     }
     
@@ -93,10 +111,11 @@ public class Jugador
             
             if (opcion == "1")
             {
-                Console.WriteLine("¿A que pokemon desea darle la superpocion?");
-                string nombrePokemon = Console.ReadLine();
-                Pokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
-                IItem superPocion = jugador.ItemsJugador.FirstOrDefault(item => item is Superpocion);
+                    Console.WriteLine("¿A que pokemon desea darle la superpocion?");
+                    string nombrePokemon = Console.ReadLine();
+                    Pokemon pokemonSeleccionado = jugador.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+                    IItem superPocion = jugador.ItemsJugador.FirstOrDefault(item => item is Superpocion);
+
                 if (superPocion == null)
                 {
                     Console.WriteLine("No quedan Super Pociones en la lista de items.");
@@ -180,10 +199,6 @@ public class Jugador
             // Si el Pokémon no fue encontrado o no está apto para la batalla
             Console.WriteLine($"{nombreNuevoPokemon} no está disponible o no es apto para la batalla.");
         }
-    }
-    public override string ToString()
-    {
-        return $"{Nombre} ({Pokemons.Count} Pokémon/Pokémons)";
     }
 
 }
