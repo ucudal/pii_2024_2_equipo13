@@ -16,5 +16,4 @@ public class AtaqueBasico:IAtaque
         this.Tipo = tipo;
         this.Precision = precision;
     }
-    
 }

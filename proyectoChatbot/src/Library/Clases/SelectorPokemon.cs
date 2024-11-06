@@ -17,6 +17,7 @@ public class SelectorPokemon
             PokemonsDisponibles = new List<Pokemon>
             {
                 new Alakazam(),
+                new Marowak(),
                 new Pikachu(),
                 new Machamp(),
                 new Snorlax(),

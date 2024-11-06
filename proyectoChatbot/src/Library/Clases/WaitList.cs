@@ -19,40 +19,45 @@ public class WaitList
     public string SalaDeEspera(Jugador jugador)
     {
         waitListJugador.Add(jugador);
-        return $"{jugador.Nombre} ha sido agregado a la lista de espera."; //En vez de hacer un Console.WriteLine directamente, retorna un valor un string para que el sistema que interactúa con la clase WaitList pueda manejar la confirmación de manera más flexible.
+        return $"{jugador.Nombre} ha sido agregado a la lista de espera.";
     }
 
-    public void StartBattle()
+    public List<string> StartBattle()
     {
+        List<string> notificaciones = new List<string>();
+
         if (waitListJugador.Count < 2)
         {
-            Console.WriteLine("No hay suficientes jugadores para iniciar una batalla.");
-            return;
+            notificaciones.Add("No hay suficientes jugadores para iniciar una batalla.");
+            return notificaciones;
         }
-        
-        var jugadoresCon6Pokemons = waitListJugador.Where(j => j.Pokemons.Count == 6).ToList(); //Solo filtra aquellos jugadores que seleccionaron 6 pokemons
+
+        //Solo filtra aquellos jugadores que seleccionaron 6 pokemons
+        var jugadoresCon6Pokemons = waitListJugador.Where(j => j.Pokemons.Count == 6).ToList();
 
         if (jugadoresCon6Pokemons.Count < 2)
         {
-            Console.WriteLine("No hay suficientes jugadores con 6 Pokémon para iniciar una batalla.");
-            return;
+            notificaciones.Add("No hay suficientes jugadores con 6 Pokémon para iniciar una batalla.");
+            return notificaciones;
         }
 
         //Solo entran los dos primeros jugadores de la lista de espera
-        Jugador primerJugadorSeleccionado = jugadoresCon6Pokemons[0]; 
-        Jugador segundoJugadorSeleccionado = jugadoresCon6Pokemons[1]; 
+        Jugador primerJugadorSeleccionado = jugadoresCon6Pokemons[0];
+        Jugador segundoJugadorSeleccionado = jugadoresCon6Pokemons[1];
 
-        Console.WriteLine($"{primerJugadorSeleccionado.Nombre} y {segundoJugadorSeleccionado.Nombre} han sido seleccionados para la batalla.");
+        notificaciones.Add(
+            $"{primerJugadorSeleccionado.Nombre} y {segundoJugadorSeleccionado.Nombre} han sido seleccionados para la batalla.");
 
         //Inicia la batalla
         Turno gestionDeTurnos = new Turno(primerJugadorSeleccionado, segundoJugadorSeleccionado);
 
-        gestionDeTurnos.CambiarTurno();  //Asegura que el primer jugador tenga el primer turno.
+        gestionDeTurnos.CambiarTurno(); //Asegura que el primer jugador tenga el primer turno.
 
-        Console.WriteLine($"{gestionDeTurnos.JugadorActual.Nombre} tiene el primer turno.");
+        notificaciones.Add($"{gestionDeTurnos.JugadorActual.Nombre} tiene el primer turno.");
+
+        return notificaciones;
     }
 
-    
     public void ImprimirLista()
     {
         Console.WriteLine($"La lista contiene un total de {waitListJugador.Count} elementos:\n");
