@@ -21,21 +21,19 @@ public class WaitList
         waitListJugador.Add(jugador);
         return $"{jugador.Nombre} ha sido agregado a la lista de espera.";
     }
-    
-    
-    
+
     public List<string> StartBattle()
     {
         List<string> notificaciones = new List<string>();
-        
+
         if (waitListJugador.Count < 2)
         {
             notificaciones.Add("No hay suficientes jugadores para iniciar una batalla.");
             return notificaciones;
         }
-        
+
         //Solo filtra aquellos jugadores que seleccionaron 6 pokemons
-        var jugadoresCon6Pokemons = waitListJugador.Where(j => j.Pokemons.Count == 6).ToList(); 
+        var jugadoresCon6Pokemons = waitListJugador.Where(j => j.Pokemons.Count == 6).ToList();
 
         if (jugadoresCon6Pokemons.Count < 2)
         {
@@ -44,21 +42,22 @@ public class WaitList
         }
 
         //Solo entran los dos primeros jugadores de la lista de espera
-        Jugador primerJugadorSeleccionado = jugadoresCon6Pokemons[0]; 
-        Jugador segundoJugadorSeleccionado = jugadoresCon6Pokemons[1]; 
+        Jugador primerJugadorSeleccionado = jugadoresCon6Pokemons[0];
+        Jugador segundoJugadorSeleccionado = jugadoresCon6Pokemons[1];
 
-        notificaciones.Add($"{primerJugadorSeleccionado.Nombre} y {segundoJugadorSeleccionado.Nombre} han sido seleccionados para la batalla.");
+        notificaciones.Add(
+            $"{primerJugadorSeleccionado.Nombre} y {segundoJugadorSeleccionado.Nombre} han sido seleccionados para la batalla.");
 
         //Inicia la batalla
         Turno gestionDeTurnos = new Turno(primerJugadorSeleccionado, segundoJugadorSeleccionado);
 
-        gestionDeTurnos.CambiarTurno();  //Asegura que el primer jugador tenga el primer turno.
+        gestionDeTurnos.CambiarTurno(); //Asegura que el primer jugador tenga el primer turno.
 
         notificaciones.Add($"{gestionDeTurnos.JugadorActual.Nombre} tiene el primer turno.");
 
         return notificaciones;
     }
-    
+
     public void ImprimirLista()
     {
         Console.WriteLine($"La lista contiene un total de {waitListJugador.Count} elementos:\n");

@@ -1,29 +1,36 @@
 using Library.Items;
 
 namespace Library;
-
+/// <summary>
+/// Representa un jugador en el juego de Pokemón
+/// </summary>
 public class Jugador
 {
-    private List<Pokemon> pokemons; //lista de Pokemons, del jugador
-    private List<IItem> itemsJugador; //lista de items del jugador
+    // Lista de Pokemón del jugador
+    private List<Pokemon> pokemons;
+    // Lista de items del jugador
+    private List<IItem> itemsJugador;
+    // Getter y settes para la lista de items del jugador
     public List<IItem> ItemsJugador
     {
         get { return itemsJugador; }
         set { itemsJugador = value; }
-    } // getter y setter de la lista de items del jugador
-
-
+    }
+    // Getter y setter para la lista de Pokemón del jugador
     public List<Pokemon> Pokemons
     {
         get { return pokemons; }
         set { pokemons = value; }
-    } //getter de la lista de pokemons del jugador
-
-    private Pokemon pokemonActivo; //Es el Pokemon que esta activo en batalla, y que tambien al inicio de la batalla, se defince como el inicial
-    public string Nombre { get; } //Getter que devuelve el nombre del jugador, se usa pra mostrar el nombre de jugador por pantalla
-    public Pokemon PokemonActivo { get;set; } //Este Getter, devuelve cual es el Pokemon activo en batalla  del jugador
-    private List<Pokemon> PokemonsDisponibles; //Esta lista, contiene los pokemons dispoinbles del juego
-    //constructor
+    } 
+    // Pokemón activo del jugador
+    private Pokemon pokemonActivo;
+    // Nombre del jugador
+    public string Nombre { get; } 
+    // Getter y setter para el Pokemón activo del jugador
+    public Pokemon PokemonActivo { get;set; }
+    //Esta lista, contiene los pokemons dispoinbles del juego
+    private List<Pokemon> PokemonsDisponibles; 
+    //constructor del jugador
     public Jugador(string nombre)
     {
         this.Nombre = nombre;

@@ -10,9 +10,4 @@ public class Superpocion : IItem
         this.Nombre = "Super Poción";
         this.Descripcion = "Recupera 70HP";
     }
-
-    public void UsarEn(Pokemon pokemon)
-    {
-        pokemon.VidaActual = Math.Min(pokemon.VidaActual + 70, pokemon.VidaMax);
-    }
 }
