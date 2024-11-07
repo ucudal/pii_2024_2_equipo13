@@ -74,7 +74,7 @@ namespace Library
         {
             if (_currentTurn != null)
             {
-                _currentTurn.JugadorActual.CambiarPokemonActivo(_currentTurn.JugadorActual, nombrePokemon);
+                _currentTurn.JugadorActual.CambiarPokemonActivo( nombrePokemon);
                 _currentTurn.CambiarTurno();
             }
         }
@@ -82,7 +82,7 @@ namespace Library
         // Historia de usuario 8: Como entrenador, quiero poder usar un ítem durante una batalla.
         public void UsarItemDelJugador(string item, string nombrePokemon)
         {
-            _currentTurn.JugadorActual.UsarItem(_currentTurn.JugadorActual);
+            _currentTurn.JugadorActual.UsarItem();
             _currentTurn.CambiarTurno();
         }
 

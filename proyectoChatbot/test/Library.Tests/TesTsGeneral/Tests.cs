@@ -55,13 +55,13 @@ public class TurnoTests
     { 
         //Este test, comprueba que no se puede cambiar a un pokemon, o que no se tiene, o que no esta disponible para la batalla
         // Cambiar el Pokémon activo de Jugador 1 a Alakazam
-        jugador1.CambiarPokemonActivo(jugador1, "Alakazam");
+        jugador1.CambiarPokemonActivo("Alakazam");
 
         // Verificar que Alakazam es el Pokémon activo del Jugador 1
         Assert.AreEqual(alakazam, jugador1.PokemonActivo);
 
         // Cambiar el Pokémon activo de Jugador 2 a Charizard
-        jugador2.CambiarPokemonActivo(jugador2, "Arbok");
+        jugador2.CambiarPokemonActivo("Arbok");
 
         // Verificar que Charizard es el Pokémon activo del Jugador 2
         Assert.AreEqual(arbok, jugador2.PokemonActivo);
@@ -71,7 +71,7 @@ public class TurnoTests
     public void Test_CambiarPokemonActivo_InvalidPokemonDoesNotChangeActivePokemon()
     { 
         // Cambiar el Pokémon activo de Jugador 1 a un Pokémon que no tiene (Pikachu)
-        jugador1.CambiarPokemonActivo(jugador1,"Pikachu");
+        jugador1.CambiarPokemonActivo("Pikachu");
 
         // Verificar que el Pokémon activo de Jugador 1 sigue siendo Alakazam, ya que Pikachu no está en su equipo
         Assert.AreEqual(alakazam, jugador1.PokemonActivo);
