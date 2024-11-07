@@ -13,6 +13,9 @@ public abstract class Pokemon
     public Itipo Tipo { get; protected set; }
     protected Dictionary<int, IAtaque> AtaquesBasicos;
     protected Dictionary<int, IAtaque> AtaquesEspeciales;
+    public IReadOnlyDictionary<int, IAtaque> AtaquesBasicosPublicos => AtaquesBasicos;
+    public IReadOnlyDictionary<int, IAtaque> AtaquesEspecialesPublicos => AtaquesEspeciales;
+
     
 
     public void GetAtaquesBasicos()
@@ -147,8 +150,8 @@ public abstract class Pokemon
         return 0;
     }
     
-    public double AtaqueBasico(Pokemon objetivo, int ataqueElegido)
-{
+    public double AtaqueBasico(Pokemon objetivo, int ataqueElegido) 
+    {
     // Verificar si el Pokémon atacante puede realizar el ataque (no está dormido ni paralizado)
     if (!this.PuedeAtacarDormido())
     {

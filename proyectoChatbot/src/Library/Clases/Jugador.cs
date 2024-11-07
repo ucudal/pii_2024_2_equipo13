@@ -30,7 +30,7 @@ public class Jugador
     {
         this.Nombre = nombre;
         this.pokemons = new List<Pokemon>();
-        this.pokemonActivo = pokemons[1];
+        this.PokemonActivo = this.pokemons.FirstOrDefault();
         this.itemsJugador = new List<IItem>(); 
         this.itemsJugador.Add(new Revivir());
         this.itemsJugador.Add(new CuraTotal());
@@ -52,7 +52,7 @@ public class Jugador
         
         Console.WriteLine($"¿Qué ataque deseas realizar {Nombre}?\n1- Ataque Básico\n2- Ataque Especial");
         string opcion = Console.ReadLine();
-        while (opcion!="1"|| opcion !="2")
+        while (opcion != "1" && opcion != "2")
         {
             Console.WriteLine($"¿Qué ataque deseas realizar {Nombre}?\n1- Ataque Básico\n2- Ataque Especial");
             string lectura = Console.ReadLine();
