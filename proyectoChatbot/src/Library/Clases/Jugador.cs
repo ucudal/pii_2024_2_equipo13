@@ -17,14 +17,26 @@ public class Jugador
         set { itemsJugador = value; }
     }
     // Getter y setter para la lista de Pokemón del jugador
-    public List<Pokemon> Pokemons { get { return pokemons; }
-        set { pokemons = value; } } 
+    public List<Pokemon> Pokemons { get { return pokemons; } set { pokemons = value; } } 
     // Pokemón activo del jugador
     private Pokemon pokemonActivo;
     // Nombre del jugador
     public string Nombre { get; } 
     // Getter y setter para el Pokemón activo del jugador
-    public Pokemon PokemonActivo { get;set; }
+    public Pokemon PokemonActivo
+    {
+        get
+        {
+            // Asegurarse de que haya un PokemonActivo asignado
+            if (pokemonActivo == null && pokemons.Any())
+            {
+                pokemonActivo = pokemons.First();
+            }
+            return pokemonActivo;
+        }
+        set { pokemonActivo = value; }
+    }
+
     //constructor del jugador
     public Jugador(string nombre)
     {

@@ -28,7 +28,7 @@ namespace Library
         {
             Console.WriteLine("Ataques disponibles:");
             jugador.PokemonActivo.GetAtaquesBasicos();
-            if (_currentTurn.ValidarAtaqueEspecial())
+           Console.WriteLine("Ataques Especiales:");
                 jugador.PokemonActivo.GetAtaqueEspecial();
         }
 
@@ -40,10 +40,9 @@ namespace Library
         }
 
         // Historia de usuario 4: Como jugador, quiero atacar en mi turno y hacer daño basado en la efectividad de los tipos de Pokémon.
-        public void EjecutarAtaque(bool esEspecial)
+        public void Atacar()
         {
             _currentTurn.JugadorActual.Atacar(_currentTurn.JugadorRival);
-            MostrarVida();
             if (_currentTurn.BatallaFinalizada())
             {
                 Console.WriteLine($"La batalla ha terminado. Ganador: {_currentTurn.JugadorActual.Nombre}");
@@ -80,7 +79,7 @@ namespace Library
         }
 
         // Historia de usuario 8: Como entrenador, quiero poder usar un ítem durante una batalla.
-        public void UsarItemDelJugador(string item, string nombrePokemon)
+        public void UsarItemDelJugador()
         {
             _currentTurn.JugadorActual.UsarItem();
             _currentTurn.CambiarTurno();
@@ -101,6 +100,7 @@ namespace Library
                 var jugador1 = _waitList.WaitListJugador[0];
                 var jugador2 = _waitList.WaitListJugador[1];
                 _currentTurn = new Turno(jugador1, jugador2);
+                Console.WriteLine("Batalla inciada!");
                 MostrarTurnoActual();
             }
         }

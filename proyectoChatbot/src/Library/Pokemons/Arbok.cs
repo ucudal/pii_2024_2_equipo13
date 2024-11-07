@@ -11,8 +11,8 @@ public class Arbok : Pokemon
     public Arbok()
     {
         this.Nombre = "Arbok";
-        this.VidaActual = VidaMax;
         this.VidaMax = 100;
+        this.VidaActual = VidaMax;
         this.Tipo =  new Veneno();
         this.AptoParaBatalla = true;
         this.AtaquesBasicos = new Dictionary<int, IAtaque>

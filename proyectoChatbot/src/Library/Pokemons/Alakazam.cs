@@ -10,8 +10,8 @@ public class Alakazam : Pokemon
     public Alakazam()
     {
         this.Nombre = "Alakazam";
-        this.VidaActual = VidaMax;
         this.VidaMax = 100;
+        this.VidaActual = VidaMax;
         this.Tipo = new Psiquico();
         this.AptoParaBatalla = true;
         this.AtaquesBasicos = new Dictionary<int, IAtaque>

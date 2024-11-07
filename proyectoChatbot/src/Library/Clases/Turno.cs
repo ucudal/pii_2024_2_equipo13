@@ -63,10 +63,6 @@ namespace Library.Clases
 
                 Console.WriteLine($"Ahora es el turno de {JugadorActual.Nombre}. Turno del jugador: {GetNumeroTurnoActual()}");
             }
-            else
-            {
-                Console.WriteLine("El turno actual no ha sido finalizado.");
-            }
         }
         
 
