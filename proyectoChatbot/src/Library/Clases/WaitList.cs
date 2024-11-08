@@ -76,8 +76,7 @@ public class WaitList
         Jugador primerJugadorSeleccionado = jugadoresCon6Pokemons[0];
         Jugador segundoJugadorSeleccionado = jugadoresCon6Pokemons[1];
 
-        notificaciones.Add(
-            $"{primerJugadorSeleccionado.Nombre} y {segundoJugadorSeleccionado.Nombre} han sido seleccionados para la batalla.");
+        notificaciones.Add($"{primerJugadorSeleccionado.Nombre} y {segundoJugadorSeleccionado.Nombre} han sido seleccionados para la batalla.");
 
         // Inicia la batalla
         Turno gestionDeTurnos = new Turno(primerJugadorSeleccionado, segundoJugadorSeleccionado);

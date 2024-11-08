@@ -21,7 +21,7 @@ public class WaitListTests
     [Test]
     public void Test_SalaDeEspera_AddsPlayerToWaitList()
     {
-        var result = waitList.SalaDeEspera(jugador1);
+        string result = waitList.SalaDeEspera(jugador1);
         Assert.AreEqual($"{jugador1.Nombre} ha sido agregado a la lista de espera.", result);
         Assert.IsTrue(waitList.WaitListJugador.Contains(jugador1));
     }
@@ -30,13 +30,10 @@ public class WaitListTests
     public void Test_StartBattle_InsufficientPlayers()
     {
         waitList.SalaDeEspera(jugador1);
-        using (var stringwriter = new StringWriter())
-        {
-            Console.SetOut(stringwriter);
-            waitList.StartBattle();
-            var expected = "No hay suficientes jugadores para iniciar una batalla.\r\n";
-            Assert.AreEqual(expected, stringwriter.ToString());
-        }
+             var resultado=waitList.StartBattle();
+            var expected ="No hay suficientes jugadores para iniciar una batalla.";
+            Assert.That(expected,Is.EqualTo(resultado.FirstOrDefault()));
+        
     }
 
     [Test]
@@ -48,15 +45,15 @@ public class WaitListTests
             jugador2.Pokemons.Add(new Arbok());
         }
 
+        // Añadir los jugadores a la lista de espera
         waitList.SalaDeEspera(jugador1);
         waitList.SalaDeEspera(jugador2);
-
-        using (var stringwriter = new StringWriter())
-        {
-            Console.SetOut(stringwriter);
-            waitList.StartBattle();
-            var expected = $"{jugador1.Nombre} y {jugador2.Nombre} han sido seleccionados para la batalla.\r\n";
-            Assert.IsTrue(stringwriter.ToString().Contains(expected));
-        }
+    
+        // Capturar la salida de las notificaciones generadas por StartBattle
+        var resultado = waitList.StartBattle();
+    
+        // Verificar que la notificación de inicio de batalla contiene los nombres de ambos jugadores
+        var expected = $"{jugador1.Nombre} y {jugador2.Nombre} han sido seleccionados para la batalla.";
+        Assert.IsTrue(resultado.Contains(expected), "La notificación no contiene el mensaje esperado para el inicio de batalla.");
     }
 }
