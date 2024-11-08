@@ -43,6 +43,7 @@ public class TestJugador
     }
 
     [Test]
+    //(como alaracion) en este metodo, se prueba que funcione la distinta funcionalidad, como la efetividad de tipos, manejada dentro de cada pokemon
     public void Test_Ataque_Jugador_Con_Efectividad_De_Tipos()
     {
         // Arrange

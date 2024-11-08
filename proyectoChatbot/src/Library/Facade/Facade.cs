@@ -117,6 +117,7 @@ namespace Library
             if (_currentTurn != null)
             {
                 _currentTurn.JugadorActual.CambiarPokemonActivo(nombrePokemon);
+                Console.WriteLine($"{_currentTurn.JugadorActual.Nombre} ha cambiado su pokemon activo a {_currentTurn.JugadorActual.PokemonActivo.Nombre} ");
                 _currentTurn.CambiarTurno();
             }
         }
