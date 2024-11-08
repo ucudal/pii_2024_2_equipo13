@@ -89,24 +89,6 @@ public abstract class Pokemon
             Console.WriteLine($"{this.Nombre} ha recibido {daño} puntos de daño. Vida actual: {this.VidaActual}");
         }
     }
-
-    /**
-     * @brief Cura al Pokémon una cantidad fija de salud.
-     */
-    public void Curar()
-    {
-        double cantidadCuracion = this.VidaMax * 0.25;
-        this.VidaActual += cantidadCuracion;
-
-        if (this.VidaActual > this.VidaMax)
-        {
-            this.VidaActual = this.VidaMax;
-        }
-
-        Console.WriteLine(
-            $"{this.Nombre} se ha curado {cantidadCuracion} puntos de vida. Vida actual: {this.VidaActual}/{this.VidaMax}");
-    }
-
     /**
      * @brief Realiza un ataque especial al Pokémon objetivo.
      * @param objetivo El Pokémon que recibirá el ataque.
