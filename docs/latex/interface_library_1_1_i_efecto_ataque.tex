@@ -1,0 +1,120 @@
+\doxysection{Library.\+IEfecto\+Ataque Interface Reference}
+\hypertarget{interface_library_1_1_i_efecto_ataque}{}\label{interface_library_1_1_i_efecto_ataque}\index{Library.IEfectoAtaque@{Library.IEfectoAtaque}}
+
+
+Interfaz que define los métodos y propiedades de un efecto de ataque especial.  
+
+
+Inheritance diagram for Library.\+IEfecto\+Ataque\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=1.320755cm]{interface_library_1_1_i_efecto_ataque}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a4888558690de01fcae86f2d893f80826}{Esta\+Activo}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo)
+\begin{DoxyCompactList}\small\item\em Verifica si el efecto está activo en el Pokémon objetivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a4465ed5050a8041f00ffe6b274e90a6c}{Aplicar\+Efecto}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo)
+\begin{DoxyCompactList}\small\item\em Aplica el efecto al Pokémon objetivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a6644c5f456a80c8696663996dd712bf3}{Remover\+Efecto}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo)
+\begin{DoxyCompactList}\small\item\em Remueve el efecto del Pokémon objetivo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+double \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a8d53004d2f4ec52768171b429ca2f9e7}{Probabilidad\+Efecto}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Probabilidad de que el efecto se active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interfaz que define los métodos y propiedades de un efecto de ataque especial. 
+
+La interfaz \doxylink{interface_library_1_1_i_efecto_ataque}{IEfecto\+Ataque} se implementa para aplicar efectos de estado en los Pokémon durante la batalla. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_library_1_1_i_efecto_ataque_a4465ed5050a8041f00ffe6b274e90a6c}\index{Library.IEfectoAtaque@{Library.IEfectoAtaque}!AplicarEfecto@{AplicarEfecto}}
+\index{AplicarEfecto@{AplicarEfecto}!Library.IEfectoAtaque@{Library.IEfectoAtaque}}
+\doxysubsubsection{\texorpdfstring{AplicarEfecto()}{AplicarEfecto()}}
+{\footnotesize\ttfamily \label{interface_library_1_1_i_efecto_ataque_a4465ed5050a8041f00ffe6b274e90a6c} 
+void Library.\+IEfecto\+Ataque.\+Aplicar\+Efecto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}}]{objetivo}{}\end{DoxyParamCaption})}
+
+
+
+Aplica el efecto al Pokémon objetivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objetivo} & El Pokémon al que se le aplicará el efecto. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_dormir_a751129c5d57a1c4e3861a146c544dad2}{Library.\+Efectos\+Ataque.\+Dormir}}, \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_envenenar_a575aafbbb3eaeb97e80ff6db722a15b6}{Library.\+Efectos\+Ataque.\+Envenenar}}, \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_paralizar_a3af67ef83f40a1fafb5d86e0c80f738a}{Library.\+Efectos\+Ataque.\+Paralizar}}, and \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_quemar_ab589c8477b7a46ca4caad65adbbf489f}{Library.\+Efectos\+Ataque.\+Quemar}}.
+
+\Hypertarget{interface_library_1_1_i_efecto_ataque_a4888558690de01fcae86f2d893f80826}\index{Library.IEfectoAtaque@{Library.IEfectoAtaque}!EstaActivo@{EstaActivo}}
+\index{EstaActivo@{EstaActivo}!Library.IEfectoAtaque@{Library.IEfectoAtaque}}
+\doxysubsubsection{\texorpdfstring{EstaActivo()}{EstaActivo()}}
+{\footnotesize\ttfamily \label{interface_library_1_1_i_efecto_ataque_a4888558690de01fcae86f2d893f80826} 
+bool Library.\+IEfecto\+Ataque.\+Esta\+Activo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}}]{objetivo}{}\end{DoxyParamCaption})}
+
+
+
+Verifica si el efecto está activo en el Pokémon objetivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objetivo} & El Pokémon que se verificará. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el efecto está activo, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_dormir_a3af7413583689c1ae268f942ba849102}{Library.\+Efectos\+Ataque.\+Dormir}}, \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_envenenar_a73dc83e4b87cf5eb94abec1c7647c777}{Library.\+Efectos\+Ataque.\+Envenenar}}, \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_paralizar_a5f9e416f3c9266c40115c3785d6944f6}{Library.\+Efectos\+Ataque.\+Paralizar}}, and \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_quemar_ab367c455df49a9a5e58b5ad411ad0d5b}{Library.\+Efectos\+Ataque.\+Quemar}}.
+
+\Hypertarget{interface_library_1_1_i_efecto_ataque_a6644c5f456a80c8696663996dd712bf3}\index{Library.IEfectoAtaque@{Library.IEfectoAtaque}!RemoverEfecto@{RemoverEfecto}}
+\index{RemoverEfecto@{RemoverEfecto}!Library.IEfectoAtaque@{Library.IEfectoAtaque}}
+\doxysubsubsection{\texorpdfstring{RemoverEfecto()}{RemoverEfecto()}}
+{\footnotesize\ttfamily \label{interface_library_1_1_i_efecto_ataque_a6644c5f456a80c8696663996dd712bf3} 
+void Library.\+IEfecto\+Ataque.\+Remover\+Efecto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}}]{objetivo}{}\end{DoxyParamCaption})}
+
+
+
+Remueve el efecto del Pokémon objetivo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objetivo} & El Pokémon al que se le removerá el efecto. \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_dormir_a2219876d3117c53dc0475a3a2bafedf8}{Library.\+Efectos\+Ataque.\+Dormir}}, \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_envenenar_aefae6be02c72b09cb0e750e7550e1638}{Library.\+Efectos\+Ataque.\+Envenenar}}, \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_paralizar_a47c7e99817379d69633a9031b247833d}{Library.\+Efectos\+Ataque.\+Paralizar}}, and \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_quemar_ad9870ea3fa8c40feb8eaa89f37dfe7a0}{Library.\+Efectos\+Ataque.\+Quemar}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_library_1_1_i_efecto_ataque_a8d53004d2f4ec52768171b429ca2f9e7}\index{Library.IEfectoAtaque@{Library.IEfectoAtaque}!ProbabilidadEfecto@{ProbabilidadEfecto}}
+\index{ProbabilidadEfecto@{ProbabilidadEfecto}!Library.IEfectoAtaque@{Library.IEfectoAtaque}}
+\doxysubsubsection{\texorpdfstring{ProbabilidadEfecto}{ProbabilidadEfecto}}
+{\footnotesize\ttfamily \label{interface_library_1_1_i_efecto_ataque_a8d53004d2f4ec52768171b429ca2f9e7} 
+double Library.\+IEfecto\+Ataque.\+Probabilidad\+Efecto\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Probabilidad de que el efecto se active. 
+
+\begin{DoxyReturn}{Returns}
+La probabilidad de activación del efecto. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_dormir_a740056a783f7d5c302b1613bc05f0270}{Library.\+Efectos\+Ataque.\+Dormir}}, \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_envenenar_ae7082f74962379f089c6f4b20e57b31e}{Library.\+Efectos\+Ataque.\+Envenenar}}, \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_paralizar_a7ca66d10603f2e5a42fc664dda486871}{Library.\+Efectos\+Ataque.\+Paralizar}}, and \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_quemar_aef2a6735c3728a6eba8cc63f5f952eea}{Library.\+Efectos\+Ataque.\+Quemar}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+proyecto\+Chatbot/src/\+Library/\+Interfaces/\mbox{\hyperlink{_i_efecto_ataque_8cs}{IEfecto\+Ataque.\+cs}}\end{DoxyCompactItemize}

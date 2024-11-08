@@ -3,53 +3,76 @@ using Library.Pokemons;
 
 namespace Library.Clases
 {
+    /**
+     * @class Turno
+     * @brief Clase que gestiona el turno de cada jugador en una batalla.
+     *
+     * La clase Turno se encarga de alternar los turnos entre dos jugadores, gestionar
+     * el estado de finalización del turno y verificar si la batalla ha terminado.
+     */
     public class Turno
     {
-        public int TurnosJugador1 { get; private set; } // Contador de turnos para el Jugador 1
-        public int TurnosJugador2 { get; private set; } // Contador de turnos para el Jugador 2
-        public Jugador JugadorActual { get; private set; } // Jugador al que le corresponde el turno actual
-        public Jugador JugadorRival { get; private set; } // Jugador que espera en este turno
-        public bool Finalizado { get; private set; } // Estado de finalización del turno
+        /** 
+         * @brief Contador de turnos para el Jugador 1.
+         */
+        public int TurnosJugador1 { get; private set; }
 
-        // Constructor que recibe dos jugadores e inicializa el turno con el Jugador 1 como el inicial
+        /**
+         * @brief Contador de turnos para el Jugador 2.
+         */
+        public int TurnosJugador2 { get; private set; }
+
+        /**
+         * @brief Jugador al que le corresponde el turno actual.
+         */
+        public Jugador JugadorActual { get; private set; }
+
+        /**
+         * @brief Jugador que espera en este turno.
+         */
+        public Jugador JugadorRival { get; private set; }
+
+        /**
+         * @brief Estado de finalización del turno.
+         */
+        public bool Finalizado { get; private set; }
+
+        /**
+         * @brief Constructor de la clase Turno.
+         *
+         * Inicializa el turno con el Jugador 1 como el jugador inicial.
+         * 
+         * @param jugador1 El primer jugador.
+         * @param jugador2 El segundo jugador.
+         */
         public Turno(Jugador jugador1, Jugador jugador2)
         {
-            this.TurnosJugador1 = 1; // Turno inicial del Jugador 1
-            this.TurnosJugador2 = 1; // Turno inicial del Jugador 2
+            this.TurnosJugador1 = 1;
+            this.TurnosJugador2 = 1;
             this.JugadorActual = jugador1;
             this.JugadorRival = jugador2;
             this.Finalizado = false;
-            
-            /*// previene excepcion de Test
-            if (jugador1.PokemonActivo == null && jugador1.Pokemons.Any())
-            {
-                // Asignar el primer Pokémon del jugador si no se ha seleccionado uno aún
-                jugador1.PokemonActivo = jugador1.Pokemons.First();
-            }
-
-            if (jugador2.PokemonActivo == null && jugador2.Pokemons.Any())
-            {
-                // Asignar el primer Pokémon del jugador si no se ha seleccionado uno aún
-                jugador2.PokemonActivo = jugador2.Pokemons.First();
-            }*/
         }
 
+        /**
+         * @brief Cambia el turno entre los jugadores.
+         *
+         * Intercambia `JugadorActual` con `JugadorRival` y aumenta el número de turno del `JugadorActual`.
+         * Lanza una excepción si los jugadores o sus Pokémon activos no están correctamente inicializados.
+         */
         public void CambiarTurno()
         {
-            // Asegurarse de que los jugadores y sus Pokémon activos estén correctamente inicializados
             if (JugadorActual == null || JugadorRival == null || JugadorActual.PokemonActivo == null || JugadorRival.PokemonActivo == null)
             {
                 throw new InvalidOperationException("Los jugadores o sus Pokémon activos no están correctamente inicializados.");
             }
-            // Cambiar turno: Intercambia JugadorActual con JugadorRival y aumenta el número de turno del JugadorActual
+
             if (Finalizado)
             {
-                // Intercambia las referencias entre los jugadores
                 Jugador temp = JugadorActual;
                 JugadorActual = JugadorRival;
                 JugadorRival = temp;
 
-                // Incrementa el número de turno del jugador actual
                 if (JugadorActual == temp)
                 {
                     TurnosJugador1++;
@@ -59,56 +82,73 @@ namespace Library.Clases
                     TurnosJugador2++;
                 }
 
-                Finalizado = false; // Marca el nuevo turno como no finalizado
+                Finalizado = false;
 
                 Console.WriteLine($"Ahora es el turno de {JugadorActual.Nombre}. Turno del jugador: {GetNumeroTurnoActual()}");
             }
         }
-        
 
+        /**
+         * @brief Marca el turno como finalizado.
+         */
         public void FinalizarTurno()
         {
-            Finalizado = true; // Marca el turno como finalizado
+            Finalizado = true;
             Console.WriteLine($"Turno finalizado para {JugadorActual.Nombre}.");
-        } 
+        }
+
+        /**
+         * @brief Valida si el ataque especial es permitido.
+         *
+         * El ataque especial solo es válido en los turnos pares del jugador actual.
+         * 
+         * @return `true` si el ataque especial es válido, `false` de lo contrario.
+         */
         public bool ValidarAtaqueEspecial()
         {
-            // Determina si el ataque especial es válido basado en el número de turnos del jugador actual
             int numeroTurno = GetNumeroTurnoActual();
             return numeroTurno % 2 == 0;
         }
 
+        /**
+         * @brief Obtiene el número de turno actual del `JugadorActual`.
+         *
+         * @return El número de turno correspondiente al `JugadorActual`.
+         */
         private int GetNumeroTurnoActual()
         {
-            // Devuelve el número de turno correspondiente al JugadorActual
             return JugadorActual == JugadorRival ? TurnosJugador2 : TurnosJugador1;
         }
 
+        /**
+         * @brief Verifica si la batalla ha finalizado.
+         *
+         * La batalla termina si alguno de los jugadores no tiene más Pokémon aptos para la batalla.
+         * 
+         * @return `true` si la batalla ha finalizado, `false` de lo contrario.
+         */
         public bool BatallaFinalizada()
         {
-            // La batalla finaliza si algún jugador no tiene más Pokémon con vida
             bool jugadorActualSinPokemon = true;
             foreach (var pokemon in JugadorActual.Pokemons)
             {
                 if (pokemon.AptoParaBatalla)
                 {
                     jugadorActualSinPokemon = false;
-                    break; // Salir del bucle si se encuentra un Pokémon apto
+                    break;
                 }
             }
 
-            // Verificar si JugadorRival no tiene Pokémon aptos para la batalla
             bool jugadorRivalSinPokemon = true;
             foreach (var pokemon in JugadorRival.Pokemons)
             {
                 if (pokemon.AptoParaBatalla)
                 {
                     jugadorRivalSinPokemon = false;
-                    break; // Salir del bucle si se encuentra un Pokémon apto
+                    break;
                 }
             }
 
-            // La batalla termina si uno de los jugadores no tiene Pokémon disponibles
             return jugadorActualSinPokemon || jugadorRivalSinPokemon;
         }
     }

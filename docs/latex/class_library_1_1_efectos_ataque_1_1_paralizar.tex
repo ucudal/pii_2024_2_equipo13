@@ -1,0 +1,156 @@
+\doxysection{Library.\+Efectos\+Ataque.\+Paralizar Class Reference}
+\hypertarget{class_library_1_1_efectos_ataque_1_1_paralizar}{}\label{class_library_1_1_efectos_ataque_1_1_paralizar}\index{Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}}
+
+
+Clase que representa el efecto de estado "{}\+Parálisis"{} en un Pokémon.  
+
+
+Inheritance diagram for Library.\+Efectos\+Ataque.\+Paralizar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_library_1_1_efectos_ataque_1_1_paralizar}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_paralizar_a22264b640cb8ebd07f9bf3884385ba19}{Paralizar}} (double probabilidad)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_library_1_1_efectos_ataque_1_1_paralizar}{Paralizar}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_paralizar_a3af67ef83f40a1fafb5d86e0c80f738a}{Aplicar\+Efecto}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo)
+\begin{DoxyCompactList}\small\item\em Aplica el efecto de parálisis al Pokémon objetivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_paralizar_a47c7e99817379d69633a9031b247833d}{Remover\+Efecto}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo)
+\begin{DoxyCompactList}\small\item\em Elimina el efecto de parálisis del Pokémon. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_paralizar_a5f9e416f3c9266c40115c3785d6944f6}{Esta\+Activo}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo)
+\begin{DoxyCompactList}\small\item\em Verifica si el efecto de parálisis sigue activo en el Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_paralizar_a454010c431385f399a2d95b7ce8d036c}{Esta\+Paralizado}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indica si el efecto de parálisis está activo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_paralizar_a7ca66d10603f2e5a42fc664dda486871}{Probabilidad\+Efecto}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Probabilidad de que el efecto de parálisis se active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque}{Library.\+IEfecto\+Ataque}}}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa el efecto de estado "{}\+Parálisis"{} en un Pokémon. 
+
+La clase \doxylink{class_library_1_1_efectos_ataque_1_1_paralizar}{Paralizar} implementa la interfaz \doxylink{interface_library_1_1_i_efecto_ataque}{IEfecto\+Ataque} y aplica el efecto de parálisis a un Pokémon, impidiéndole atacar en ciertos turnos. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_paralizar_a22264b640cb8ebd07f9bf3884385ba19}\index{Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}!Paralizar@{Paralizar}}
+\index{Paralizar@{Paralizar}!Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}}
+\doxysubsubsection{\texorpdfstring{Paralizar()}{Paralizar()}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_paralizar_a22264b640cb8ebd07f9bf3884385ba19} 
+Library.\+Efectos\+Ataque.\+Paralizar.\+Paralizar (\begin{DoxyParamCaption}\item[{double}]{probabilidad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_library_1_1_efectos_ataque_1_1_paralizar}{Paralizar}. 
+
+Inicializa el efecto de parálisis con una probabilidad de activación especificada.
+
+
+\begin{DoxyParams}{Parameters}
+{\em probabilidad} & La probabilidad de que el efecto de parálisis se active. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_paralizar_a3af67ef83f40a1fafb5d86e0c80f738a}\index{Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}!AplicarEfecto@{AplicarEfecto}}
+\index{AplicarEfecto@{AplicarEfecto}!Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}}
+\doxysubsubsection{\texorpdfstring{AplicarEfecto()}{AplicarEfecto()}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_paralizar_a3af67ef83f40a1fafb5d86e0c80f738a} 
+void Library.\+Efectos\+Ataque.\+Paralizar.\+Aplicar\+Efecto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}}]{objetivo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Aplica el efecto de parálisis al Pokémon objetivo. 
+
+Pone al Pokémon en estado de parálisis, afectando su capacidad de atacar.
+
+
+\begin{DoxyParams}{Parameters}
+{\em objetivo} & El Pokémon que recibirá el efecto de parálisis. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a4465ed5050a8041f00ffe6b274e90a6c}{Library.\+IEfecto\+Ataque}}.
+
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_paralizar_a5f9e416f3c9266c40115c3785d6944f6}\index{Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}!EstaActivo@{EstaActivo}}
+\index{EstaActivo@{EstaActivo}!Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}}
+\doxysubsubsection{\texorpdfstring{EstaActivo()}{EstaActivo()}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_paralizar_a5f9e416f3c9266c40115c3785d6944f6} 
+bool Library.\+Efectos\+Ataque.\+Paralizar.\+Esta\+Activo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}}]{objetivo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el efecto de parálisis sigue activo en el Pokémon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objetivo} & El Pokémon que se verificará. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el efecto de parálisis está activo, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a4888558690de01fcae86f2d893f80826}{Library.\+IEfecto\+Ataque}}.
+
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_paralizar_a47c7e99817379d69633a9031b247833d}\index{Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}!RemoverEfecto@{RemoverEfecto}}
+\index{RemoverEfecto@{RemoverEfecto}!Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}}
+\doxysubsubsection{\texorpdfstring{RemoverEfecto()}{RemoverEfecto()}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_paralizar_a47c7e99817379d69633a9031b247833d} 
+void Library.\+Efectos\+Ataque.\+Paralizar.\+Remover\+Efecto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}}]{objetivo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina el efecto de parálisis del Pokémon. 
+
+Permite que el Pokémon ataque nuevamente sin la restricción de la parálisis.
+
+
+\begin{DoxyParams}{Parameters}
+{\em objetivo} & El Pokémon al que se le removerá el efecto de parálisis. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a6644c5f456a80c8696663996dd712bf3}{Library.\+IEfecto\+Ataque}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_paralizar_a454010c431385f399a2d95b7ce8d036c}\index{Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}!EstaParalizado@{EstaParalizado}}
+\index{EstaParalizado@{EstaParalizado}!Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}}
+\doxysubsubsection{\texorpdfstring{EstaParalizado}{EstaParalizado}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_paralizar_a454010c431385f399a2d95b7ce8d036c} 
+bool Library.\+Efectos\+Ataque.\+Paralizar.\+Esta\+Paralizado\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indica si el efecto de parálisis está activo. 
+
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_paralizar_a7ca66d10603f2e5a42fc664dda486871}\index{Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}!ProbabilidadEfecto@{ProbabilidadEfecto}}
+\index{ProbabilidadEfecto@{ProbabilidadEfecto}!Library.EfectosAtaque.Paralizar@{Library.EfectosAtaque.Paralizar}}
+\doxysubsubsection{\texorpdfstring{ProbabilidadEfecto}{ProbabilidadEfecto}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_paralizar_a7ca66d10603f2e5a42fc664dda486871} 
+double Library.\+Efectos\+Ataque.\+Paralizar.\+Probabilidad\+Efecto\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Probabilidad de que el efecto de parálisis se active. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a8d53004d2f4ec52768171b429ca2f9e7}{Library.\+IEfecto\+Ataque}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+proyecto\+Chatbot/src/\+Library/\+Efectos\+Ataque/\mbox{\hyperlink{_paralizar_8cs}{Paralizar.\+cs}}\end{DoxyCompactItemize}

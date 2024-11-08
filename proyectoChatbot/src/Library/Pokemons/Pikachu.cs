@@ -4,15 +4,27 @@ using Library.TiposPokemon;
 
 namespace Library.Pokemons;
 
+/**
+ * @class Pikachu
+ * @brief Representa el Pokémon Pikachu, con sus atributos y ataques específicos.
+ *
+ * La clase Pikachu hereda de la clase base Pokemon y define los valores específicos de Pikachu,
+ * como su nombre, tipo, vida máxima y una lista de ataques básicos y especiales.
+ */
 public class Pikachu : Pokemon
 {
-    //Constructor 
+    /**
+     * @brief Constructor de la clase Pikachu.
+     *
+     * Inicializa el Pokémon Pikachu con su nombre, tipo, vida máxima y una lista de ataques
+     * básicos y especiales disponibles.
+     */
     public Pikachu()
     {
         this.Nombre = "Pikachu";
-        this.VidaActual = VidaMax;
         this.VidaMax = 100;
-        this.Tipo =  new Electrico();
+        this.VidaActual = VidaMax;
+        this.Tipo = new Electrico();
         this.AptoParaBatalla = true;
         this.AtaquesBasicos = new Dictionary<int, IAtaque>
         {

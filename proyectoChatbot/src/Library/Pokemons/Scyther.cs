@@ -4,15 +4,27 @@ using Library.TiposPokemon;
 
 namespace Library.Pokemons;
 
+/**
+ * @class Scyther
+ * @brief Representa el Pokémon Scyther, con sus atributos y ataques específicos.
+ *
+ * La clase Scyther hereda de la clase base Pokemon y define los valores específicos de Scyther,
+ * como su nombre, tipo, vida máxima y una lista de ataques básicos y especiales.
+ */
 public class Scyther : Pokemon
 {
-    //Constructor 
+    /**
+     * @brief Constructor de la clase Scyther.
+     *
+     * Inicializa el Pokémon Scyther con su nombre, tipo, vida máxima y una lista de ataques
+     * básicos y especiales disponibles.
+     */
     public Scyther()
     {
         this.Nombre = "Scyther";
-        this.VidaActual = VidaMax;
         this.VidaMax = 100;
-        this.Tipo =  new Bicho();
+        this.VidaActual = VidaMax;
+        this.Tipo = new Bicho();
         this.AptoParaBatalla = true;
         this.AtaquesBasicos = new Dictionary<int, IAtaque>
         {

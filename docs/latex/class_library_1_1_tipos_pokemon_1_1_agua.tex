@@ -1,0 +1,143 @@
+\doxysection{Library.\+Tipos\+Pokemon.\+Agua Class Reference}
+\hypertarget{class_library_1_1_tipos_pokemon_1_1_agua}{}\label{class_library_1_1_tipos_pokemon_1_1_agua}\index{Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}}
+
+
+Representa el tipo de Pokémon "{}\+Agua"{} y define sus interacciones con otros tipos.  
+
+
+Inheritance diagram for Library.\+Tipos\+Pokemon.\+Agua\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_library_1_1_tipos_pokemon_1_1_agua}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_agua_a728a58a5d81a3782f2e1cfba027ce138}{Agua}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_agua_abf9ac556769e7cbe54310372a5d741ed}{Inmune\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua} es inmune a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_agua_acf884fc8cf76111de74c1584b5c15eb9}{Resistente\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua} es resistente a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_agua_ad8c934914ff4611d23e4cea3c0862f9d}{Debil\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua} es débil a otro tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_agua_a701625e616a08517a19fd3a931244bf5}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del tipo de Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_itipo}{Library.\+Itipo}}}
+
+
+\doxysubsection{Detailed Description}
+Representa el tipo de Pokémon "{}\+Agua"{} y define sus interacciones con otros tipos. 
+
+La clase \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua} implementa la interfaz \doxylink{interface_library_1_1_itipo}{Itipo} y proporciona las propiedades y métodos para verificar las inmunidades, resistencias y debilidades del tipo \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_library_1_1_tipos_pokemon_1_1_agua_a728a58a5d81a3782f2e1cfba027ce138}\index{Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}!Agua@{Agua}}
+\index{Agua@{Agua}!Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}}
+\doxysubsubsection{\texorpdfstring{Agua()}{Agua()}}
+{\footnotesize\ttfamily \label{class_library_1_1_tipos_pokemon_1_1_agua_a728a58a5d81a3782f2e1cfba027ce138} 
+Library.\+Tipos\+Pokemon.\+Agua.\+Agua (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua}. 
+
+Inicializa el nombre del tipo como "{}\+Agua"{}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_library_1_1_tipos_pokemon_1_1_agua_ad8c934914ff4611d23e4cea3c0862f9d}\index{Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}!DebilContra@{DebilContra}}
+\index{DebilContra@{DebilContra}!Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}}
+\doxysubsubsection{\texorpdfstring{DebilContra()}{DebilContra()}}
+{\footnotesize\ttfamily \label{class_library_1_1_tipos_pokemon_1_1_agua_ad8c934914ff4611d23e4cea3c0862f9d} 
+bool Library.\+Tipos\+Pokemon.\+Agua.\+Debil\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua} es débil a otro tipo. 
+
+El tipo \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua} es débil a \doxylink{class_planta}{Planta} y Eléctrico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El otro tipo contra el que se verificará la debilidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el otro tipo es \doxylink{class_planta}{Planta} o Eléctrico, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}{Library.\+Itipo}}.
+
+\Hypertarget{class_library_1_1_tipos_pokemon_1_1_agua_abf9ac556769e7cbe54310372a5d741ed}\index{Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}!InmuneContra@{InmuneContra}}
+\index{InmuneContra@{InmuneContra}!Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}}
+\doxysubsubsection{\texorpdfstring{InmuneContra()}{InmuneContra()}}
+{\footnotesize\ttfamily \label{class_library_1_1_tipos_pokemon_1_1_agua_abf9ac556769e7cbe54310372a5d741ed} 
+bool Library.\+Tipos\+Pokemon.\+Agua.\+Inmune\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua} es inmune a otro tipo. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El otro tipo contra el que se verificará la inmunidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} siempre, ya que el tipo \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua} no es inmune a ningún tipo. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}{Library.\+Itipo}}.
+
+\Hypertarget{class_library_1_1_tipos_pokemon_1_1_agua_acf884fc8cf76111de74c1584b5c15eb9}\index{Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}!ResistenteContra@{ResistenteContra}}
+\index{ResistenteContra@{ResistenteContra}!Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}}
+\doxysubsubsection{\texorpdfstring{ResistenteContra()}{ResistenteContra()}}
+{\footnotesize\ttfamily \label{class_library_1_1_tipos_pokemon_1_1_agua_acf884fc8cf76111de74c1584b5c15eb9} 
+bool Library.\+Tipos\+Pokemon.\+Agua.\+Resistente\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua} es resistente a otro tipo. 
+
+El tipo \doxylink{class_library_1_1_tipos_pokemon_1_1_agua}{Agua} es resistente a \doxylink{class_fuego}{Fuego} y \doxylink{class_tierra}{Tierra}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El otro tipo contra el que se verificará la resistencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el otro tipo es \doxylink{class_fuego}{Fuego} o \doxylink{class_tierra}{Tierra}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}{Library.\+Itipo}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_library_1_1_tipos_pokemon_1_1_agua_a701625e616a08517a19fd3a931244bf5}\index{Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Library.TiposPokemon.Agua@{Library.TiposPokemon.Agua}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{class_library_1_1_tipos_pokemon_1_1_agua_a701625e616a08517a19fd3a931244bf5} 
+string Library.\+Tipos\+Pokemon.\+Agua.\+Nombre\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del tipo de Pokémon. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}{Library.\+Itipo}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+proyecto\+Chatbot/src/\+Library/\+Tipos\+Pokemon/\mbox{\hyperlink{_agua_8cs}{Agua.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,156 @@
+\doxysection{Library.\+Efectos\+Ataque.\+Quemar Class Reference}
+\hypertarget{class_library_1_1_efectos_ataque_1_1_quemar}{}\label{class_library_1_1_efectos_ataque_1_1_quemar}\index{Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}}
+
+
+Clase que representa el efecto de estado "{}\+Quemadura"{} en un Pokémon.  
+
+
+Inheritance diagram for Library.\+Efectos\+Ataque.\+Quemar\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_library_1_1_efectos_ataque_1_1_quemar}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_quemar_a2cdc454f29c29fff980d4530a24286c9}{Quemar}} (double probabilidad)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_library_1_1_efectos_ataque_1_1_quemar}{Quemar}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_quemar_ab589c8477b7a46ca4caad65adbbf489f}{Aplicar\+Efecto}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo)
+\begin{DoxyCompactList}\small\item\em Aplica el efecto de quemadura al Pokémon objetivo. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_quemar_ad9870ea3fa8c40feb8eaa89f37dfe7a0}{Remover\+Efecto}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo)
+\begin{DoxyCompactList}\small\item\em Elimina el efecto de quemadura del Pokémon. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_quemar_ab367c455df49a9a5e58b5ad411ad0d5b}{Esta\+Activo}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo)
+\begin{DoxyCompactList}\small\item\em Verifica si el efecto de quemadura sigue activo en el Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_quemar_abd5165d7724a6c97f159dc8a58d53c1f}{Esta\+Quemado}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indica si el efecto de quemadura está activo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_library_1_1_efectos_ataque_1_1_quemar_aef2a6735c3728a6eba8cc63f5f952eea}{Probabilidad\+Efecto}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Probabilidad de que el efecto de quemadura se active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque}{Library.\+IEfecto\+Ataque}}}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa el efecto de estado "{}\+Quemadura"{} en un Pokémon. 
+
+La clase \doxylink{class_library_1_1_efectos_ataque_1_1_quemar}{Quemar} implementa la interfaz \doxylink{interface_library_1_1_i_efecto_ataque}{IEfecto\+Ataque} y aplica el efecto de quemadura a un Pokémon, causando daño adicional en cada turno. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_quemar_a2cdc454f29c29fff980d4530a24286c9}\index{Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}!Quemar@{Quemar}}
+\index{Quemar@{Quemar}!Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}}
+\doxysubsubsection{\texorpdfstring{Quemar()}{Quemar()}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_quemar_a2cdc454f29c29fff980d4530a24286c9} 
+Library.\+Efectos\+Ataque.\+Quemar.\+Quemar (\begin{DoxyParamCaption}\item[{double}]{probabilidad}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_library_1_1_efectos_ataque_1_1_quemar}{Quemar}. 
+
+Inicializa el efecto de quemadura con una probabilidad de activación especificada.
+
+
+\begin{DoxyParams}{Parameters}
+{\em probabilidad} & La probabilidad de que el efecto de quemadura se active. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_quemar_ab589c8477b7a46ca4caad65adbbf489f}\index{Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}!AplicarEfecto@{AplicarEfecto}}
+\index{AplicarEfecto@{AplicarEfecto}!Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}}
+\doxysubsubsection{\texorpdfstring{AplicarEfecto()}{AplicarEfecto()}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_quemar_ab589c8477b7a46ca4caad65adbbf489f} 
+void Library.\+Efectos\+Ataque.\+Quemar.\+Aplicar\+Efecto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}}]{objetivo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Aplica el efecto de quemadura al Pokémon objetivo. 
+
+Pone al Pokémon en estado quemado, causando daño adicional en cada turno.
+
+
+\begin{DoxyParams}{Parameters}
+{\em objetivo} & El Pokémon que recibirá el efecto de quemadura. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a4465ed5050a8041f00ffe6b274e90a6c}{Library.\+IEfecto\+Ataque}}.
+
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_quemar_ab367c455df49a9a5e58b5ad411ad0d5b}\index{Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}!EstaActivo@{EstaActivo}}
+\index{EstaActivo@{EstaActivo}!Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}}
+\doxysubsubsection{\texorpdfstring{EstaActivo()}{EstaActivo()}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_quemar_ab367c455df49a9a5e58b5ad411ad0d5b} 
+bool Library.\+Efectos\+Ataque.\+Quemar.\+Esta\+Activo (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}}]{objetivo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el efecto de quemadura sigue activo en el Pokémon. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em objetivo} & El Pokémon que se verificará. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el efecto de quemadura está activo, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a4888558690de01fcae86f2d893f80826}{Library.\+IEfecto\+Ataque}}.
+
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_quemar_ad9870ea3fa8c40feb8eaa89f37dfe7a0}\index{Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}!RemoverEfecto@{RemoverEfecto}}
+\index{RemoverEfecto@{RemoverEfecto}!Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}}
+\doxysubsubsection{\texorpdfstring{RemoverEfecto()}{RemoverEfecto()}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_quemar_ad9870ea3fa8c40feb8eaa89f37dfe7a0} 
+void Library.\+Efectos\+Ataque.\+Quemar.\+Remover\+Efecto (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}}]{objetivo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina el efecto de quemadura del Pokémon. 
+
+Permite que el Pokémon deje de recibir daño adicional por quemadura.
+
+
+\begin{DoxyParams}{Parameters}
+{\em objetivo} & El Pokémon al que se le removerá el efecto de quemadura. \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a6644c5f456a80c8696663996dd712bf3}{Library.\+IEfecto\+Ataque}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_quemar_abd5165d7724a6c97f159dc8a58d53c1f}\index{Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}!EstaQuemado@{EstaQuemado}}
+\index{EstaQuemado@{EstaQuemado}!Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}}
+\doxysubsubsection{\texorpdfstring{EstaQuemado}{EstaQuemado}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_quemar_abd5165d7724a6c97f159dc8a58d53c1f} 
+bool Library.\+Efectos\+Ataque.\+Quemar.\+Esta\+Quemado\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Indica si el efecto de quemadura está activo. 
+
+\Hypertarget{class_library_1_1_efectos_ataque_1_1_quemar_aef2a6735c3728a6eba8cc63f5f952eea}\index{Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}!ProbabilidadEfecto@{ProbabilidadEfecto}}
+\index{ProbabilidadEfecto@{ProbabilidadEfecto}!Library.EfectosAtaque.Quemar@{Library.EfectosAtaque.Quemar}}
+\doxysubsubsection{\texorpdfstring{ProbabilidadEfecto}{ProbabilidadEfecto}}
+{\footnotesize\ttfamily \label{class_library_1_1_efectos_ataque_1_1_quemar_aef2a6735c3728a6eba8cc63f5f952eea} 
+double Library.\+Efectos\+Ataque.\+Quemar.\+Probabilidad\+Efecto\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Probabilidad de que el efecto de quemadura se active. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_i_efecto_ataque_a8d53004d2f4ec52768171b429ca2f9e7}{Library.\+IEfecto\+Ataque}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+proyecto\+Chatbot/src/\+Library/\+Efectos\+Ataque/\mbox{\hyperlink{_quemar_8cs}{Quemar.\+cs}}\end{DoxyCompactItemize}

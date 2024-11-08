@@ -1,0 +1,145 @@
+\doxysection{Veneno Class Reference}
+\hypertarget{class_veneno}{}\label{class_veneno}\index{Veneno@{Veneno}}
+
+
+Representa el tipo de Pokémon "{}\+Veneno"{} y define sus interacciones con otros tipos.  
+
+
+Inheritance diagram for Veneno\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_veneno}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_veneno_a67f21a3408e8a6c14530cd6e35692b48}{Veneno}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_veneno}{Veneno}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_veneno_a5d1a764196f2c12d08635d02312d3dc3}{Inmune\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_veneno}{Veneno} es inmune a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_veneno_aaf7218ee29b8de488670ebe51abbbc0b}{Resistente\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_veneno}{Veneno} es resistente a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_veneno_a50a360be2e6dc94608b940d8041b900d}{Debil\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_veneno}{Veneno} es débil a otro tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_veneno_a965a45f7c2de61e8e65d860bc6cbe2fc}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del tipo de Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_itipo}{Library.\+Itipo}}}
+
+
+\doxysubsection{Detailed Description}
+Representa el tipo de Pokémon "{}\+Veneno"{} y define sus interacciones con otros tipos. 
+
+La clase \doxylink{class_veneno}{Veneno} implementa la interfaz Itipo y proporciona las propiedades y métodos para verificar las inmunidades, resistencias y debilidades del tipo \doxylink{class_veneno}{Veneno}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_veneno_a67f21a3408e8a6c14530cd6e35692b48}\index{Veneno@{Veneno}!Veneno@{Veneno}}
+\index{Veneno@{Veneno}!Veneno@{Veneno}}
+\doxysubsubsection{\texorpdfstring{Veneno()}{Veneno()}}
+{\footnotesize\ttfamily \label{class_veneno_a67f21a3408e8a6c14530cd6e35692b48} 
+Veneno.\+Veneno (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_veneno}{Veneno}. 
+
+Inicializa el nombre del tipo como "{}\+Veneno"{}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_veneno_a50a360be2e6dc94608b940d8041b900d}\index{Veneno@{Veneno}!DebilContra@{DebilContra}}
+\index{DebilContra@{DebilContra}!Veneno@{Veneno}}
+\doxysubsubsection{\texorpdfstring{DebilContra()}{DebilContra()}}
+{\footnotesize\ttfamily \label{class_veneno_a50a360be2e6dc94608b940d8041b900d} 
+bool Veneno.\+Debil\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_veneno}{Veneno} es débil a otro tipo. 
+
+El tipo \doxylink{class_veneno}{Veneno} es débil a \doxylink{class_tierra}{Tierra} y Psíquico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la debilidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_tierra}{Tierra} o Psíquico, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}{Library.\+Itipo}}.
+
+\Hypertarget{class_veneno_a5d1a764196f2c12d08635d02312d3dc3}\index{Veneno@{Veneno}!InmuneContra@{InmuneContra}}
+\index{InmuneContra@{InmuneContra}!Veneno@{Veneno}}
+\doxysubsubsection{\texorpdfstring{InmuneContra()}{InmuneContra()}}
+{\footnotesize\ttfamily \label{class_veneno_a5d1a764196f2c12d08635d02312d3dc3} 
+bool Veneno.\+Inmune\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_veneno}{Veneno} es inmune a otro tipo. 
+
+El tipo \doxylink{class_veneno}{Veneno} no es inmune a ningún tipo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la inmunidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} siempre, ya que el tipo \doxylink{class_veneno}{Veneno} no es inmune a ningún tipo. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}{Library.\+Itipo}}.
+
+\Hypertarget{class_veneno_aaf7218ee29b8de488670ebe51abbbc0b}\index{Veneno@{Veneno}!ResistenteContra@{ResistenteContra}}
+\index{ResistenteContra@{ResistenteContra}!Veneno@{Veneno}}
+\doxysubsubsection{\texorpdfstring{ResistenteContra()}{ResistenteContra()}}
+{\footnotesize\ttfamily \label{class_veneno_aaf7218ee29b8de488670ebe51abbbc0b} 
+bool Veneno.\+Resistente\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_veneno}{Veneno} es resistente a otro tipo. 
+
+El tipo \doxylink{class_veneno}{Veneno} es resistente a \doxylink{class_planta}{Planta}, \doxylink{class_hada}{Hada}, \doxylink{class_bicho}{Bicho} y \doxylink{class_veneno}{Veneno}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la resistencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_planta}{Planta}, \doxylink{class_hada}{Hada}, \doxylink{class_bicho}{Bicho} o \doxylink{class_veneno}{Veneno}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}{Library.\+Itipo}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_veneno_a965a45f7c2de61e8e65d860bc6cbe2fc}\index{Veneno@{Veneno}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Veneno@{Veneno}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{class_veneno_a965a45f7c2de61e8e65d860bc6cbe2fc} 
+string Veneno.\+Nombre\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del tipo de Pokémon. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}{Library.\+Itipo}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+proyecto\+Chatbot/src/\+Library/\+Tipos\+Pokemon/\mbox{\hyperlink{_veneno_8cs}{Veneno.\+cs}}\end{DoxyCompactItemize}

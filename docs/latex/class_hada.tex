@@ -1,0 +1,145 @@
+\doxysection{Hada Class Reference}
+\hypertarget{class_hada}{}\label{class_hada}\index{Hada@{Hada}}
+
+
+Representa el tipo de Pokémon "{}\+Hada"{} y define sus interacciones con otros tipos.  
+
+
+Inheritance diagram for Hada\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_hada}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_hada_a695d20787bef725e465891926e9dc515}{Hada}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_hada}{Hada}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_hada_a70c6cf3b17ae3a562f468874016f6305}{Inmune\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_hada}{Hada} es inmune a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_hada_a5da48e8214a5513e32abff50bb84f4d8}{Resistente\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_hada}{Hada} es resistente a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_hada_a18983b39bf3ff0b07cc0036821d0d5a7}{Debil\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_hada}{Hada} es débil a otro tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_hada_ab101cc81fb43dc089a6c0a58c5294902}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del tipo de Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_itipo}{Library.\+Itipo}}}
+
+
+\doxysubsection{Detailed Description}
+Representa el tipo de Pokémon "{}\+Hada"{} y define sus interacciones con otros tipos. 
+
+La clase \doxylink{class_hada}{Hada} implementa la interfaz Itipo y proporciona las propiedades y métodos para verificar las inmunidades, resistencias y debilidades del tipo \doxylink{class_hada}{Hada}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_hada_a695d20787bef725e465891926e9dc515}\index{Hada@{Hada}!Hada@{Hada}}
+\index{Hada@{Hada}!Hada@{Hada}}
+\doxysubsubsection{\texorpdfstring{Hada()}{Hada()}}
+{\footnotesize\ttfamily \label{class_hada_a695d20787bef725e465891926e9dc515} 
+Hada.\+Hada (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_hada}{Hada}. 
+
+Inicializa el nombre del tipo como "{}\+Hada"{}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_hada_a18983b39bf3ff0b07cc0036821d0d5a7}\index{Hada@{Hada}!DebilContra@{DebilContra}}
+\index{DebilContra@{DebilContra}!Hada@{Hada}}
+\doxysubsubsection{\texorpdfstring{DebilContra()}{DebilContra()}}
+{\footnotesize\ttfamily \label{class_hada_a18983b39bf3ff0b07cc0036821d0d5a7} 
+bool Hada.\+Debil\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_hada}{Hada} es débil a otro tipo. 
+
+El tipo \doxylink{class_hada}{Hada} es débil a \doxylink{class_veneno}{Veneno}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la debilidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_veneno}{Veneno}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}{Library.\+Itipo}}.
+
+\Hypertarget{class_hada_a70c6cf3b17ae3a562f468874016f6305}\index{Hada@{Hada}!InmuneContra@{InmuneContra}}
+\index{InmuneContra@{InmuneContra}!Hada@{Hada}}
+\doxysubsubsection{\texorpdfstring{InmuneContra()}{InmuneContra()}}
+{\footnotesize\ttfamily \label{class_hada_a70c6cf3b17ae3a562f468874016f6305} 
+bool Hada.\+Inmune\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_hada}{Hada} es inmune a otro tipo. 
+
+El tipo \doxylink{class_hada}{Hada} no es inmune a ningún tipo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la inmunidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} siempre, ya que el tipo \doxylink{class_hada}{Hada} no es inmune a ningún tipo. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}{Library.\+Itipo}}.
+
+\Hypertarget{class_hada_a5da48e8214a5513e32abff50bb84f4d8}\index{Hada@{Hada}!ResistenteContra@{ResistenteContra}}
+\index{ResistenteContra@{ResistenteContra}!Hada@{Hada}}
+\doxysubsubsection{\texorpdfstring{ResistenteContra()}{ResistenteContra()}}
+{\footnotesize\ttfamily \label{class_hada_a5da48e8214a5513e32abff50bb84f4d8} 
+bool Hada.\+Resistente\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_hada}{Hada} es resistente a otro tipo. 
+
+El tipo \doxylink{class_hada}{Hada} es resistente a \doxylink{class_lucha}{Lucha} y \doxylink{class_bicho}{Bicho}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la resistencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_lucha}{Lucha} o \doxylink{class_bicho}{Bicho}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}{Library.\+Itipo}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_hada_ab101cc81fb43dc089a6c0a58c5294902}\index{Hada@{Hada}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Hada@{Hada}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{class_hada_ab101cc81fb43dc089a6c0a58c5294902} 
+string Hada.\+Nombre\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del tipo de Pokémon. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}{Library.\+Itipo}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+proyecto\+Chatbot/src/\+Library/\+Tipos\+Pokemon/\mbox{\hyperlink{_hada_8cs}{Hada.\+cs}}\end{DoxyCompactItemize}

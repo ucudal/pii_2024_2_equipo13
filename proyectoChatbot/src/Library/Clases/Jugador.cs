@@ -2,27 +2,51 @@ using Library.Items;
 
 namespace Library.Clases;
 /// <summary>
-/// Representa un jugador en el juego de Pokemón
+/// Representa un jugador en el juego de Pokémon.
 /// </summary>
 public class Jugador
 {
-    // Lista de Pokemón del jugador
+    /// <summary>
+    /// Lista de Pokémon del jugador.
+    /// </summary>
     private List<Pokemon> pokemons;
-    // Lista de items del jugador
+
+    /// <summary>
+    /// Lista de ítems del jugador.
+    /// </summary>
     private List<IItem> itemsJugador;
-    // Getter y settes para la lista de items del jugador
+
+    /// <summary>
+    /// Obtiene o establece la lista de ítems del jugador.
+    /// </summary>
     public List<IItem> ItemsJugador
     {
         get { return itemsJugador; }
         set { itemsJugador = value; }
     }
-    // Getter y setter para la lista de Pokemón del jugador
-    public List<Pokemon> Pokemons { get { return pokemons; } set { pokemons = value; } } 
-    // Pokemón activo del jugador
+
+    /// <summary>
+    /// Obtiene o establece la lista de Pokémon del jugador.
+    /// </summary>
+    public List<Pokemon> Pokemons
+    {
+        get { return pokemons; }
+        set { pokemons = value; }
+    }
+
+    /// <summary>
+    /// Pokémon activo del jugador.
+    /// </summary>
     private Pokemon pokemonActivo;
-    // Nombre del jugador
-    public string Nombre { get; } 
-    // Getter y setter para el Pokemón activo del jugador
+
+    /// <summary>
+    /// Nombre del jugador.
+    /// </summary>
+    public string Nombre { get; }
+
+    /// <summary>
+    /// Obtiene o establece el Pokémon activo del jugador.
+    /// </summary>
     public Pokemon PokemonActivo
     {
         get
@@ -37,13 +61,16 @@ public class Jugador
         set { pokemonActivo = value; }
     }
 
-    //constructor del jugador
+    /// <summary>
+    /// Constructor de la clase Jugador.
+    /// </summary>
+    /// <param name="nombre">El nombre del jugador.</param>
     public Jugador(string nombre)
     {
         this.Nombre = nombre;
         this.pokemons = new List<Pokemon>();
         this.PokemonActivo = this.pokemons.FirstOrDefault();
-        this.itemsJugador = new List<IItem>(); 
+        this.itemsJugador = new List<IItem>();
         this.itemsJugador.Add(new Revivir());
         this.itemsJugador.Add(new CuraTotal());
         this.itemsJugador.Add(new CuraTotal());
@@ -51,9 +78,14 @@ public class Jugador
         {
             this.itemsJugador.Add(new Superpocion());
         }
-        /*Constructor del objeto jugador, que establece el nombre del jugador, y incializa una lista vacia.
-         que contendra los pokemons del jugador*/
+        /* Constructor del objeto Jugador, que establece el nombre del jugador,
+         * inicializa una lista vacía que contendrá los Pokémon del jugador. */
     }
+
+    /// <summary>
+    /// Realiza un ataque al Pokémon activo del jugador oponente.
+    /// </summary>
+    /// <param name="oponente">El jugador oponente al que se atacará.</param>
     public void Atacar(Jugador oponente)
     {
         if (!PokemonActivo.AptoParaBatalla)
@@ -61,7 +93,7 @@ public class Jugador
             Console.WriteLine($"{Nombre} no tiene un Pokémon apto para atacar.");
             return;
         }
-        
+
         Console.WriteLine($"¿Qué ataque deseas realizar {Nombre}?\n1- Ataque Básico\n2- Ataque Especial");
         string opcion = Console.ReadLine();
         while (opcion != "1" && opcion != "2")
@@ -69,7 +101,6 @@ public class Jugador
             Console.WriteLine($"¿Qué ataque deseas realizar {Nombre}?\n1- Ataque Básico\n2- Ataque Especial");
             string lectura = Console.ReadLine();
             opcion = (lectura == "1" || lectura == "2") ? lectura : opcion;
-
         }
         Pokemon objetivo = oponente.PokemonActivo;
 
@@ -91,7 +122,7 @@ public class Jugador
             }
             catch (ArgumentOutOfRangeException)
             {
-                Console.WriteLine("Se selecciono, un ataque no existente.Turno perdido");
+                Console.WriteLine("Se seleccionó un ataque no existente. Turno perdido.");
             }
         }
         else if (opcion == "2")
@@ -111,87 +142,92 @@ public class Jugador
             }
             catch (ArgumentOutOfRangeException)
             {
-                Console.WriteLine("Se selecciono, un ataque no existente.Turno perdido");
+                Console.WriteLine("Se seleccionó un ataque no existente. Turno perdido.");
             }
         }
     }
-    
+
+    /// <summary>
+    /// Usa un ítem para curar a un Pokémon del jugador.
+    /// </summary>
     public void UsarItem()
+    {
+        Console.WriteLine("¿Qué ítem desea usar para curar a su Pokémon?\n 1-Superpoción.\n 2-Revivir.\n 3-Cura Total");
+        string opcion = Console.ReadLine();
+        if (opcion == "1")
         {
-            Console.WriteLine("¿Que item desea usar para curar a su pokemon?\n 1-Superpocion.\n 2-Revivir.\n 3-Cura Total");
-            string opcion = Console.ReadLine();
-            if (opcion == "1")
-            {
-                    Console.WriteLine("¿A que pokemon desea darle la superpocion?");
-                    string nombrePokemon = Console.ReadLine();
-                    Pokemon pokemonSeleccionado = this.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
-                    IItem superPocion = this.ItemsJugador.FirstOrDefault(item => item is Superpocion);
+            Console.WriteLine("¿A qué Pokémon desea darle la superpoción?");
+            string nombrePokemon = Console.ReadLine();
+            Pokemon pokemonSeleccionado = this.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+            IItem superPocion = this.ItemsJugador.FirstOrDefault(item => item is Superpocion);
 
-                if (superPocion == null)
-                {
-                    Console.WriteLine("No quedan Super Pociones en la lista de items.");
-                }
-                
-                else if (pokemonSeleccionado != null)
-                {
-                    pokemonSeleccionado.VidaActual += 70;
-                    this.ItemsJugador.Remove(superPocion);
-                    Console.WriteLine($"La superpoción fue usada en {pokemonSeleccionado.Nombre}.");
-                }
-                else
-                {
-                    Console.WriteLine("Pokémon no encontrado.");
-                }
-            }
-            else if (opcion == "2")
+            if (superPocion == null)
             {
-                Console.WriteLine("¿A que pokemon desea darle el Revivir?");
-                string nombrePokemon = Console.ReadLine();
-                IItem revivir = this.ItemsJugador.FirstOrDefault(item => item is Revivir);
-                if (revivir == null)
-                {
-                    Console.WriteLine("No quedan items Revivir en la lista.");
-                }
-                else
-                {
-                    Pokemon pokemonSeleccionado = this.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
-                    if (this.Pokemons.Contains(pokemonSeleccionado))
-                    {
-                        if (pokemonSeleccionado.AptoParaBatalla == false)
-                        {
-                            pokemonSeleccionado.AptoParaBatalla = true;
-                            pokemonSeleccionado.VidaActual = pokemonSeleccionado.VidaMax * 0.5;
-                            this.ItemsJugador.Remove(revivir);
-                            Console.WriteLine($"El item Revivir ha sido usado para {pokemonSeleccionado}.");
-
-                        }
-                        else
-                        {
-                            Console.WriteLine($"{pokemonSeleccionado} esta vivo, no es posible usar el item Revivir");
-                        }
-                    }
-                }
-                
+                Console.WriteLine("No quedan Super Pociones en la lista de ítems.");
             }
-            else if (opcion=="3")
+            else if (pokemonSeleccionado != null)
             {
-                Console.WriteLine("¿A que pokemon desea darle la Cura Total?");
-                string nombrePokemon = Console.ReadLine();
+                pokemonSeleccionado.VidaActual += 70;
+                this.ItemsJugador.Remove(superPocion);
+                Console.WriteLine($"La superpoción fue usada en {pokemonSeleccionado.Nombre}.");
+            }
+            else
+            {
+                Console.WriteLine("Pokémon no encontrado.");
+            }
+        }
+        else if (opcion == "2")
+        {
+            Console.WriteLine("¿A qué Pokémon desea darle el Revivir?");
+            string nombrePokemon = Console.ReadLine();
+            IItem revivir = this.ItemsJugador.FirstOrDefault(item => item is Revivir);
+            if (revivir == null)
+            {
+                Console.WriteLine("No quedan ítems Revivir en la lista.");
+            }
+            else
+            {
                 Pokemon pokemonSeleccionado = this.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
-                IItem curaTotal = this.ItemsJugador.FirstOrDefault(item => item is CuraTotal);
-                if (curaTotal == null)
+                if (this.Pokemons.Contains(pokemonSeleccionado))
                 {
-                    Console.WriteLine("No quedan items Cura Total en la lista.");
-                }
-                else
-                {
-                    pokemonSeleccionado.VidaActual = pokemonSeleccionado.VidaMax;
-                    pokemonSeleccionado.RemoverEfectos();
-                    this.ItemsJugador.Remove(curaTotal);
-                    Console.WriteLine($"El item Cura Total ha sido usado en {pokemonSeleccionado}");
+                    if (pokemonSeleccionado.AptoParaBatalla == false)
+                    {
+                        pokemonSeleccionado.AptoParaBatalla = true;
+                        pokemonSeleccionado.VidaActual = pokemonSeleccionado.VidaMax * 0.5;
+                        this.ItemsJugador.Remove(revivir);
+                        Console.WriteLine($"El ítem Revivir ha sido usado para {pokemonSeleccionado.Nombre}.");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"{pokemonSeleccionado.Nombre} está vivo, no es posible usar el ítem Revivir.");
+                    }
                 }
             }
         }
+        else if (opcion == "3")
+        {
+            Console.WriteLine("¿A qué Pokémon desea darle la Cura Total?");
+            string nombrePokemon = Console.ReadLine();
+            Pokemon pokemonSeleccionado = this.Pokemons.FirstOrDefault(p => p.Nombre.Equals(nombrePokemon, StringComparison.OrdinalIgnoreCase));
+            IItem curaTotal = this.ItemsJugador.FirstOrDefault(item => item is CuraTotal);
+            if (curaTotal == null)
+            {
+                Console.WriteLine("No quedan ítems Cura Total en la lista.");
+            }
+            else
+            {
+                pokemonSeleccionado.VidaActual = pokemonSeleccionado.VidaMax;
+                pokemonSeleccionado.RemoverEfectos();
+                this.ItemsJugador.Remove(curaTotal);
+                Console.WriteLine($"El ítem Cura Total ha sido usado en {pokemonSeleccionado.Nombre}.");
+            }
+        }
+    }
+
+    /// <summary>
+    /// Cambia el Pokémon activo del jugador.
+    /// </summary>
+    /// <param name="nombreNuevoPokemon">El nombre del nuevo Pokémon activo.</param>
     public void CambiarPokemonActivo(string nombreNuevoPokemon)
     {
         // Buscar el nuevo Pokémon en la lista de Pokémon del jugador
@@ -210,5 +246,4 @@ public class Jugador
             Console.WriteLine($"{nombreNuevoPokemon} no está disponible o no es apto para la batalla.");
         }
     }
-
 }

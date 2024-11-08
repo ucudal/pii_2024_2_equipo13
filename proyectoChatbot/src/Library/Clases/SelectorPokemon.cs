@@ -2,14 +2,35 @@ using Library.Pokemons;
 
 namespace Library.Clases;
 
+/**
+ * @class SelectorPokemon
+ * @brief Clase que gestiona la selección de Pokémon disponibles para los jugadores.
+ * 
+ * La clase SelectorPokemon proporciona una lista de Pokémon disponibles para que los jugadores puedan
+ * seleccionar sus equipos de batalla.
+ */
 public class SelectorPokemon
 {
-    public static List<Pokemon> PokemonsDisponibles { get; private set; } // Lista de Pokémon disponible para todos los jugadores
+    /**
+     * @brief Lista de Pokémon disponibles para todos los jugadores.
+     */
+    public static List<Pokemon> PokemonsDisponibles { get; private set; }
 
+    /**
+     * @brief Constructor de la clase SelectorPokemon.
+     * 
+     * Inicializa la lista de Pokémon disponibles si aún no ha sido inicializada.
+     */
     public SelectorPokemon()
     {
         InicializarPokemonsDisponibles();
     }
+
+    /**
+     * @brief Inicializa la lista de Pokémon disponibles.
+     * 
+     * Si la lista de Pokémon disponibles aún no fue inicializada, se crea una lista de Pokémon con instancias predefinidas.
+     */
     private void InicializarPokemonsDisponibles()
     {
         if (PokemonsDisponibles == null) // Si la lista aún no fue inicializada
@@ -29,6 +50,10 @@ public class SelectorPokemon
             };
         }
     }
+
+    /**
+     * @brief Muestra la lista de Pokémon disponibles en la consola.
+     */
     public void MostrarPokemonsDisponibles()
     {
         Console.WriteLine("Pokémon disponibles para seleccionar:");
@@ -37,7 +62,15 @@ public class SelectorPokemon
             Console.WriteLine($"- {pokemon.Nombre}");
         }
     }
-    
+
+    /**
+     * @brief Permite a un jugador seleccionar Pokémon para su equipo.
+     * 
+     * Muestra los Pokémon disponibles, solicita al jugador que seleccione sus Pokémon
+     * y los añade a su equipo, verificando que no se repitan.
+     * 
+     * @param jugador El jugador que seleccionará sus Pokémon.
+     */
     public void SeleccionarPokemonsParaJugador(Jugador jugador)
     {
         MostrarPokemonsDisponibles();

@@ -1,0 +1,105 @@
+\doxysection{Library.\+Clases.\+Wait\+List Class Reference}
+\hypertarget{class_library_1_1_clases_1_1_wait_list}{}\label{class_library_1_1_clases_1_1_wait_list}\index{Library.Clases.WaitList@{Library.Clases.WaitList}}
+
+
+Clase que gestiona la lista de espera de jugadores para una batalla.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_clases_1_1_wait_list_a92c09be1ffc86140cc4bc35df9d615bc}{Wait\+List}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_library_1_1_clases_1_1_wait_list}{Wait\+List}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_library_1_1_clases_1_1_wait_list_aeec85a16adc0bbf40b31dd1ebdec08ca}{Sala\+De\+Espera}} (\mbox{\hyperlink{class_library_1_1_clases_1_1_jugador}{Jugador}} jugador)
+\begin{DoxyCompactList}\small\item\em Agrega un jugador a la lista de espera. \end{DoxyCompactList}\item 
+List$<$ string $>$ \mbox{\hyperlink{class_library_1_1_clases_1_1_wait_list_af045e50cf6a7bb8e1a07168e95212bdb}{Start\+Battle}} ()
+\begin{DoxyCompactList}\small\item\em Inicia una batalla si hay suficientes jugadores en la lista de espera con equipos completos. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_clases_1_1_wait_list_a7cc360d18942eae321fdd97fa5308198}{Imprimir\+Lista}} ()
+\begin{DoxyCompactList}\small\item\em Imprime la lista de espera actual en la consola. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_library_1_1_clases_1_1_jugador}{Jugador}} $>$ \mbox{\hyperlink{class_library_1_1_clases_1_1_wait_list_a430183d0094434b762d59cd1e47b464b}{Wait\+List\+Jugador}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de jugadores en espera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que gestiona la lista de espera de jugadores para una batalla. 
+
+La clase \doxylink{class_library_1_1_clases_1_1_wait_list}{Wait\+List} permite agregar jugadores a una lista de espera, iniciar una batalla cuando hay suficientes jugadores disponibles y mostrar la lista de espera actual. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_library_1_1_clases_1_1_wait_list_a92c09be1ffc86140cc4bc35df9d615bc}\index{Library.Clases.WaitList@{Library.Clases.WaitList}!WaitList@{WaitList}}
+\index{WaitList@{WaitList}!Library.Clases.WaitList@{Library.Clases.WaitList}}
+\doxysubsubsection{\texorpdfstring{WaitList()}{WaitList()}}
+{\footnotesize\ttfamily \label{class_library_1_1_clases_1_1_wait_list_a92c09be1ffc86140cc4bc35df9d615bc} 
+Library.\+Clases.\+Wait\+List.\+Wait\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_library_1_1_clases_1_1_wait_list}{Wait\+List}. 
+
+Inicializa una nueva lista de espera vacía. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_library_1_1_clases_1_1_wait_list_a7cc360d18942eae321fdd97fa5308198}\index{Library.Clases.WaitList@{Library.Clases.WaitList}!ImprimirLista@{ImprimirLista}}
+\index{ImprimirLista@{ImprimirLista}!Library.Clases.WaitList@{Library.Clases.WaitList}}
+\doxysubsubsection{\texorpdfstring{ImprimirLista()}{ImprimirLista()}}
+{\footnotesize\ttfamily \label{class_library_1_1_clases_1_1_wait_list_a7cc360d18942eae321fdd97fa5308198} 
+void Library.\+Clases.\+Wait\+List.\+Imprimir\+Lista (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Imprime la lista de espera actual en la consola. 
+
+Muestra el número total de jugadores en espera y los nombres de cada uno. \Hypertarget{class_library_1_1_clases_1_1_wait_list_aeec85a16adc0bbf40b31dd1ebdec08ca}\index{Library.Clases.WaitList@{Library.Clases.WaitList}!SalaDeEspera@{SalaDeEspera}}
+\index{SalaDeEspera@{SalaDeEspera}!Library.Clases.WaitList@{Library.Clases.WaitList}}
+\doxysubsubsection{\texorpdfstring{SalaDeEspera()}{SalaDeEspera()}}
+{\footnotesize\ttfamily \label{class_library_1_1_clases_1_1_wait_list_aeec85a16adc0bbf40b31dd1ebdec08ca} 
+string Library.\+Clases.\+Wait\+List.\+Sala\+De\+Espera (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_clases_1_1_jugador}{Jugador}}}]{jugador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega un jugador a la lista de espera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jugador} & El jugador que se agregará a la lista de espera. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje indicando que el jugador ha sido agregado a la lista de espera. 
+\end{DoxyReturn}
+\Hypertarget{class_library_1_1_clases_1_1_wait_list_af045e50cf6a7bb8e1a07168e95212bdb}\index{Library.Clases.WaitList@{Library.Clases.WaitList}!StartBattle@{StartBattle}}
+\index{StartBattle@{StartBattle}!Library.Clases.WaitList@{Library.Clases.WaitList}}
+\doxysubsubsection{\texorpdfstring{StartBattle()}{StartBattle()}}
+{\footnotesize\ttfamily \label{class_library_1_1_clases_1_1_wait_list_af045e50cf6a7bb8e1a07168e95212bdb} 
+List$<$ string $>$ Library.\+Clases.\+Wait\+List.\+Start\+Battle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicia una batalla si hay suficientes jugadores en la lista de espera con equipos completos. 
+
+Selecciona dos jugadores con 6 Pokémon en sus equipos y comienza una nueva batalla, notificando a los jugadores.
+
+\begin{DoxyReturn}{Returns}
+Una lista de notificaciones sobre el estado de la batalla. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_library_1_1_clases_1_1_wait_list_a430183d0094434b762d59cd1e47b464b}\index{Library.Clases.WaitList@{Library.Clases.WaitList}!WaitListJugador@{WaitListJugador}}
+\index{WaitListJugador@{WaitListJugador}!Library.Clases.WaitList@{Library.Clases.WaitList}}
+\doxysubsubsection{\texorpdfstring{WaitListJugador}{WaitListJugador}}
+{\footnotesize\ttfamily \label{class_library_1_1_clases_1_1_wait_list_a430183d0094434b762d59cd1e47b464b} 
+List$<$\mbox{\hyperlink{class_library_1_1_clases_1_1_jugador}{Jugador}}$>$ Library.\+Clases.\+Wait\+List.\+Wait\+List\+Jugador\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Obtiene la lista de jugadores en espera. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+proyecto\+Chatbot/src/\+Library/\+Clases/\mbox{\hyperlink{_wait_list_8cs}{Wait\+List.\+cs}}\end{DoxyCompactItemize}

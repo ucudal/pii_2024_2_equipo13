@@ -2,24 +2,62 @@ using Library.TiposPokemon;
 
 namespace Library;
 
-public class AtaqueEspecial:IAtaque
+/**
+ * @class AtaqueEspecial
+ * @brief Representa un ataque especial de un Pokémon.
+ *
+ * La clase AtaqueEspecial implementa la interfaz IAtaque y define las propiedades
+ * de un ataque especial, como el nombre, el daño, el tipo, la precisión y el efecto.
+ */
+public class AtaqueEspecial : IAtaque
 {
-    public string Nombre { get; } //Getter que devuelve el nombre del ataque, definido en el constructor
-    public double Daño { get; } //Getter que devuelve el daño del ataque, definido en el constructor
+    /**
+     * @brief Nombre del ataque.
+     * @return El nombre del ataque, definido en el constructor.
+     */
+    public string Nombre { get; }
 
-    public Itipo Tipo { get; } //devuelve el tipo del ataque
+    /**
+     * @brief Daño del ataque.
+     * @return El daño del ataque, definido en el constructor.
+     */
+    public double Daño { get; }
+
+    /**
+     * @brief Tipo del ataque.
+     * @return El tipo del ataque.
+     */
+    public Itipo Tipo { get; }
+
+    /**
+     * @brief Efecto especial del ataque.
+     * @return El efecto que aplica el ataque.
+     */
     public IEfectoAtaque Efecto { get; }
+
+    /**
+     * @brief Precisión del ataque.
+     * @return La precisión del ataque.
+     */
     public double Precision { get; }
 
-    public AtaqueEspecial(string nombre, double daño,Itipo tipo,double precision,IEfectoAtaque efecto)
+    /**
+     * @brief Constructor de la clase AtaqueEspecial.
+     *
+     * Inicializa un ataque especial con el nombre, el daño, el tipo, la precisión y el efecto especificados.
+     *
+     * @param nombre El nombre del ataque.
+     * @param daño La cantidad de daño que causa el ataque.
+     * @param tipo El tipo del ataque.
+     * @param precision La precisión del ataque.
+     * @param efecto El efecto especial que aplica el ataque.
+     */
+    public AtaqueEspecial(string nombre, double daño, Itipo tipo, double precision, IEfectoAtaque efecto)
     {
-        //constructor de ataque especial de un pokemon, donde se establece el nombre, daño, tipo, prescision y efecto.
         this.Nombre = nombre;
         this.Daño = daño;
         this.Tipo = tipo;
         this.Precision = precision;
         this.Efecto = efecto;
-        
     }
-    
 }

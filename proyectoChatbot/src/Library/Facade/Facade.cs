@@ -5,41 +5,70 @@ using Library.Items;  // Espacio de nombres donde están IItem y las implementac
 
 namespace Library
 {
+    /**
+     * @class BattleFacade
+     * @brief Clase que actúa como una interfaz simplificada para manejar las operaciones de la batalla.
+     *
+     * La clase BattleFacade proporciona métodos para gestionar la selección de Pokémon, ataques, 
+     * uso de ítems, y otros elementos necesarios en el flujo de la batalla.
+     */
     public class BattleFacade
     {
         private WaitList _waitList = new WaitList();
         private Turno _currentTurn;
         private SelectorPokemon _selectorPokemon = new SelectorPokemon(); // Instancia de SelectorPokemon para manejar la selección de Pokémon
 
-        // Historia de usuario 1: Seleccionar Pokémons
+        /**
+         * @brief Muestra los Pokémon disponibles para seleccionar.
+         *
+         * Historia de usuario 1: Seleccionar Pokémons.
+         */
         public void MostrarPokemonsDisponibles()
         {
             _selectorPokemon.MostrarPokemonsDisponibles();
         }
 
-        // Historia de usuario 1: Seleccionar Pokémons
+        /**
+         * @brief Permite a un jugador seleccionar sus Pokémon.
+         *
+         * @param jugador El jugador que seleccionará sus Pokémon.
+         * Historia de usuario 1: Seleccionar Pokémons.
+         */
         public void SeleccionarPokemonsParaJugador(Jugador jugador)
         {
             _selectorPokemon.SeleccionarPokemonsParaJugador(jugador);
         }
 
-        // Historia de usuario 2: Como jugador, quiero ver los ataques disponibles de mis Pokémons para poder elegir cuál usar en cada turno.
+        /**
+         * @brief Muestra los ataques disponibles del Pokémon activo del jugador.
+         *
+         * @param jugador El jugador cuyos ataques se mostrarán.
+         * Historia de usuario 2: Ver ataques disponibles de los Pokémon.
+         */
         public void MostrarAtaquesDisponibles(Jugador jugador)
         {
             Console.WriteLine("Ataques disponibles:");
             jugador.PokemonActivo.GetAtaquesBasicos();
-           Console.WriteLine("Ataques Especiales:");
-                jugador.PokemonActivo.GetAtaqueEspecial();
+            Console.WriteLine("Ataques Especiales:");
+            jugador.PokemonActivo.GetAtaqueEspecial();
         }
 
-        // Historia de usuario 3:  Como jugador, quiero ver la cantidad de vida (HP) de mis Pokémons y de los Pokémons oponentes para saber cuánta salud tienen
+        /**
+         * @brief Muestra la cantidad de vida (HP) de los Pokémon activos de ambos jugadores.
+         *
+         * Historia de usuario 3: Ver la cantidad de vida (HP) de los Pokémon.
+         */
         public void MostrarVida()
         {
             Console.WriteLine($"{_currentTurn.JugadorActual.Nombre} HP: {_currentTurn.JugadorActual.PokemonActivo.VidaActual}/{_currentTurn.JugadorActual.PokemonActivo.VidaMax}");
             Console.WriteLine($"{_currentTurn.JugadorRival.Nombre} HP: {_currentTurn.JugadorRival.PokemonActivo.VidaActual}/{_currentTurn.JugadorRival.PokemonActivo.VidaMax}");
         }
 
-        // Historia de usuario 4: Como jugador, quiero atacar en mi turno y hacer daño basado en la efectividad de los tipos de Pokémon.
+        /**
+         * @brief Realiza un ataque del jugador actual al jugador rival.
+         *
+         * Historia de usuario 4: Atacar en el turno y hacer daño.
+         */
         public void Atacar()
         {
             _currentTurn.JugadorActual.Atacar(_currentTurn.JugadorRival);
@@ -50,13 +79,22 @@ namespace Library
             }
         }
 
-        // Historia de usuario 5: Como jugador, quiero saber de quién es el turno para estar seguro de cuándo atacar o esperar.
+        /**
+         * @brief Muestra de quién es el turno actual.
+         *
+         * Historia de usuario 5: Conocer de quién es el turno.
+         */
         public void MostrarTurnoActual()
         {
             Console.WriteLine($"Es el turno de {_currentTurn.JugadorActual.Nombre}.");
         }
 
-        // Historia de usuario 6: Como jugador, quiero ganar la batalla cuando la vida de todos los Pokémons oponente llegue a cero.
+        /**
+         * @brief Verifica si la batalla ha finalizado.
+         *
+         * @return `true` si la batalla ha terminado, `false` de lo contrario.
+         * Historia de usuario 6: Ganar la batalla cuando la vida de todos los Pokémon oponentes llegue a cero.
+         */
         public bool BatallaFinalizada()
         {
             if (_currentTurn.BatallaFinalizada())
@@ -64,34 +102,56 @@ namespace Library
                 Console.WriteLine("La batalla ha finalizado");
                 return true;
             }
-            Console.WriteLine("La batalla aun no ha finalizado");
+            Console.WriteLine("La batalla aún no ha finalizado");
             return false;
         }
 
-        // Historia de usuario 7: Cambiar Pokémon activo
+        /**
+         * @brief Cambia el Pokémon activo del jugador actual.
+         *
+         * @param nombrePokemon El nombre del nuevo Pokémon activo.
+         * Historia de usuario 7: Cambiar Pokémon activo.
+         */
         public void CambiarPokemonActivo(string nombrePokemon)
         {
             if (_currentTurn != null)
             {
-                _currentTurn.JugadorActual.CambiarPokemonActivo( nombrePokemon);
+                _currentTurn.JugadorActual.CambiarPokemonActivo(nombrePokemon);
                 _currentTurn.CambiarTurno();
             }
         }
 
-        // Historia de usuario 8: Como entrenador, quiero poder usar un ítem durante una batalla.
+        /**
+         * @brief Permite al jugador actual usar un ítem.
+         *
+         * Historia de usuario 8: Usar un ítem durante una batalla.
+         */
         public void UsarItemDelJugador()
         {
             _currentTurn.JugadorActual.UsarItem();
             _currentTurn.CambiarTurno();
         }
 
-        // Historia de usuario 9: Como entrenador, quiero unirme a la lista de jugadores esperando por un oponente
+        /**
+         * @brief Agrega un jugador a la lista de espera para encontrar oponente.
+         *
+         * @param jugador El jugador que se agregará a la lista de espera.
+         * Historia de usuario 9: Unirse a la lista de jugadores esperando por un oponente.
+         */
         public void AgregarJugadorALaListaDeEspera(Jugador jugador) => Console.WriteLine(_waitList.SalaDeEspera(jugador));
 
-        // Historia de usuario 10: Como entrenador, quiero ver la lista de jugadores esperando por un oponente.
+        /**
+         * @brief Muestra la lista de jugadores en espera.
+         *
+         * Historia de usuario 10: Ver la lista de jugadores esperando por un oponente.
+         */
         public void MostrarListaDeEspera() => _waitList.ImprimirLista();
 
-        // Historia de usuario 11: Como entrenador, quiero iniciar una ballata con un jugador que está esperando por un oponente.
+        /**
+         * @brief Inicia una batalla entre dos jugadores en la lista de espera.
+         *
+         * Historia de usuario 11: Iniciar una batalla con un jugador en espera.
+         */
         public void IniciarBatalla()
         {
             _waitList.StartBattle();
@@ -100,11 +160,9 @@ namespace Library
                 var jugador1 = _waitList.WaitListJugador[0];
                 var jugador2 = _waitList.WaitListJugador[1];
                 _currentTurn = new Turno(jugador1, jugador2);
-                Console.WriteLine("Batalla inciada!");
+                Console.WriteLine("¡Batalla iniciada!");
                 MostrarTurnoActual();
             }
         }
-    
-        
     }
 }

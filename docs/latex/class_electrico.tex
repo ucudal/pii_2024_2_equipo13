@@ -1,0 +1,145 @@
+\doxysection{Electrico Class Reference}
+\hypertarget{class_electrico}{}\label{class_electrico}\index{Electrico@{Electrico}}
+
+
+Representa el tipo de Pokémon "{}\+Eléctrico"{} y define sus interacciones con otros tipos.  
+
+
+Inheritance diagram for Electrico\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_electrico}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_electrico_a8ad21cce454b950b27806d07e0defc1f}{Electrico}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_electrico}{Electrico}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_electrico_a1edb1514529bd1507369b4a5849f354f}{Inmune\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo Eléctrico es inmune a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_electrico_a266907cb2d497c51c9a3f213fc2ee026}{Resistente\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo Eléctrico es resistente a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_electrico_a73e0c347f008283c839fd5b3d0defae6}{Debil\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo Eléctrico es débil a otro tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_electrico_a2a8eae3ab4227050644fd2aecf5e0109}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del tipo de Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_itipo}{Library.\+Itipo}}}
+
+
+\doxysubsection{Detailed Description}
+Representa el tipo de Pokémon "{}\+Eléctrico"{} y define sus interacciones con otros tipos. 
+
+La clase \doxylink{class_electrico}{Electrico} implementa la interfaz Itipo y proporciona las propiedades y métodos para verificar las inmunidades, resistencias y debilidades del tipo Eléctrico. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_electrico_a8ad21cce454b950b27806d07e0defc1f}\index{Electrico@{Electrico}!Electrico@{Electrico}}
+\index{Electrico@{Electrico}!Electrico@{Electrico}}
+\doxysubsubsection{\texorpdfstring{Electrico()}{Electrico()}}
+{\footnotesize\ttfamily \label{class_electrico_a8ad21cce454b950b27806d07e0defc1f} 
+Electrico.\+Electrico (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_electrico}{Electrico}. 
+
+Inicializa el nombre del tipo como "{}\+Electrico"{}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_electrico_a73e0c347f008283c839fd5b3d0defae6}\index{Electrico@{Electrico}!DebilContra@{DebilContra}}
+\index{DebilContra@{DebilContra}!Electrico@{Electrico}}
+\doxysubsubsection{\texorpdfstring{DebilContra()}{DebilContra()}}
+{\footnotesize\ttfamily \label{class_electrico_a73e0c347f008283c839fd5b3d0defae6} 
+bool Electrico.\+Debil\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo Eléctrico es débil a otro tipo. 
+
+El tipo Eléctrico es débil a \doxylink{class_tierra}{Tierra}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la debilidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_tierra}{Tierra}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}{Library.\+Itipo}}.
+
+\Hypertarget{class_electrico_a1edb1514529bd1507369b4a5849f354f}\index{Electrico@{Electrico}!InmuneContra@{InmuneContra}}
+\index{InmuneContra@{InmuneContra}!Electrico@{Electrico}}
+\doxysubsubsection{\texorpdfstring{InmuneContra()}{InmuneContra()}}
+{\footnotesize\ttfamily \label{class_electrico_a1edb1514529bd1507369b4a5849f354f} 
+bool Electrico.\+Inmune\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo Eléctrico es inmune a otro tipo. 
+
+El tipo Eléctrico es inmune a otros ataques del tipo Eléctrico.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la inmunidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es Eléctrico, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}{Library.\+Itipo}}.
+
+\Hypertarget{class_electrico_a266907cb2d497c51c9a3f213fc2ee026}\index{Electrico@{Electrico}!ResistenteContra@{ResistenteContra}}
+\index{ResistenteContra@{ResistenteContra}!Electrico@{Electrico}}
+\doxysubsubsection{\texorpdfstring{ResistenteContra()}{ResistenteContra()}}
+{\footnotesize\ttfamily \label{class_electrico_a266907cb2d497c51c9a3f213fc2ee026} 
+bool Electrico.\+Resistente\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo Eléctrico es resistente a otro tipo. 
+
+El tipo Eléctrico es resistente a \doxylink{class_volador}{Volador}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la resistencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_volador}{Volador}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}{Library.\+Itipo}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_electrico_a2a8eae3ab4227050644fd2aecf5e0109}\index{Electrico@{Electrico}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Electrico@{Electrico}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{class_electrico_a2a8eae3ab4227050644fd2aecf5e0109} 
+string Electrico.\+Nombre\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del tipo de Pokémon. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}{Library.\+Itipo}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+proyecto\+Chatbot/src/\+Library/\+Tipos\+Pokemon/\mbox{\hyperlink{_electrico_8cs}{Electrico.\+cs}}\end{DoxyCompactItemize}
