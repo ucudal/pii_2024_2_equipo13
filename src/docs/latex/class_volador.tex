@@ -1,0 +1,145 @@
+\doxysection{Volador Class Reference}
+\hypertarget{class_volador}{}\label{class_volador}\index{Volador@{Volador}}
+
+
+Representa el tipo de Pokémon "{}\+Volador"{} y define sus interacciones con otros tipos.  
+
+
+Inheritance diagram for Volador\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_volador}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_volador_a3bd8bbb9b8f6f338e1452381a1fefe4a}{Volador}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_volador}{Volador}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_volador_a49881d9b6ae4c008a9bb93593755ea14}{Inmune\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_volador}{Volador} es inmune a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_volador_aa20998497d635562053fb8d280887152}{Resistente\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_volador}{Volador} es resistente a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_volador_a2a9cda997168a43642be5807fb0c9860}{Debil\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_volador}{Volador} es débil a otro tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_volador_a1f5b6ff53eab0a6c645c3b87b55674e7}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del tipo de Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_itipo}{Library.\+Itipo}}}
+
+
+\doxysubsection{Detailed Description}
+Representa el tipo de Pokémon "{}\+Volador"{} y define sus interacciones con otros tipos. 
+
+La clase \doxylink{class_volador}{Volador} implementa la interfaz Itipo y proporciona las propiedades y métodos para verificar las inmunidades, resistencias y debilidades del tipo \doxylink{class_volador}{Volador}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_volador_a3bd8bbb9b8f6f338e1452381a1fefe4a}\index{Volador@{Volador}!Volador@{Volador}}
+\index{Volador@{Volador}!Volador@{Volador}}
+\doxysubsubsection{\texorpdfstring{Volador()}{Volador()}}
+{\footnotesize\ttfamily \label{class_volador_a3bd8bbb9b8f6f338e1452381a1fefe4a} 
+Volador.\+Volador (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_volador}{Volador}. 
+
+Inicializa el nombre del tipo como "{}\+Volador"{}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_volador_a2a9cda997168a43642be5807fb0c9860}\index{Volador@{Volador}!DebilContra@{DebilContra}}
+\index{DebilContra@{DebilContra}!Volador@{Volador}}
+\doxysubsubsection{\texorpdfstring{DebilContra()}{DebilContra()}}
+{\footnotesize\ttfamily \label{class_volador_a2a9cda997168a43642be5807fb0c9860} 
+bool Volador.\+Debil\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_volador}{Volador} es débil a otro tipo. 
+
+El tipo \doxylink{class_volador}{Volador} es débil a Eléctrico y Roca.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la debilidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es Eléctrico o Roca, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}{Library.\+Itipo}}.
+
+\Hypertarget{class_volador_a49881d9b6ae4c008a9bb93593755ea14}\index{Volador@{Volador}!InmuneContra@{InmuneContra}}
+\index{InmuneContra@{InmuneContra}!Volador@{Volador}}
+\doxysubsubsection{\texorpdfstring{InmuneContra()}{InmuneContra()}}
+{\footnotesize\ttfamily \label{class_volador_a49881d9b6ae4c008a9bb93593755ea14} 
+bool Volador.\+Inmune\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_volador}{Volador} es inmune a otro tipo. 
+
+El tipo \doxylink{class_volador}{Volador} es inmune a \doxylink{class_tierra}{Tierra}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la inmunidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_tierra}{Tierra}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}{Library.\+Itipo}}.
+
+\Hypertarget{class_volador_aa20998497d635562053fb8d280887152}\index{Volador@{Volador}!ResistenteContra@{ResistenteContra}}
+\index{ResistenteContra@{ResistenteContra}!Volador@{Volador}}
+\doxysubsubsection{\texorpdfstring{ResistenteContra()}{ResistenteContra()}}
+{\footnotesize\ttfamily \label{class_volador_aa20998497d635562053fb8d280887152} 
+bool Volador.\+Resistente\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_volador}{Volador} es resistente a otro tipo. 
+
+El tipo \doxylink{class_volador}{Volador} es resistente a \doxylink{class_planta}{Planta}, Normal y \doxylink{class_bicho}{Bicho}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la resistencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_planta}{Planta}, Normal o \doxylink{class_bicho}{Bicho}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}{Library.\+Itipo}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_volador_a1f5b6ff53eab0a6c645c3b87b55674e7}\index{Volador@{Volador}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Volador@{Volador}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{class_volador_a1f5b6ff53eab0a6c645c3b87b55674e7} 
+string Volador.\+Nombre\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del tipo de Pokémon. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}{Library.\+Itipo}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Tipos\+Pokemon/\mbox{\hyperlink{_volador_8cs}{Volador.\+cs}}\end{DoxyCompactItemize}

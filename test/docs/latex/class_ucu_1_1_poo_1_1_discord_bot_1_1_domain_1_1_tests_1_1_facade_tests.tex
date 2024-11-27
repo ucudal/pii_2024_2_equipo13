@@ -1,0 +1,359 @@
+\doxysection{Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests Class Reference}
+\hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests}{}\label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+
+
+Clase de pruebas para la funcionalidad de la clase Facade.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_add53fb4221e7ed46fe0ea0a4574f1871}{Set\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Configura el entorno necesario para las pruebas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a0d9b34c24f14cd6b1546db3c99efe9d5}{Tear\+Down}} ()
+\begin{DoxyCompactList}\small\item\em Restablece el estado de la fachada después de cada prueba. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a27a0354b4cff56cb4b7ce291de212a3d}{Add\+Training\+To\+Waiting\+List}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la adición de entrenadores a la lista de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_af43e298f06deb41f789ac247f3d88e1d}{Atacar\+Basico\+\_\+\+No\+Current\+Turn\+\_\+\+Returns\+Error\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Prueba un ataque básico cuando no hay un turno actual. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_af6b62945563ff617578225d7da561943}{Remove\+Trainer\+From\+Waiting\+List\+Trainer\+Does\+Not\+Exist\+Returns\+Not\+In\+List\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la eliminación de un entrenador de la lista de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_af30c0ae01aff5546a0649334c137f3c8}{Iniciar\+Batalla\+\_\+\+Trainer\+Without\+Complete\+Team\+\_\+\+Returns\+Error\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la inicialización de una batalla con un equipo incompleto. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a8b27cc796827398e78d97bf99a485777}{Obtener\+Trainer\+Random\+When\+Called\+Returns\+Random\+Trainer}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la obtención de un entrenador aleatorio de la lista de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a03fac06ded21c6ed0190fed7c80cbfb7}{Mostrar\+Ataques\+Disponibles\+\_\+\+When\+Trainer\+Does\+Not\+Exist\+\_\+\+Returns\+Error\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la visualización de ataques disponibles cuando el entrenador no existe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a68fc262ed4e920e6309cfb009a78f8e8}{Mostrar\+Items\+Disponibles\+\_\+\+When\+Trainer\+Does\+Not\+Exist\+\_\+\+Returns\+Error\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la visualización de ítems disponibles cuando el entrenador no existe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a774dc6535cd958cbdd6c4df2e240fee2}{Rendirse\+When\+Called\+Returns\+Correct\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Prueba que el método {\ttfamily Rendirse()} devuelva un mensaje adecuado si no es el turno del jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a996404924950b0c35f8b66b8ce6ea223}{Realizar\+Accion\+When\+Called\+Returns\+Correct\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Prueba que el método {\ttfamily Realizar\+Accion()} devuelva un mensaje adecuado si no es el turno del jugador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a3b0bb7d5950d73489747f7a6a3b471f0}{Notificar\+Turno\+Jugador\+Actual\+When\+Called\+Returns\+Correct\+Message}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la notificación del turno del jugador actual cuando no hay una batalla en curso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a307409cd95d9e79ce38c83720ffb7b8d}{Add\+Trainer\+To\+Waiting\+List\+When\+Trainer\+Was\+Not\+Added\+Returns\+Added}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la adición de un entrenador a la lista de espera cuando no está agregado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a032dfb6d4fbe0a553b52c4198e225774}{Add\+Trainer\+To\+Waiting\+List\+When\+Trainer\+Was\+Added\+Returns\+Existing}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la adición de un entrenador a la lista de espera cuando ya está agregado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a8cc9d2419250e64bb17f3be0d783882c}{Remove\+Trainer\+From\+Waiting\+List\+When\+Trainer\+Was\+Added\+Returns\+Removed}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la eliminación de un entrenador de la lista de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_ab457ea5daaef6cafd6d69de065305d40}{Remove\+Trainer\+From\+Waiting\+List\+When\+Trainer\+Was\+Not\+Added\+Returns\+Not\+Added}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la eliminación de un entrenador de la lista de espera cuando no estaba agregado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_ab54915775eee9e3a3dd2ffb685c937f8}{Get\+All\+Trainers\+Waiting\+When\+Somebody\+Is\+Waiting\+Returns\+Somebody}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la obtención de todos los entrenadores en la lista de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a21b3ca3016b625ff1e359e051f278a7d}{Trainer\+Is\+Waiting\+When\+Not\+Added\+Returns\+Not\+Waiting}} ()
+\begin{DoxyCompactList}\small\item\em Prueba que un entrenador no esté en la lista de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a7edbcb5b9fae8a3658fc3ff9c082dd3d}{Trainer\+Is\+Waiting\+When\+Added\+Returns\+Waiting}} ()
+\begin{DoxyCompactList}\small\item\em Prueba que un entrenador esté en la lista de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a4d642931f862ea25e04bced54204163b}{Get\+Trainer\+By\+Display\+Name\+Returns\+Correct\+Trainer}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la obtención de un entrenador por su nombre de visualización. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a9da0e9e143f9de6453200aad3546fccd}{Get\+Trainer\+By\+Display\+Name\+Returns\+Null\+For\+Non\+Existent\+Trainer}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la obtención de un entrenador por su nombre de visualización cuando no existe. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a0da445fb1e05004f0887894f2d96ea9f}{Get\+All\+Trainers\+Waiting\+When\+Nobody\+Is\+Waiting\+Returns\+Nobody\+Is\+Waiting}} ()
+\begin{DoxyCompactList}\small\item\em Prueba para obtener todos los entrenadores en espera cuando nadie está en espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a4a5f30e9b4c08a6177a4a021f45e13d2}{Start\+Battle\+When\+No\+Opponent\+And\+Nobody\+Is\+Waiting\+Returns\+Nobody\+Is\+Waiting}} ()
+\begin{DoxyCompactList}\small\item\em Prueba para iniciar una batalla sin oponente y sin entrenadores en espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a6eb0670906b1cc9c467c0f9bb115a471}{Start\+Battle\+When\+Opponent\+But\+Is\+Not\+Waiting\+Returns\+Not\+Waiting}} ()
+\begin{DoxyCompactList}\small\item\em Prueba para iniciar una batalla con un oponente que no está en espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a7ad44581ffe5bef9a9d20f97eea7f695}{Start\+Battle\+When\+No\+Opponent\+But\+One\+Waiting\+Returns\+Battle\+With\+Waiting}} ()
+\begin{DoxyCompactList}\small\item\em Prueba para iniciar una batalla sin oponente pero con un entrenador en espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a9784c44c2737928cfd25173801be3fce}{Start\+Battle\+When\+Opponent\+Waiting\+Returns\+Battle\+With\+Opponent}} ()
+\begin{DoxyCompactList}\small\item\em Prueba para iniciar una batalla con un oponente que está en espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a263d69774b03486c7129540ac4171a0f}{Obtener\+Oponente\+En\+Batalla\+Returns\+Null\+When\+No\+Battle}} ()
+\begin{DoxyCompactList}\small\item\em Prueba para obtener el oponente en una batalla cuando no hay una batalla en curso. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a10ab8fbb1efd5553926f8ef0342ec966}{Mostrar\+Pokemons\+Disponibles\+\_\+\+Test}} ()
+\begin{DoxyCompactList}\small\item\em Prueba para mostrar los Pokémon disponibles para selección. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase de pruebas para la funcionalidad de la clase Facade. 
+
+La clase {\ttfamily \doxylink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests}{Facade\+Tests}} contiene un conjunto de pruebas unitarias para verificar el correcto funcionamiento de la clase {\ttfamily Facade}. Se asegura de que las operaciones relacionadas con la lista de espera, los entrenadores y las batallas se realicen correctamente. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a032dfb6d4fbe0a553b52c4198e225774}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!AddTrainerToWaitingListWhenTrainerWasAddedReturnsExisting@{AddTrainerToWaitingListWhenTrainerWasAddedReturnsExisting}}
+\index{AddTrainerToWaitingListWhenTrainerWasAddedReturnsExisting@{AddTrainerToWaitingListWhenTrainerWasAddedReturnsExisting}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{AddTrainerToWaitingListWhenTrainerWasAddedReturnsExisting()}{AddTrainerToWaitingListWhenTrainerWasAddedReturnsExisting()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a032dfb6d4fbe0a553b52c4198e225774} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Add\+Trainer\+To\+Waiting\+List\+When\+Trainer\+Was\+Added\+Returns\+Existing (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la adición de un entrenador a la lista de espera cuando ya está agregado. 
+
+Verifica que el entrenador reciba un mensaje adecuado si intenta agregarse a la lista de espera nuevamente. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a307409cd95d9e79ce38c83720ffb7b8d}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!AddTrainerToWaitingListWhenTrainerWasNotAddedReturnsAdded@{AddTrainerToWaitingListWhenTrainerWasNotAddedReturnsAdded}}
+\index{AddTrainerToWaitingListWhenTrainerWasNotAddedReturnsAdded@{AddTrainerToWaitingListWhenTrainerWasNotAddedReturnsAdded}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{AddTrainerToWaitingListWhenTrainerWasNotAddedReturnsAdded()}{AddTrainerToWaitingListWhenTrainerWasNotAddedReturnsAdded()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a307409cd95d9e79ce38c83720ffb7b8d} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Add\+Trainer\+To\+Waiting\+List\+When\+Trainer\+Was\+Not\+Added\+Returns\+Added (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la adición de un entrenador a la lista de espera cuando no está agregado. 
+
+Verifica que el entrenador sea agregado correctamente a la lista de espera si no estaba agregado. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a27a0354b4cff56cb4b7ce291de212a3d}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!AddTrainingToWaitingList@{AddTrainingToWaitingList}}
+\index{AddTrainingToWaitingList@{AddTrainingToWaitingList}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{AddTrainingToWaitingList()}{AddTrainingToWaitingList()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a27a0354b4cff56cb4b7ce291de212a3d} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Add\+Training\+To\+Waiting\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la adición de entrenadores a la lista de espera. 
+
+Verifica que los entrenadores sean agregados correctamente a la lista de espera. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_af43e298f06deb41f789ac247f3d88e1d}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!AtacarBasico\_NoCurrentTurn\_ReturnsErrorMessage@{AtacarBasico\_NoCurrentTurn\_ReturnsErrorMessage}}
+\index{AtacarBasico\_NoCurrentTurn\_ReturnsErrorMessage@{AtacarBasico\_NoCurrentTurn\_ReturnsErrorMessage}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{AtacarBasico\_NoCurrentTurn\_ReturnsErrorMessage()}{AtacarBasico\_NoCurrentTurn\_ReturnsErrorMessage()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_af43e298f06deb41f789ac247f3d88e1d} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Atacar\+Basico\+\_\+\+No\+Current\+Turn\+\_\+\+Returns\+Error\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba un ataque básico cuando no hay un turno actual. 
+
+Verifica que el método {\ttfamily Atacar\+Basico()} devuelva un mensaje de error cuando no hay un turno activo. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a0da445fb1e05004f0887894f2d96ea9f}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!GetAllTrainersWaitingWhenNobodyIsWaitingReturnsNobodyIsWaiting@{GetAllTrainersWaitingWhenNobodyIsWaitingReturnsNobodyIsWaiting}}
+\index{GetAllTrainersWaitingWhenNobodyIsWaitingReturnsNobodyIsWaiting@{GetAllTrainersWaitingWhenNobodyIsWaitingReturnsNobodyIsWaiting}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{GetAllTrainersWaitingWhenNobodyIsWaitingReturnsNobodyIsWaiting()}{GetAllTrainersWaitingWhenNobodyIsWaitingReturnsNobodyIsWaiting()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a0da445fb1e05004f0887894f2d96ea9f} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Get\+All\+Trainers\+Waiting\+When\+Nobody\+Is\+Waiting\+Returns\+Nobody\+Is\+Waiting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba para obtener todos los entrenadores en espera cuando nadie está en espera. 
+
+Se espera que la respuesta indique que no hay nadie en espera. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_ab54915775eee9e3a3dd2ffb685c937f8}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!GetAllTrainersWaitingWhenSomebodyIsWaitingReturnsSomebody@{GetAllTrainersWaitingWhenSomebodyIsWaitingReturnsSomebody}}
+\index{GetAllTrainersWaitingWhenSomebodyIsWaitingReturnsSomebody@{GetAllTrainersWaitingWhenSomebodyIsWaitingReturnsSomebody}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{GetAllTrainersWaitingWhenSomebodyIsWaitingReturnsSomebody()}{GetAllTrainersWaitingWhenSomebodyIsWaitingReturnsSomebody()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_ab54915775eee9e3a3dd2ffb685c937f8} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Get\+All\+Trainers\+Waiting\+When\+Somebody\+Is\+Waiting\+Returns\+Somebody (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la obtención de todos los entrenadores en la lista de espera. 
+
+Verifica que el método {\ttfamily Get\+All\+Trainers\+Waiting()} devuelva la lista correcta de entrenadores en espera. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a4d642931f862ea25e04bced54204163b}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!GetTrainerByDisplayNameReturnsCorrectTrainer@{GetTrainerByDisplayNameReturnsCorrectTrainer}}
+\index{GetTrainerByDisplayNameReturnsCorrectTrainer@{GetTrainerByDisplayNameReturnsCorrectTrainer}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{GetTrainerByDisplayNameReturnsCorrectTrainer()}{GetTrainerByDisplayNameReturnsCorrectTrainer()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a4d642931f862ea25e04bced54204163b} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Get\+Trainer\+By\+Display\+Name\+Returns\+Correct\+Trainer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la obtención de un entrenador por su nombre de visualización. 
+
+Verifica que el método {\ttfamily Get\+Trainer\+By\+Display\+Name()} devuelva el entrenador correcto si existe. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a9da0e9e143f9de6453200aad3546fccd}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!GetTrainerByDisplayNameReturnsNullForNonExistentTrainer@{GetTrainerByDisplayNameReturnsNullForNonExistentTrainer}}
+\index{GetTrainerByDisplayNameReturnsNullForNonExistentTrainer@{GetTrainerByDisplayNameReturnsNullForNonExistentTrainer}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{GetTrainerByDisplayNameReturnsNullForNonExistentTrainer()}{GetTrainerByDisplayNameReturnsNullForNonExistentTrainer()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a9da0e9e143f9de6453200aad3546fccd} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Get\+Trainer\+By\+Display\+Name\+Returns\+Null\+For\+Non\+Existent\+Trainer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la obtención de un entrenador por su nombre de visualización cuando no existe. 
+
+Verifica que el método {\ttfamily Get\+Trainer\+By\+Display\+Name()} devuelva null si el entrenador no existe. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_af30c0ae01aff5546a0649334c137f3c8}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!IniciarBatalla\_TrainerWithoutCompleteTeam\_ReturnsErrorMessage@{IniciarBatalla\_TrainerWithoutCompleteTeam\_ReturnsErrorMessage}}
+\index{IniciarBatalla\_TrainerWithoutCompleteTeam\_ReturnsErrorMessage@{IniciarBatalla\_TrainerWithoutCompleteTeam\_ReturnsErrorMessage}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{IniciarBatalla\_TrainerWithoutCompleteTeam\_ReturnsErrorMessage()}{IniciarBatalla\_TrainerWithoutCompleteTeam\_ReturnsErrorMessage()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_af30c0ae01aff5546a0649334c137f3c8} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Iniciar\+Batalla\+\_\+\+Trainer\+Without\+Complete\+Team\+\_\+\+Returns\+Error\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la inicialización de una batalla con un equipo incompleto. 
+
+Verifica que el método {\ttfamily Iniciar\+Batalla()} devuelva un mensaje de error si el entrenador no tiene un equipo completo. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a03fac06ded21c6ed0190fed7c80cbfb7}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!MostrarAtaquesDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage@{MostrarAtaquesDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage}}
+\index{MostrarAtaquesDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage@{MostrarAtaquesDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{MostrarAtaquesDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage()}{MostrarAtaquesDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a03fac06ded21c6ed0190fed7c80cbfb7} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Mostrar\+Ataques\+Disponibles\+\_\+\+When\+Trainer\+Does\+Not\+Exist\+\_\+\+Returns\+Error\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la visualización de ataques disponibles cuando el entrenador no existe. 
+
+Verifica que el método {\ttfamily Mostrar\+Ataques\+Disponibles()} devuelva un mensaje de error si el entrenador no existe. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a68fc262ed4e920e6309cfb009a78f8e8}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!MostrarItemsDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage@{MostrarItemsDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage}}
+\index{MostrarItemsDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage@{MostrarItemsDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{MostrarItemsDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage()}{MostrarItemsDisponibles\_WhenTrainerDoesNotExist\_ReturnsErrorMessage()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a68fc262ed4e920e6309cfb009a78f8e8} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Mostrar\+Items\+Disponibles\+\_\+\+When\+Trainer\+Does\+Not\+Exist\+\_\+\+Returns\+Error\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la visualización de ítems disponibles cuando el entrenador no existe. 
+
+Verifica que el método {\ttfamily Mostrar\+Items\+Disponibles()} devuelva un mensaje de error si el entrenador no existe. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a10ab8fbb1efd5553926f8ef0342ec966}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!MostrarPokemonsDisponibles\_Test@{MostrarPokemonsDisponibles\_Test}}
+\index{MostrarPokemonsDisponibles\_Test@{MostrarPokemonsDisponibles\_Test}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{MostrarPokemonsDisponibles\_Test()}{MostrarPokemonsDisponibles\_Test()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a10ab8fbb1efd5553926f8ef0342ec966} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Mostrar\+Pokemons\+Disponibles\+\_\+\+Test (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba para mostrar los Pokémon disponibles para selección. 
+
+Prueba tanto el caso cuando hay Pokémon disponibles como cuando la lista está vacía. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a3b0bb7d5950d73489747f7a6a3b471f0}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!NotificarTurnoJugadorActualWhenCalledReturnsCorrectMessage@{NotificarTurnoJugadorActualWhenCalledReturnsCorrectMessage}}
+\index{NotificarTurnoJugadorActualWhenCalledReturnsCorrectMessage@{NotificarTurnoJugadorActualWhenCalledReturnsCorrectMessage}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{NotificarTurnoJugadorActualWhenCalledReturnsCorrectMessage()}{NotificarTurnoJugadorActualWhenCalledReturnsCorrectMessage()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a3b0bb7d5950d73489747f7a6a3b471f0} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Notificar\+Turno\+Jugador\+Actual\+When\+Called\+Returns\+Correct\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la notificación del turno del jugador actual cuando no hay una batalla en curso. 
+
+Verifica que el método {\ttfamily Notificar\+Turno\+Jugador\+Actual()} devuelva el mensaje adecuado cuando no hay una batalla en curso. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a263d69774b03486c7129540ac4171a0f}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!ObtenerOponenteEnBatallaReturnsNullWhenNoBattle@{ObtenerOponenteEnBatallaReturnsNullWhenNoBattle}}
+\index{ObtenerOponenteEnBatallaReturnsNullWhenNoBattle@{ObtenerOponenteEnBatallaReturnsNullWhenNoBattle}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{ObtenerOponenteEnBatallaReturnsNullWhenNoBattle()}{ObtenerOponenteEnBatallaReturnsNullWhenNoBattle()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a263d69774b03486c7129540ac4171a0f} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Obtener\+Oponente\+En\+Batalla\+Returns\+Null\+When\+No\+Battle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba para obtener el oponente en una batalla cuando no hay una batalla en curso. 
+
+Se espera que el oponente retornado sea nulo. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a8b27cc796827398e78d97bf99a485777}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!ObtenerTrainerRandomWhenCalledReturnsRandomTrainer@{ObtenerTrainerRandomWhenCalledReturnsRandomTrainer}}
+\index{ObtenerTrainerRandomWhenCalledReturnsRandomTrainer@{ObtenerTrainerRandomWhenCalledReturnsRandomTrainer}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{ObtenerTrainerRandomWhenCalledReturnsRandomTrainer()}{ObtenerTrainerRandomWhenCalledReturnsRandomTrainer()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a8b27cc796827398e78d97bf99a485777} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Obtener\+Trainer\+Random\+When\+Called\+Returns\+Random\+Trainer (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la obtención de un entrenador aleatorio de la lista de espera. 
+
+Verifica que el método {\ttfamily Obtener\+Trainer\+Random()} devuelva un entrenador aleatorio de la lista. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a996404924950b0c35f8b66b8ce6ea223}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!RealizarAccionWhenCalledReturnsCorrectMessage@{RealizarAccionWhenCalledReturnsCorrectMessage}}
+\index{RealizarAccionWhenCalledReturnsCorrectMessage@{RealizarAccionWhenCalledReturnsCorrectMessage}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{RealizarAccionWhenCalledReturnsCorrectMessage()}{RealizarAccionWhenCalledReturnsCorrectMessage()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a996404924950b0c35f8b66b8ce6ea223} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Realizar\+Accion\+When\+Called\+Returns\+Correct\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba que el método {\ttfamily Realizar\+Accion()} devuelva un mensaje adecuado si no es el turno del jugador. 
+
+Verifica que un jugador reciba un mensaje de error si intenta realizar una acción fuera de su turno. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_af6b62945563ff617578225d7da561943}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!RemoveTrainerFromWaitingListTrainerDoesNotExistReturnsNotInListMessage@{RemoveTrainerFromWaitingListTrainerDoesNotExistReturnsNotInListMessage}}
+\index{RemoveTrainerFromWaitingListTrainerDoesNotExistReturnsNotInListMessage@{RemoveTrainerFromWaitingListTrainerDoesNotExistReturnsNotInListMessage}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{RemoveTrainerFromWaitingListTrainerDoesNotExistReturnsNotInListMessage()}{RemoveTrainerFromWaitingListTrainerDoesNotExistReturnsNotInListMessage()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_af6b62945563ff617578225d7da561943} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Remove\+Trainer\+From\+Waiting\+List\+Trainer\+Does\+Not\+Exist\+Returns\+Not\+In\+List\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la eliminación de un entrenador de la lista de espera. 
+
+Verifica que el método {\ttfamily Remove\+Trainer\+From\+Waiting\+List()} elimine correctamente al entrenador y devuelva el mensaje adecuado. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a8cc9d2419250e64bb17f3be0d783882c}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!RemoveTrainerFromWaitingListWhenTrainerWasAddedReturnsRemoved@{RemoveTrainerFromWaitingListWhenTrainerWasAddedReturnsRemoved}}
+\index{RemoveTrainerFromWaitingListWhenTrainerWasAddedReturnsRemoved@{RemoveTrainerFromWaitingListWhenTrainerWasAddedReturnsRemoved}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{RemoveTrainerFromWaitingListWhenTrainerWasAddedReturnsRemoved()}{RemoveTrainerFromWaitingListWhenTrainerWasAddedReturnsRemoved()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a8cc9d2419250e64bb17f3be0d783882c} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Remove\+Trainer\+From\+Waiting\+List\+When\+Trainer\+Was\+Added\+Returns\+Removed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la eliminación de un entrenador de la lista de espera. 
+
+Verifica que un entrenador pueda ser eliminado correctamente de la lista de espera. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_ab457ea5daaef6cafd6d69de065305d40}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!RemoveTrainerFromWaitingListWhenTrainerWasNotAddedReturnsNotAdded@{RemoveTrainerFromWaitingListWhenTrainerWasNotAddedReturnsNotAdded}}
+\index{RemoveTrainerFromWaitingListWhenTrainerWasNotAddedReturnsNotAdded@{RemoveTrainerFromWaitingListWhenTrainerWasNotAddedReturnsNotAdded}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{RemoveTrainerFromWaitingListWhenTrainerWasNotAddedReturnsNotAdded()}{RemoveTrainerFromWaitingListWhenTrainerWasNotAddedReturnsNotAdded()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_ab457ea5daaef6cafd6d69de065305d40} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Remove\+Trainer\+From\+Waiting\+List\+When\+Trainer\+Was\+Not\+Added\+Returns\+Not\+Added (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la eliminación de un entrenador de la lista de espera cuando no estaba agregado. 
+
+Verifica que se devuelva un mensaje adecuado si se intenta eliminar un entrenador que no está en la lista de espera. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a774dc6535cd958cbdd6c4df2e240fee2}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!RendirseWhenCalledReturnsCorrectMessage@{RendirseWhenCalledReturnsCorrectMessage}}
+\index{RendirseWhenCalledReturnsCorrectMessage@{RendirseWhenCalledReturnsCorrectMessage}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{RendirseWhenCalledReturnsCorrectMessage()}{RendirseWhenCalledReturnsCorrectMessage()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a774dc6535cd958cbdd6c4df2e240fee2} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Rendirse\+When\+Called\+Returns\+Correct\+Message (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba que el método {\ttfamily Rendirse()} devuelva un mensaje adecuado si no es el turno del jugador. 
+
+Verifica que un jugador reciba un mensaje de error si intenta rendirse fuera de su turno. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_add53fb4221e7ed46fe0ea0a4574f1871}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!SetUp@{SetUp}}
+\index{SetUp@{SetUp}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{SetUp()}{SetUp()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_add53fb4221e7ed46fe0ea0a4574f1871} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Set\+Up (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configura el entorno necesario para las pruebas. 
+
+Inicializa la instancia de {\ttfamily Facade} y crea dos entrenadores para las pruebas. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a4a5f30e9b4c08a6177a4a021f45e13d2}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!StartBattleWhenNoOpponentAndNobodyIsWaitingReturnsNobodyIsWaiting@{StartBattleWhenNoOpponentAndNobodyIsWaitingReturnsNobodyIsWaiting}}
+\index{StartBattleWhenNoOpponentAndNobodyIsWaitingReturnsNobodyIsWaiting@{StartBattleWhenNoOpponentAndNobodyIsWaitingReturnsNobodyIsWaiting}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{StartBattleWhenNoOpponentAndNobodyIsWaitingReturnsNobodyIsWaiting()}{StartBattleWhenNoOpponentAndNobodyIsWaitingReturnsNobodyIsWaiting()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a4a5f30e9b4c08a6177a4a021f45e13d2} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Start\+Battle\+When\+No\+Opponent\+And\+Nobody\+Is\+Waiting\+Returns\+Nobody\+Is\+Waiting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba para iniciar una batalla sin oponente y sin entrenadores en espera. 
+
+Se espera que la respuesta indique que el usuario no tiene un equipo completo para iniciar una batalla. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a7ad44581ffe5bef9a9d20f97eea7f695}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!StartBattleWhenNoOpponentButOneWaitingReturnsBattleWithWaiting@{StartBattleWhenNoOpponentButOneWaitingReturnsBattleWithWaiting}}
+\index{StartBattleWhenNoOpponentButOneWaitingReturnsBattleWithWaiting@{StartBattleWhenNoOpponentButOneWaitingReturnsBattleWithWaiting}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{StartBattleWhenNoOpponentButOneWaitingReturnsBattleWithWaiting()}{StartBattleWhenNoOpponentButOneWaitingReturnsBattleWithWaiting()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a7ad44581ffe5bef9a9d20f97eea7f695} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Start\+Battle\+When\+No\+Opponent\+But\+One\+Waiting\+Returns\+Battle\+With\+Waiting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba para iniciar una batalla sin oponente pero con un entrenador en espera. 
+
+Agrega un oponente a la lista de espera y se espera que la respuesta indique que el usuario no tiene un equipo completo. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a6eb0670906b1cc9c467c0f9bb115a471}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!StartBattleWhenOpponentButIsNotWaitingReturnsNotWaiting@{StartBattleWhenOpponentButIsNotWaitingReturnsNotWaiting}}
+\index{StartBattleWhenOpponentButIsNotWaitingReturnsNotWaiting@{StartBattleWhenOpponentButIsNotWaitingReturnsNotWaiting}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{StartBattleWhenOpponentButIsNotWaitingReturnsNotWaiting()}{StartBattleWhenOpponentButIsNotWaitingReturnsNotWaiting()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a6eb0670906b1cc9c467c0f9bb115a471} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Start\+Battle\+When\+Opponent\+But\+Is\+Not\+Waiting\+Returns\+Not\+Waiting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba para iniciar una batalla con un oponente que no está en espera. 
+
+Se espera que la respuesta indique que el usuario no tiene un equipo completo para iniciar una batalla. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a9784c44c2737928cfd25173801be3fce}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!StartBattleWhenOpponentWaitingReturnsBattleWithOpponent@{StartBattleWhenOpponentWaitingReturnsBattleWithOpponent}}
+\index{StartBattleWhenOpponentWaitingReturnsBattleWithOpponent@{StartBattleWhenOpponentWaitingReturnsBattleWithOpponent}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{StartBattleWhenOpponentWaitingReturnsBattleWithOpponent()}{StartBattleWhenOpponentWaitingReturnsBattleWithOpponent()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a9784c44c2737928cfd25173801be3fce} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Start\+Battle\+When\+Opponent\+Waiting\+Returns\+Battle\+With\+Opponent (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba para iniciar una batalla con un oponente que está en espera. 
+
+Agrega un oponente a la lista de espera y se espera que la respuesta indique que el usuario no tiene un equipo completo. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a0d9b34c24f14cd6b1546db3c99efe9d5}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!TearDown@{TearDown}}
+\index{TearDown@{TearDown}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{TearDown()}{TearDown()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a0d9b34c24f14cd6b1546db3c99efe9d5} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Tear\+Down (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Restablece el estado de la fachada después de cada prueba. 
+
+Llama a {\ttfamily Facade.\+Reset()} para limpiar la instancia. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a7edbcb5b9fae8a3658fc3ff9c082dd3d}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!TrainerIsWaitingWhenAddedReturnsWaiting@{TrainerIsWaitingWhenAddedReturnsWaiting}}
+\index{TrainerIsWaitingWhenAddedReturnsWaiting@{TrainerIsWaitingWhenAddedReturnsWaiting}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{TrainerIsWaitingWhenAddedReturnsWaiting()}{TrainerIsWaitingWhenAddedReturnsWaiting()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a7edbcb5b9fae8a3658fc3ff9c082dd3d} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Trainer\+Is\+Waiting\+When\+Added\+Returns\+Waiting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba que un entrenador esté en la lista de espera. 
+
+Verifica que el método {\ttfamily Trainer\+Is\+Waiting()} devuelva el mensaje adecuado si el entrenador está en la lista de espera. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a21b3ca3016b625ff1e359e051f278a7d}\index{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}!TrainerIsWaitingWhenNotAddedReturnsNotWaiting@{TrainerIsWaitingWhenNotAddedReturnsNotWaiting}}
+\index{TrainerIsWaitingWhenNotAddedReturnsNotWaiting@{TrainerIsWaitingWhenNotAddedReturnsNotWaiting}!Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests@{Ucu.Poo.DiscordBot.Domain.Tests.FacadeTests}}
+\doxysubsubsection{\texorpdfstring{TrainerIsWaitingWhenNotAddedReturnsNotWaiting()}{TrainerIsWaitingWhenNotAddedReturnsNotWaiting()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_tests_1_1_facade_tests_a21b3ca3016b625ff1e359e051f278a7d} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Tests.\+Facade\+Tests.\+Trainer\+Is\+Waiting\+When\+Not\+Added\+Returns\+Not\+Waiting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba que un entrenador no esté en la lista de espera. 
+
+Verifica que se devuelva un mensaje adecuado si el entrenador no está en la lista de espera. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library\+Tests/\+Tests\+General/\+Tests\+Domain/\mbox{\hyperlink{_test_facade_8cs}{Test\+Facade.\+cs}}\end{DoxyCompactItemize}

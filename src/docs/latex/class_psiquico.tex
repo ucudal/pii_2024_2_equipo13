@@ -1,0 +1,145 @@
+\doxysection{Psiquico Class Reference}
+\hypertarget{class_psiquico}{}\label{class_psiquico}\index{Psiquico@{Psiquico}}
+
+
+Representa el tipo de Pokémon "{}\+Psíquico"{} y define sus interacciones con otros tipos.  
+
+
+Inheritance diagram for Psiquico\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_psiquico}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_psiquico_a806c8736b2ededef0f99ea3c4c00a2ce}{Psiquico}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_psiquico}{Psiquico}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_psiquico_aa0c0827c6ae83228d13069a95357b2f6}{Inmune\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo Psíquico es inmune a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_psiquico_a525221b16ce7a125b40f6c1ec949b784}{Resistente\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo Psíquico es resistente a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_psiquico_ae2485a058e3d2c307b283ecee7eb1801}{Debil\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo Psíquico es débil a otro tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_psiquico_a4629b2bd8e599874c1d4715c5cd89d79}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del tipo de Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_itipo}{Library.\+Itipo}}}
+
+
+\doxysubsection{Detailed Description}
+Representa el tipo de Pokémon "{}\+Psíquico"{} y define sus interacciones con otros tipos. 
+
+La clase \doxylink{class_psiquico}{Psiquico} implementa la interfaz Itipo y proporciona las propiedades y métodos para verificar las inmunidades, resistencias y debilidades del tipo Psíquico. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_psiquico_a806c8736b2ededef0f99ea3c4c00a2ce}\index{Psiquico@{Psiquico}!Psiquico@{Psiquico}}
+\index{Psiquico@{Psiquico}!Psiquico@{Psiquico}}
+\doxysubsubsection{\texorpdfstring{Psiquico()}{Psiquico()}}
+{\footnotesize\ttfamily \label{class_psiquico_a806c8736b2ededef0f99ea3c4c00a2ce} 
+Psiquico.\+Psiquico (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_psiquico}{Psiquico}. 
+
+Inicializa el nombre del tipo como "{}\+Psiquico"{}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_psiquico_ae2485a058e3d2c307b283ecee7eb1801}\index{Psiquico@{Psiquico}!DebilContra@{DebilContra}}
+\index{DebilContra@{DebilContra}!Psiquico@{Psiquico}}
+\doxysubsubsection{\texorpdfstring{DebilContra()}{DebilContra()}}
+{\footnotesize\ttfamily \label{class_psiquico_ae2485a058e3d2c307b283ecee7eb1801} 
+bool Psiquico.\+Debil\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo Psíquico es débil a otro tipo. 
+
+El tipo Psíquico es débil a \doxylink{class_bicho}{Bicho} y Fantasma.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la debilidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_bicho}{Bicho} o Fantasma, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}{Library.\+Itipo}}.
+
+\Hypertarget{class_psiquico_aa0c0827c6ae83228d13069a95357b2f6}\index{Psiquico@{Psiquico}!InmuneContra@{InmuneContra}}
+\index{InmuneContra@{InmuneContra}!Psiquico@{Psiquico}}
+\doxysubsubsection{\texorpdfstring{InmuneContra()}{InmuneContra()}}
+{\footnotesize\ttfamily \label{class_psiquico_aa0c0827c6ae83228d13069a95357b2f6} 
+bool Psiquico.\+Inmune\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo Psíquico es inmune a otro tipo. 
+
+El tipo Psíquico no es inmune a ningún tipo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la inmunidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} siempre, ya que el tipo Psíquico no es inmune a ningún tipo. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}{Library.\+Itipo}}.
+
+\Hypertarget{class_psiquico_a525221b16ce7a125b40f6c1ec949b784}\index{Psiquico@{Psiquico}!ResistenteContra@{ResistenteContra}}
+\index{ResistenteContra@{ResistenteContra}!Psiquico@{Psiquico}}
+\doxysubsubsection{\texorpdfstring{ResistenteContra()}{ResistenteContra()}}
+{\footnotesize\ttfamily \label{class_psiquico_a525221b16ce7a125b40f6c1ec949b784} 
+bool Psiquico.\+Resistente\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo Psíquico es resistente a otro tipo. 
+
+El tipo Psíquico es resistente a \doxylink{class_lucha}{Lucha} y \doxylink{class_veneno}{Veneno}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la resistencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_lucha}{Lucha} o \doxylink{class_veneno}{Veneno}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}{Library.\+Itipo}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_psiquico_a4629b2bd8e599874c1d4715c5cd89d79}\index{Psiquico@{Psiquico}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Psiquico@{Psiquico}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{class_psiquico_a4629b2bd8e599874c1d4715c5cd89d79} 
+string Psiquico.\+Nombre\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del tipo de Pokémon. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}{Library.\+Itipo}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Tipos\+Pokemon/\mbox{\hyperlink{_psiquico_8cs}{Psiquico.\+cs}}\end{DoxyCompactItemize}

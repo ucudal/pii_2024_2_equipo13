@@ -1,0 +1,132 @@
+\doxysection{Library.\+Itipo Interface Reference}
+\hypertarget{interface_library_1_1_itipo}{}\label{interface_library_1_1_itipo}\index{Library.Itipo@{Library.Itipo}}
+
+
+Interfaz que define las propiedades y métodos relacionados con el tipo de un Pokémon.  
+
+
+Inheritance diagram for Library.\+Itipo\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=12.000000cm]{interface_library_1_1_itipo}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}{Inmune\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo es inmune contra otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}{Resistente\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo es resistente contra otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}{Debil\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo es débil contra otro tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del tipo de Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interfaz que define las propiedades y métodos relacionados con el tipo de un Pokémon. 
+
+La interfaz \doxylink{interface_library_1_1_itipo}{Itipo} se implementa para representar el tipo de un Pokémon y verificar sus interacciones de efectividad con otros tipos. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}\index{Library.Itipo@{Library.Itipo}!DebilContra@{DebilContra}}
+\index{DebilContra@{DebilContra}!Library.Itipo@{Library.Itipo}}
+\doxysubsubsection{\texorpdfstring{DebilContra()}{DebilContra()}}
+{\footnotesize\ttfamily \label{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890} 
+bool Library.\+Itipo.\+Debil\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo es débil contra otro tipo. 
+
+Este método comprueba si el tipo del Pokémon es débil al tipo especificado, lo que significa que el daño recibido se duplicaría (2x).
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El otro tipo contra el que se verificará la debilidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si es débil al otro tipo, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_bicho_ae8bd7aaf28b42e7ec24cfa1a4893c230}{Bicho}}, \mbox{\hyperlink{class_electrico_a73e0c347f008283c839fd5b3d0defae6}{Electrico}}, \mbox{\hyperlink{class_fuego_af4beb5bb8da52fdc15a27d71ee0b4115}{Fuego}}, \mbox{\hyperlink{class_hada_a18983b39bf3ff0b07cc0036821d0d5a7}{Hada}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_agua_ad8c934914ff4611d23e4cea3c0862f9d}{Library.\+Tipos\+Pokemon.\+Agua}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_fantasma_afc1fbfc39fe88f43c83d98fbe48cace3}{Library.\+Tipos\+Pokemon.\+Fantasma}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_normal_af01d3c045d51e4f3fb38d2584ab8806b}{Library.\+Tipos\+Pokemon.\+Normal}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_roca_a046c0957803b7a7c1482db1989408f36}{Library.\+Tipos\+Pokemon.\+Roca}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_siniestro_a2ffc729e36307b5401714d89dae4f496}{Library.\+Tipos\+Pokemon.\+Siniestro}}, \mbox{\hyperlink{class_lucha_a0ff3deb8013750172007f039bbc59b8b}{Lucha}}, \mbox{\hyperlink{class_planta_a4563fc4eeb99baeb921ed0e10d463fc7}{Planta}}, \mbox{\hyperlink{class_psiquico_ae2485a058e3d2c307b283ecee7eb1801}{Psiquico}}, \mbox{\hyperlink{class_tierra_a412e143820be5242341782c28a006447}{Tierra}}, \mbox{\hyperlink{class_veneno_a50a360be2e6dc94608b940d8041b900d}{Veneno}}, and \mbox{\hyperlink{class_volador_a2a9cda997168a43642be5807fb0c9860}{Volador}}.
+
+\Hypertarget{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}\index{Library.Itipo@{Library.Itipo}!InmuneContra@{InmuneContra}}
+\index{InmuneContra@{InmuneContra}!Library.Itipo@{Library.Itipo}}
+\doxysubsubsection{\texorpdfstring{InmuneContra()}{InmuneContra()}}
+{\footnotesize\ttfamily \label{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e} 
+bool Library.\+Itipo.\+Inmune\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo es inmune contra otro tipo. 
+
+Este método comprueba si el tipo del Pokémon es inmune al tipo especificado, lo que significa que el daño recibido sería nulo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El otro tipo contra el que se verificará la inmunidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si es inmune al otro tipo, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_bicho_a52b2d361fedecbb64d2a02cd305a4ccb}{Bicho}}, \mbox{\hyperlink{class_electrico_a1edb1514529bd1507369b4a5849f354f}{Electrico}}, \mbox{\hyperlink{class_fuego_a2b88f6cc985542c3a26cd0d40fd88285}{Fuego}}, \mbox{\hyperlink{class_hada_a70c6cf3b17ae3a562f468874016f6305}{Hada}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_agua_abf9ac556769e7cbe54310372a5d741ed}{Library.\+Tipos\+Pokemon.\+Agua}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_fantasma_a292e8be0fd3d47bd729edefb408c7b8b}{Library.\+Tipos\+Pokemon.\+Fantasma}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_normal_af0ab984f78dd35a28f9539b8f6fff895}{Library.\+Tipos\+Pokemon.\+Normal}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_roca_a389c14bb3da4814e0d0b365e5a994451}{Library.\+Tipos\+Pokemon.\+Roca}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_siniestro_a2e941c44a3079ebf97584f7a4adfb0c6}{Library.\+Tipos\+Pokemon.\+Siniestro}}, \mbox{\hyperlink{class_lucha_afa260a29577b49ed1b410b1a615187f7}{Lucha}}, \mbox{\hyperlink{class_planta_a9386922d8acd0c1cc6724fc539e08c86}{Planta}}, \mbox{\hyperlink{class_psiquico_aa0c0827c6ae83228d13069a95357b2f6}{Psiquico}}, \mbox{\hyperlink{class_tierra_a3fbfa9eff36fc096c725dd6dda9257b7}{Tierra}}, \mbox{\hyperlink{class_veneno_a5d1a764196f2c12d08635d02312d3dc3}{Veneno}}, and \mbox{\hyperlink{class_volador_a49881d9b6ae4c008a9bb93593755ea14}{Volador}}.
+
+\Hypertarget{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}\index{Library.Itipo@{Library.Itipo}!ResistenteContra@{ResistenteContra}}
+\index{ResistenteContra@{ResistenteContra}!Library.Itipo@{Library.Itipo}}
+\doxysubsubsection{\texorpdfstring{ResistenteContra()}{ResistenteContra()}}
+{\footnotesize\ttfamily \label{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676} 
+bool Library.\+Itipo.\+Resistente\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo es resistente contra otro tipo. 
+
+Este método comprueba si el tipo del Pokémon es resistente al tipo especificado, lo que significa que el daño recibido se reduciría a la mitad (0.\+5x).
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El otro tipo contra el que se verificará la resistencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si es resistente al otro tipo, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_bicho_ab9e4b6c4f6514462984e70a117097e73}{Bicho}}, \mbox{\hyperlink{class_electrico_a266907cb2d497c51c9a3f213fc2ee026}{Electrico}}, \mbox{\hyperlink{class_fuego_a44d7a0b17b4d3de3bc95ff6a8afbb482}{Fuego}}, \mbox{\hyperlink{class_hada_a5da48e8214a5513e32abff50bb84f4d8}{Hada}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_agua_acf884fc8cf76111de74c1584b5c15eb9}{Library.\+Tipos\+Pokemon.\+Agua}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_fantasma_ada4197326f929384d0aeb2cbe95e9436}{Library.\+Tipos\+Pokemon.\+Fantasma}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_normal_a49625d5293b3b3281da770bfab8e9d51}{Library.\+Tipos\+Pokemon.\+Normal}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_roca_a46cb0e18323ae041c8c0eb5ad2635ae4}{Library.\+Tipos\+Pokemon.\+Roca}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_siniestro_a0ab238e6211bd7eb948c1605c9bc102f}{Library.\+Tipos\+Pokemon.\+Siniestro}}, \mbox{\hyperlink{class_lucha_afc8c191c5fa49f70dd3201c7e1a9847a}{Lucha}}, \mbox{\hyperlink{class_planta_ac71111de6b629fba2a3b45fa3cec70b6}{Planta}}, \mbox{\hyperlink{class_psiquico_a525221b16ce7a125b40f6c1ec949b784}{Psiquico}}, \mbox{\hyperlink{class_tierra_a95429d00e51c243ed08edc927c261a96}{Tierra}}, \mbox{\hyperlink{class_veneno_aaf7218ee29b8de488670ebe51abbbc0b}{Veneno}}, and \mbox{\hyperlink{class_volador_aa20998497d635562053fb8d280887152}{Volador}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}\index{Library.Itipo@{Library.Itipo}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Library.Itipo@{Library.Itipo}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4} 
+string Library.\+Itipo.\+Nombre\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del tipo de Pokémon. 
+
+\begin{DoxyReturn}{Returns}
+El nombre del tipo de Pokémon, por ejemplo, "{}\+Fuego"{}. 
+\end{DoxyReturn}
+
+
+Implemented in \mbox{\hyperlink{class_bicho_a45f3d3afcaa49a9c8b4821a5141f4f66}{Bicho}}, \mbox{\hyperlink{class_electrico_a2a8eae3ab4227050644fd2aecf5e0109}{Electrico}}, \mbox{\hyperlink{class_fuego_a29743f1b2294eee9aac3f8fc27653d2d}{Fuego}}, \mbox{\hyperlink{class_hada_ab101cc81fb43dc089a6c0a58c5294902}{Hada}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_agua_a701625e616a08517a19fd3a931244bf5}{Library.\+Tipos\+Pokemon.\+Agua}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_fantasma_a04aa110ad12300454e4c492c37c324e2}{Library.\+Tipos\+Pokemon.\+Fantasma}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_normal_a66a9ba49903ab34b0b6f29af8f40058a}{Library.\+Tipos\+Pokemon.\+Normal}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_roca_a96ecd81d159a27e94f87d83a7fb9d8bd}{Library.\+Tipos\+Pokemon.\+Roca}}, \mbox{\hyperlink{class_library_1_1_tipos_pokemon_1_1_siniestro_a03f20344d3b114b5dc8c87f3b04a77b1}{Library.\+Tipos\+Pokemon.\+Siniestro}}, \mbox{\hyperlink{class_lucha_ac93cced5f2acca6856fd4746d798b520}{Lucha}}, \mbox{\hyperlink{class_planta_a54b8cc15ed43ad36657cb6586bcfad1f}{Planta}}, \mbox{\hyperlink{class_psiquico_a4629b2bd8e599874c1d4715c5cd89d79}{Psiquico}}, \mbox{\hyperlink{class_tierra_add382413c44a7b9786f9296a70ac74b9}{Tierra}}, \mbox{\hyperlink{class_veneno_a965a45f7c2de61e8e65d860bc6cbe2fc}{Veneno}}, and \mbox{\hyperlink{class_volador_a1f5b6ff53eab0a6c645c3b87b55674e7}{Volador}}.
+
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Interfaces/\mbox{\hyperlink{_itipo_8cs}{Itipo.\+cs}}\end{DoxyCompactItemize}

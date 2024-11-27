@@ -1,0 +1,422 @@
+\doxysection{Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade Class Reference}
+\hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade}{}\label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+
+
+La clase \doxylink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade}{Facade} proporciona métodos simplificados para manejar la lista de espera, iniciar batallas y realizar acciones durante una batalla.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a376de7e42e94abce3bb7135b634345d3}{Add\+Trainer\+To\+Waiting\+List}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Agrega un entrenador a la lista de espera. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a89a4414772440d41adf0930bff407a7e}{Remove\+Trainer\+From\+Waiting\+List}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Elimina un entrenador de la lista de espera. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a15b3b1fcceca0d79806e76ff4f6df547}{Get\+All\+Trainers\+Waiting}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene todos los entrenadores en la lista de espera. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}} \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_ac305075676ca60bd1518e4683e54260f}{Get\+Trainer\+By\+Display\+Name}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Obtiene un entrenador por su nombre de pantalla. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a5e0b1d9ca1347c92c36a3a336e902152}{Trainer\+Is\+Waiting}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Verifica si un entrenador está en la lista de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_acbf8728472de2f1b92943dab28539023}{Mostrar\+Pokemons\+Disponibles}} ()
+\begin{DoxyCompactList}\small\item\em Muestra los Pokémon disponibles. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_af1154c9b60756e4c340057ea4e0b0f26}{Mostrar\+Ataques\+Disponibles}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Muestra los ataques disponibles para el Pokémon activo de un entrenador. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_ab5ce925baee6500cbb5f1d14683184c9}{Mostrar\+Items\+Disponibles}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Muestra los ítems disponibles para un entrenador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}? \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_adbfeb24cb63819c78d1fb714585a49f5}{Obtener\+Oponente\+En\+Batalla}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Obtiene un oponente en batalla para un entrenador. \end{DoxyCompactList}\item 
+async Task$<$ bool $>$ \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a776e21039d626b1abdf888f0401fc1f7}{Select\+Pokemon\+For\+Player}} (string display\+Name, string pokemon\+Name, ICommand\+Context context)
+\begin{DoxyCompactList}\small\item\em Selecciona un Pokémon para un jugador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}? \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a9fc22c2a85daf36d571c0504218bb7e5}{Obtener\+Trainer\+Random}} (string exclude\+Display\+Name)
+\begin{DoxyCompactList}\small\item\em Obtiene un entrenador aleatorio de la lista de espera. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a5948a60e6bc312e1e34c0893cdbb4b1b}{Iniciar\+Batalla}} (string display\+Name, string? opponent\+Display\+Name=null)
+\begin{DoxyCompactList}\small\item\em Inicia una batalla entre dos entrenadores. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a7fbdd9a6fe1ef674872511dc5a9d3981}{Notificar\+Turno\+Jugador\+Actual}} ()
+\begin{DoxyCompactList}\small\item\em Notifica el turno del jugador actual. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a7ea8556d4dd5ac8cf7482e2c14bfea98}{Atacar\+Basico}} (\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}} atacante, \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}} oponente, int ataque\+Seleccionado)
+\begin{DoxyCompactList}\small\item\em Realiza un ataque básico. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a77f81202dc2f51252caa33830b194ada}{Atacar\+Especial}} (\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}} atacante, \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}} oponente, int ataque\+Seleccionado)
+\begin{DoxyCompactList}\small\item\em Realiza un ataque especial. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a0145b63678ece54a28ab6f110dfb5684}{Realizar\+Accion}} (string display\+Name, string accion, string? item\+Opcion=null, string? nombre\+Pokemon=null)
+\begin{DoxyCompactList}\small\item\em Realiza una acción durante la batalla. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a40530c743c4f8a5d709fb42fe001c393}{Rendirse}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Marca la rendición de un entrenador. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a6a4c0f9a50438167b8a077281e2d2486}{Verificar\+Batalla}} ()
+\begin{DoxyCompactList}\small\item\em Verifica el estado de la batalla. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a79498c7def36d33cb3ccf6ee7576c63d}{Reset}} ()
+\begin{DoxyCompactList}\small\item\em Restablece la instancia para uso en pruebas u otras operaciones. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} $>$ \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a494f090832888d958d255a008102d460}{Pokemons\+Disponibles}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+static \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade}{Facade}} \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a5ba10a1da29b6141e13013a9b590699e}{Instance}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Obtiene la única instancia de la clase \doxylink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade}{Facade}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+La clase \doxylink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade}{Facade} proporciona métodos simplificados para manejar la lista de espera, iniciar batallas y realizar acciones durante una batalla. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a376de7e42e94abce3bb7135b634345d3}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!AddTrainerToWaitingList@{AddTrainerToWaitingList}}
+\index{AddTrainerToWaitingList@{AddTrainerToWaitingList}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{AddTrainerToWaitingList()}{AddTrainerToWaitingList()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a376de7e42e94abce3bb7135b634345d3} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Add\+Trainer\+To\+Waiting\+List (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega un entrenador a la lista de espera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre del entrenador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje indicando que el entrenador ha sido agregado a la lista de espera. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a7ea8556d4dd5ac8cf7482e2c14bfea98}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!AtacarBasico@{AtacarBasico}}
+\index{AtacarBasico@{AtacarBasico}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{AtacarBasico()}{AtacarBasico()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a7ea8556d4dd5ac8cf7482e2c14bfea98} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Atacar\+Basico (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}}]{atacante}{, }\item[{\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}}]{oponente}{, }\item[{int}]{ataque\+Seleccionado}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realiza un ataque básico. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atacante} & El entrenador atacante. \\
+\hline
+{\em oponente} & El entrenador oponente. \\
+\hline
+{\em ataque\+Seleccionado} & El número del ataque seleccionado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje con el resultado del ataque. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a77f81202dc2f51252caa33830b194ada}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!AtacarEspecial@{AtacarEspecial}}
+\index{AtacarEspecial@{AtacarEspecial}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{AtacarEspecial()}{AtacarEspecial()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a77f81202dc2f51252caa33830b194ada} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Atacar\+Especial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}}]{atacante}{, }\item[{\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}}]{oponente}{, }\item[{int}]{ataque\+Seleccionado}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realiza un ataque especial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em atacante} & El entrenador atacante. \\
+\hline
+{\em oponente} & El entrenador oponente. \\
+\hline
+{\em ataque\+Seleccionado} & El número del ataque seleccionado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje con el resultado del ataque. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a15b3b1fcceca0d79806e76ff4f6df547}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!GetAllTrainersWaiting@{GetAllTrainersWaiting}}
+\index{GetAllTrainersWaiting@{GetAllTrainersWaiting}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{GetAllTrainersWaiting()}{GetAllTrainersWaiting()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a15b3b1fcceca0d79806e76ff4f6df547} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Get\+All\+Trainers\+Waiting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene todos los entrenadores en la lista de espera. 
+
+\begin{DoxyReturn}{Returns}
+Una cadena con la lista de entrenadores en espera. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_ac305075676ca60bd1518e4683e54260f}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!GetTrainerByDisplayName@{GetTrainerByDisplayName}}
+\index{GetTrainerByDisplayName@{GetTrainerByDisplayName}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{GetTrainerByDisplayName()}{GetTrainerByDisplayName()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_ac305075676ca60bd1518e4683e54260f} 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}} Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Get\+Trainer\+By\+Display\+Name (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene un entrenador por su nombre de pantalla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del entrenador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El entrenador encontrado o null si no se encuentra. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a5948a60e6bc312e1e34c0893cdbb4b1b}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!IniciarBatalla@{IniciarBatalla}}
+\index{IniciarBatalla@{IniciarBatalla}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{IniciarBatalla()}{IniciarBatalla()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a5948a60e6bc312e1e34c0893cdbb4b1b} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Iniciar\+Batalla (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{, }\item[{string?}]{opponent\+Display\+Name}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Inicia una batalla entre dos entrenadores. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del primer entrenador. \\
+\hline
+{\em opponent\+Display\+Name} & El nombre de pantalla del oponente (opcional). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje indicando el estado de la batalla. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_af1154c9b60756e4c340057ea4e0b0f26}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!MostrarAtaquesDisponibles@{MostrarAtaquesDisponibles}}
+\index{MostrarAtaquesDisponibles@{MostrarAtaquesDisponibles}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{MostrarAtaquesDisponibles()}{MostrarAtaquesDisponibles()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_af1154c9b60756e4c340057ea4e0b0f26} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Mostrar\+Ataques\+Disponibles (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Muestra los ataques disponibles para el Pokémon activo de un entrenador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del entrenador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una cadena con los ataques disponibles. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_ab5ce925baee6500cbb5f1d14683184c9}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!MostrarItemsDisponibles@{MostrarItemsDisponibles}}
+\index{MostrarItemsDisponibles@{MostrarItemsDisponibles}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{MostrarItemsDisponibles()}{MostrarItemsDisponibles()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_ab5ce925baee6500cbb5f1d14683184c9} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Mostrar\+Items\+Disponibles (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Muestra los ítems disponibles para un entrenador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del entrenador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Una cadena con los ítems disponibles. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_acbf8728472de2f1b92943dab28539023}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!MostrarPokemonsDisponibles@{MostrarPokemonsDisponibles}}
+\index{MostrarPokemonsDisponibles@{MostrarPokemonsDisponibles}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{MostrarPokemonsDisponibles()}{MostrarPokemonsDisponibles()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_acbf8728472de2f1b92943dab28539023} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Mostrar\+Pokemons\+Disponibles (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Muestra los Pokémon disponibles. 
+
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a7fbdd9a6fe1ef674872511dc5a9d3981}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!NotificarTurnoJugadorActual@{NotificarTurnoJugadorActual}}
+\index{NotificarTurnoJugadorActual@{NotificarTurnoJugadorActual}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{NotificarTurnoJugadorActual()}{NotificarTurnoJugadorActual()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a7fbdd9a6fe1ef674872511dc5a9d3981} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Notificar\+Turno\+Jugador\+Actual (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Notifica el turno del jugador actual. 
+
+\begin{DoxyReturn}{Returns}
+Un mensaje indicando el turno del jugador actual. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_adbfeb24cb63819c78d1fb714585a49f5}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!ObtenerOponenteEnBatalla@{ObtenerOponenteEnBatalla}}
+\index{ObtenerOponenteEnBatalla@{ObtenerOponenteEnBatalla}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{ObtenerOponenteEnBatalla()}{ObtenerOponenteEnBatalla()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_adbfeb24cb63819c78d1fb714585a49f5} 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}? Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Obtener\+Oponente\+En\+Batalla (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene un oponente en batalla para un entrenador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del entrenador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El oponente encontrado o null si no se encuentra. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a9fc22c2a85daf36d571c0504218bb7e5}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!ObtenerTrainerRandom@{ObtenerTrainerRandom}}
+\index{ObtenerTrainerRandom@{ObtenerTrainerRandom}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{ObtenerTrainerRandom()}{ObtenerTrainerRandom()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a9fc22c2a85daf36d571c0504218bb7e5} 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}? Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Obtener\+Trainer\+Random (\begin{DoxyParamCaption}\item[{string}]{exclude\+Display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene un entrenador aleatorio de la lista de espera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em exclude\+Display\+Name} & El nombre de pantalla del entrenador a excluir. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un entrenador aleatorio o null si la lista está vacía. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a0145b63678ece54a28ab6f110dfb5684}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!RealizarAccion@{RealizarAccion}}
+\index{RealizarAccion@{RealizarAccion}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{RealizarAccion()}{RealizarAccion()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a0145b63678ece54a28ab6f110dfb5684} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Realizar\+Accion (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{, }\item[{string}]{accion}{, }\item[{string?}]{item\+Opcion}{ = {\ttfamily null}, }\item[{string?}]{nombre\+Pokemon}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realiza una acción durante la batalla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del entrenador. \\
+\hline
+{\em accion} & La acción a realizar. \\
+\hline
+{\em item\+Opcion} & La opción del ítem a usar (opcional). \\
+\hline
+{\em nombre\+Pokemon} & El nombre del Pokémon (opcional). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje con el resultado de la acción. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a89a4414772440d41adf0930bff407a7e}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!RemoveTrainerFromWaitingList@{RemoveTrainerFromWaitingList}}
+\index{RemoveTrainerFromWaitingList@{RemoveTrainerFromWaitingList}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{RemoveTrainerFromWaitingList()}{RemoveTrainerFromWaitingList()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a89a4414772440d41adf0930bff407a7e} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Remove\+Trainer\+From\+Waiting\+List (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina un entrenador de la lista de espera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre del entrenador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje indicando que el entrenador ha sido eliminado de la lista de espera. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a40530c743c4f8a5d709fb42fe001c393}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!Rendirse@{Rendirse}}
+\index{Rendirse@{Rendirse}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{Rendirse()}{Rendirse()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a40530c743c4f8a5d709fb42fe001c393} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Rendirse (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Marca la rendición de un entrenador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del entrenador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje indicando que el entrenador se ha rendido. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a79498c7def36d33cb3ccf6ee7576c63d}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!Reset@{Reset}}
+\index{Reset@{Reset}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{Reset()}{Reset()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a79498c7def36d33cb3ccf6ee7576c63d} 
+static void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Reset (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [static]}}
+
+
+
+Restablece la instancia para uso en pruebas u otras operaciones. 
+
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a776e21039d626b1abdf888f0401fc1f7}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!SelectPokemonForPlayer@{SelectPokemonForPlayer}}
+\index{SelectPokemonForPlayer@{SelectPokemonForPlayer}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{SelectPokemonForPlayer()}{SelectPokemonForPlayer()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a776e21039d626b1abdf888f0401fc1f7} 
+async Task$<$ bool $>$ Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Select\+Pokemon\+For\+Player (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{, }\item[{string}]{pokemon\+Name}{, }\item[{ICommand\+Context}]{context}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Selecciona un Pokémon para un jugador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del jugador. \\
+\hline
+{\em pokemon\+Name} & El nombre del Pokémon a seleccionar. \\
+\hline
+{\em context} & El contexto del comando. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true si el Pokémon fue seleccionado exitosamente, false de lo contrario. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a5e0b1d9ca1347c92c36a3a336e902152}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!TrainerIsWaiting@{TrainerIsWaiting}}
+\index{TrainerIsWaiting@{TrainerIsWaiting}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{TrainerIsWaiting()}{TrainerIsWaiting()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a5e0b1d9ca1347c92c36a3a336e902152} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Trainer\+Is\+Waiting (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si un entrenador está en la lista de espera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del entrenador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje indicando si el entrenador está en la lista de espera. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a6a4c0f9a50438167b8a077281e2d2486}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!VerificarBatalla@{VerificarBatalla}}
+\index{VerificarBatalla@{VerificarBatalla}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{VerificarBatalla()}{VerificarBatalla()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a6a4c0f9a50438167b8a077281e2d2486} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Verificar\+Batalla (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica el estado de la batalla. 
+
+\begin{DoxyReturn}{Returns}
+Un mensaje indicando el estado de la batalla. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a5ba10a1da29b6141e13013a9b590699e}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!Instance@{Instance}}
+\index{Instance@{Instance}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{Instance}{Instance}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a5ba10a1da29b6141e13013a9b590699e} 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade}{Facade}} Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Instance\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}}
+
+
+
+Obtiene la única instancia de la clase \doxylink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade}{Facade}. 
+
+\begin{DoxyReturn}{Returns}
+La instancia única de \doxylink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade}{Facade}. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a494f090832888d958d255a008102d460}\index{Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}!PokemonsDisponibles@{PokemonsDisponibles}}
+\index{PokemonsDisponibles@{PokemonsDisponibles}!Ucu.Poo.DiscordBot.Domain.Facade@{Ucu.Poo.DiscordBot.Domain.Facade}}
+\doxysubsubsection{\texorpdfstring{PokemonsDisponibles}{PokemonsDisponibles}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_facade_a494f090832888d958d255a008102d460} 
+List$<$\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}$>$ Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Facade.\+Pokemons\+Disponibles\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Domain/\mbox{\hyperlink{_facade_8cs}{Facade.\+cs}}\end{DoxyCompactItemize}

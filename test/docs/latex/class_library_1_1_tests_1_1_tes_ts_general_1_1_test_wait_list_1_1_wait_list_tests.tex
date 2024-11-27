@@ -1,0 +1,71 @@
+\doxysection{Library.\+Tests.\+Tes\+Ts\+General.\+Test\+Wait\+List.\+Wait\+List\+Tests Class Reference}
+\hypertarget{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests}{}\label{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests}\index{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests@{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests}}
+
+
+Clase de pruebas para la funcionalidad de la lista de espera (Wait\+List).  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_a3fc00010494a5ce2d58bbbfbc7c619a6}{Set\+Up}} ()
+\begin{DoxyCompactList}\small\item\em Configura el entorno necesario para las pruebas. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_af05de304c75ae359e8eee6fb9879d902}{Test\+Sala\+De\+Espera\+Adds\+Player\+To\+Wait\+List}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la adición de un entrenador a la lista de espera. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_af1c3dee155bc9db0a23b89171eb73bbe}{Test\+Get\+Random\+Trainer\+Waiting\+Returns\+Null\+When\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la obtención de un entrenador aleatorio de la lista de espera cuando está vacía. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_a58b6034348037df4327dc093279e4e89}{Test\+Get\+Random\+Trainer\+Waiting\+Returns\+Trainer\+When\+Not\+Empty}} ()
+\begin{DoxyCompactList}\small\item\em Prueba la obtención de un entrenador aleatorio de la lista de espera cuando contiene entrenadores. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase de pruebas para la funcionalidad de la lista de espera (Wait\+List). 
+
+La clase {\ttfamily \doxylink{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests}{Wait\+List\+Tests}} contiene un conjunto de pruebas unitarias para verificar el correcto funcionamiento de la clase {\ttfamily Wait\+List}, asegurando que los jugadores sean agregados correctamente a la lista de espera y que se obtengan resultados esperados cuando se consultan los entrenadores en espera. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_a3fc00010494a5ce2d58bbbfbc7c619a6}\index{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests@{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests}!SetUp@{SetUp}}
+\index{SetUp@{SetUp}!Library.Tests.TesTsGeneral.TestWaitList.WaitListTests@{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests}}
+\doxysubsubsection{\texorpdfstring{SetUp()}{SetUp()}}
+{\footnotesize\ttfamily \label{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_a3fc00010494a5ce2d58bbbfbc7c619a6} 
+void Library.\+Tests.\+Tes\+Ts\+General.\+Test\+Wait\+List.\+Wait\+List\+Tests.\+Set\+Up (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Configura el entorno necesario para las pruebas. 
+
+Inicializa una nueva instancia de {\ttfamily Wait\+List} y dos objetos de {\ttfamily Trainer} antes de ejecutar cada prueba. \Hypertarget{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_af1c3dee155bc9db0a23b89171eb73bbe}\index{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests@{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests}!TestGetRandomTrainerWaitingReturnsNullWhenEmpty@{TestGetRandomTrainerWaitingReturnsNullWhenEmpty}}
+\index{TestGetRandomTrainerWaitingReturnsNullWhenEmpty@{TestGetRandomTrainerWaitingReturnsNullWhenEmpty}!Library.Tests.TesTsGeneral.TestWaitList.WaitListTests@{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests}}
+\doxysubsubsection{\texorpdfstring{TestGetRandomTrainerWaitingReturnsNullWhenEmpty()}{TestGetRandomTrainerWaitingReturnsNullWhenEmpty()}}
+{\footnotesize\ttfamily \label{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_af1c3dee155bc9db0a23b89171eb73bbe} 
+void Library.\+Tests.\+Tes\+Ts\+General.\+Test\+Wait\+List.\+Wait\+List\+Tests.\+Test\+Get\+Random\+Trainer\+Waiting\+Returns\+Null\+When\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la obtención de un entrenador aleatorio de la lista de espera cuando está vacía. 
+
+Verifica que el método {\ttfamily Get\+Random\+Trainer\+Waiting()} devuelva null cuando no hay entrenadores en la lista de espera. \Hypertarget{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_a58b6034348037df4327dc093279e4e89}\index{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests@{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests}!TestGetRandomTrainerWaitingReturnsTrainerWhenNotEmpty@{TestGetRandomTrainerWaitingReturnsTrainerWhenNotEmpty}}
+\index{TestGetRandomTrainerWaitingReturnsTrainerWhenNotEmpty@{TestGetRandomTrainerWaitingReturnsTrainerWhenNotEmpty}!Library.Tests.TesTsGeneral.TestWaitList.WaitListTests@{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests}}
+\doxysubsubsection{\texorpdfstring{TestGetRandomTrainerWaitingReturnsTrainerWhenNotEmpty()}{TestGetRandomTrainerWaitingReturnsTrainerWhenNotEmpty()}}
+{\footnotesize\ttfamily \label{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_a58b6034348037df4327dc093279e4e89} 
+void Library.\+Tests.\+Tes\+Ts\+General.\+Test\+Wait\+List.\+Wait\+List\+Tests.\+Test\+Get\+Random\+Trainer\+Waiting\+Returns\+Trainer\+When\+Not\+Empty (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la obtención de un entrenador aleatorio de la lista de espera cuando contiene entrenadores. 
+
+Verifica que el método {\ttfamily Get\+Random\+Trainer\+Waiting()} devuelva un entrenador cuando la lista de espera tiene entrenadores y que el entrenador devuelto esté en la lista. \Hypertarget{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_af05de304c75ae359e8eee6fb9879d902}\index{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests@{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests}!TestSalaDeEsperaAddsPlayerToWaitList@{TestSalaDeEsperaAddsPlayerToWaitList}}
+\index{TestSalaDeEsperaAddsPlayerToWaitList@{TestSalaDeEsperaAddsPlayerToWaitList}!Library.Tests.TesTsGeneral.TestWaitList.WaitListTests@{Library.Tests.TesTsGeneral.TestWaitList.WaitListTests}}
+\doxysubsubsection{\texorpdfstring{TestSalaDeEsperaAddsPlayerToWaitList()}{TestSalaDeEsperaAddsPlayerToWaitList()}}
+{\footnotesize\ttfamily \label{class_library_1_1_tests_1_1_tes_ts_general_1_1_test_wait_list_1_1_wait_list_tests_af05de304c75ae359e8eee6fb9879d902} 
+void Library.\+Tests.\+Tes\+Ts\+General.\+Test\+Wait\+List.\+Wait\+List\+Tests.\+Test\+Sala\+De\+Espera\+Adds\+Player\+To\+Wait\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Prueba la adición de un entrenador a la lista de espera. 
+
+Verifica que un entrenador sea agregado correctamente a la lista de espera y que el mensaje de confirmación sea el esperado. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library\+Tests/\+Tests\+General/\+Tests\+Domain/\mbox{\hyperlink{_test_wait_list_8cs}{Test\+Wait\+List.\+cs}}\end{DoxyCompactItemize}

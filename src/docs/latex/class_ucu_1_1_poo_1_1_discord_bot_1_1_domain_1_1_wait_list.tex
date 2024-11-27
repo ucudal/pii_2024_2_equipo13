@@ -1,0 +1,141 @@
+\doxysection{Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Wait\+List Class Reference}
+\hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list}{}\label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list}\index{Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}}
+
+
+Clase que representa la lista de jugadores esperando para jugar.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_a853a1a91804ecdd099682e849bcf03f2}{Wait\+List}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list}{Wait\+List}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_abcc850a92c7f8238b494cfdbcde4e106}{Añadir\+Trainer}} (\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}} jugador)
+\begin{DoxyCompactList}\small\item\em Agrega un jugador a la lista de espera. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}? \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_ad5a886f30284c81195e751e743ce7d81}{Get\+Random\+Trainer\+Waiting}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene un jugador aleatorio de la lista de espera. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_adc44de3cafffe40e378753be87e4c18c}{Imprimir\+Lista}} ()
+\begin{DoxyCompactList}\small\item\em Imprime la lista de espera actual en la consola. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}? \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_acd26f3f4dd785b0a4a740b6ce113f836}{Find\+Trainer\+By\+Display\+Name}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Busca un jugador por su nombre de pantalla. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_a1034289342e5c2a0b5a230f18ec8a8fd}{Remove\+Trainer}} (string display\+Name)
+\begin{DoxyCompactList}\small\item\em Elimina un jugador de la lista de espera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}} $>$ \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_a7c7433f37a2b98c3bd42e785ee4a0cfb}{Wait\+List\+Jugador}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Obtiene la lista de jugadores en espera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa la lista de jugadores esperando para jugar. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_a853a1a91804ecdd099682e849bcf03f2}\index{Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}!WaitList@{WaitList}}
+\index{WaitList@{WaitList}!Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}}
+\doxysubsubsection{\texorpdfstring{WaitList()}{WaitList()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_a853a1a91804ecdd099682e849bcf03f2} 
+Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Wait\+List.\+Wait\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list}{Wait\+List}. 
+
+Inicializa una nueva lista de espera vacía. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_abcc850a92c7f8238b494cfdbcde4e106}\index{Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}!AñadirTrainer@{AñadirTrainer}}
+\index{AñadirTrainer@{AñadirTrainer}!Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}}
+\doxysubsubsection{\texorpdfstring{AñadirTrainer()}{AñadirTrainer()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_abcc850a92c7f8238b494cfdbcde4e106} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Wait\+List.\+Añadir\+Trainer (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}}]{jugador}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega un jugador a la lista de espera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em jugador} & El jugador que se agregará a la lista de espera. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje indicando que el jugador ha sido agregado a la lista de espera. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_acd26f3f4dd785b0a4a740b6ce113f836}\index{Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}!FindTrainerByDisplayName@{FindTrainerByDisplayName}}
+\index{FindTrainerByDisplayName@{FindTrainerByDisplayName}!Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}}
+\doxysubsubsection{\texorpdfstring{FindTrainerByDisplayName()}{FindTrainerByDisplayName()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_acd26f3f4dd785b0a4a740b6ce113f836} 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}? Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Wait\+List.\+Find\+Trainer\+By\+Display\+Name (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Busca un jugador por su nombre de pantalla. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del jugador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+El jugador encontrado o {\ttfamily null} si no se encuentra. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_ad5a886f30284c81195e751e743ce7d81}\index{Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}!GetRandomTrainerWaiting@{GetRandomTrainerWaiting}}
+\index{GetRandomTrainerWaiting@{GetRandomTrainerWaiting}!Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}}
+\doxysubsubsection{\texorpdfstring{GetRandomTrainerWaiting()}{GetRandomTrainerWaiting()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_ad5a886f30284c81195e751e743ce7d81} 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}? Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Wait\+List.\+Get\+Random\+Trainer\+Waiting (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene un jugador aleatorio de la lista de espera. 
+
+\begin{DoxyReturn}{Returns}
+Un jugador aleatorio o {\ttfamily null} si la lista está vacía. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_adc44de3cafffe40e378753be87e4c18c}\index{Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}!ImprimirLista@{ImprimirLista}}
+\index{ImprimirLista@{ImprimirLista}!Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}}
+\doxysubsubsection{\texorpdfstring{ImprimirLista()}{ImprimirLista()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_adc44de3cafffe40e378753be87e4c18c} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Wait\+List.\+Imprimir\+Lista (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Imprime la lista de espera actual en la consola. 
+
+Muestra el número total de jugadores en espera y los nombres de cada uno. \Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_a1034289342e5c2a0b5a230f18ec8a8fd}\index{Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}!RemoveTrainer@{RemoveTrainer}}
+\index{RemoveTrainer@{RemoveTrainer}!Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}}
+\doxysubsubsection{\texorpdfstring{RemoveTrainer()}{RemoveTrainer()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_a1034289342e5c2a0b5a230f18ec8a8fd} 
+bool Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Wait\+List.\+Remove\+Trainer (\begin{DoxyParamCaption}\item[{string}]{display\+Name}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Elimina un jugador de la lista de espera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em display\+Name} & El nombre de pantalla del jugador a eliminar. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el jugador fue eliminado, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_a7c7433f37a2b98c3bd42e785ee4a0cfb}\index{Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}!WaitListJugador@{WaitListJugador}}
+\index{WaitListJugador@{WaitListJugador}!Ucu.Poo.DiscordBot.Domain.WaitList@{Ucu.Poo.DiscordBot.Domain.WaitList}}
+\doxysubsubsection{\texorpdfstring{WaitListJugador}{WaitListJugador}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_wait_list_a7c7433f37a2b98c3bd42e785ee4a0cfb} 
+List$<$\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}$>$ Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Wait\+List.\+Wait\+List\+Jugador\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Obtiene la lista de jugadores en espera. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Domain/\mbox{\hyperlink{_waiting_list_8cs}{Waiting\+List.\+cs}}\end{DoxyCompactItemize}

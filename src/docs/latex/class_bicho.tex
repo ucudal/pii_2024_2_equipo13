@@ -1,0 +1,145 @@
+\doxysection{Bicho Class Reference}
+\hypertarget{class_bicho}{}\label{class_bicho}\index{Bicho@{Bicho}}
+
+
+Representa el tipo de Pokémon "{}\+Bicho"{} y define sus interacciones con otros tipos.  
+
+
+Inheritance diagram for Bicho\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_bicho}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_bicho_a34d1bf58a698c3b60b32719429347c86}{Bicho}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_bicho}{Bicho}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bicho_a52b2d361fedecbb64d2a02cd305a4ccb}{Inmune\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_bicho}{Bicho} es inmune a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bicho_ae8bd7aaf28b42e7ec24cfa1a4893c230}{Debil\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_bicho}{Bicho} es débil a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_bicho_ab9e4b6c4f6514462984e70a117097e73}{Resistente\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_bicho}{Bicho} es resistente a otro tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_bicho_a45f3d3afcaa49a9c8b4821a5141f4f66}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del tipo de Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_itipo}{Library.\+Itipo}}}
+
+
+\doxysubsection{Detailed Description}
+Representa el tipo de Pokémon "{}\+Bicho"{} y define sus interacciones con otros tipos. 
+
+La clase \doxylink{class_bicho}{Bicho} implementa la interfaz Itipo y proporciona las propiedades y métodos para verificar las inmunidades, resistencias y debilidades del tipo \doxylink{class_bicho}{Bicho}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_bicho_a34d1bf58a698c3b60b32719429347c86}\index{Bicho@{Bicho}!Bicho@{Bicho}}
+\index{Bicho@{Bicho}!Bicho@{Bicho}}
+\doxysubsubsection{\texorpdfstring{Bicho()}{Bicho()}}
+{\footnotesize\ttfamily \label{class_bicho_a34d1bf58a698c3b60b32719429347c86} 
+Bicho.\+Bicho (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_bicho}{Bicho}. 
+
+Inicializa el nombre del tipo como "{}\+Bicho"{}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_bicho_ae8bd7aaf28b42e7ec24cfa1a4893c230}\index{Bicho@{Bicho}!DebilContra@{DebilContra}}
+\index{DebilContra@{DebilContra}!Bicho@{Bicho}}
+\doxysubsubsection{\texorpdfstring{DebilContra()}{DebilContra()}}
+{\footnotesize\ttfamily \label{class_bicho_ae8bd7aaf28b42e7ec24cfa1a4893c230} 
+bool Bicho.\+Debil\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_bicho}{Bicho} es débil a otro tipo. 
+
+El tipo \doxylink{class_bicho}{Bicho} es débil a \doxylink{class_fuego}{Fuego}, \doxylink{class_volador}{Volador} y \doxylink{class_veneno}{Veneno}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El otro tipo contra el que se verificará la debilidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el otro tipo es \doxylink{class_fuego}{Fuego}, \doxylink{class_volador}{Volador} o \doxylink{class_veneno}{Veneno}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}{Library.\+Itipo}}.
+
+\Hypertarget{class_bicho_a52b2d361fedecbb64d2a02cd305a4ccb}\index{Bicho@{Bicho}!InmuneContra@{InmuneContra}}
+\index{InmuneContra@{InmuneContra}!Bicho@{Bicho}}
+\doxysubsubsection{\texorpdfstring{InmuneContra()}{InmuneContra()}}
+{\footnotesize\ttfamily \label{class_bicho_a52b2d361fedecbb64d2a02cd305a4ccb} 
+bool Bicho.\+Inmune\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_bicho}{Bicho} es inmune a otro tipo. 
+
+El tipo \doxylink{class_bicho}{Bicho} no es inmune a ningún tipo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & Lista de tipos contra los que se verificará la inmunidad (actualmente no se usa). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} siempre, ya que el tipo \doxylink{class_bicho}{Bicho} no es inmune a ningún tipo. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}{Library.\+Itipo}}.
+
+\Hypertarget{class_bicho_ab9e4b6c4f6514462984e70a117097e73}\index{Bicho@{Bicho}!ResistenteContra@{ResistenteContra}}
+\index{ResistenteContra@{ResistenteContra}!Bicho@{Bicho}}
+\doxysubsubsection{\texorpdfstring{ResistenteContra()}{ResistenteContra()}}
+{\footnotesize\ttfamily \label{class_bicho_ab9e4b6c4f6514462984e70a117097e73} 
+bool Bicho.\+Resistente\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_bicho}{Bicho} es resistente a otro tipo. 
+
+El tipo \doxylink{class_bicho}{Bicho} es resistente a \doxylink{class_lucha}{Lucha}, \doxylink{class_tierra}{Tierra} y \doxylink{class_planta}{Planta}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El otro tipo contra el que se verificará la resistencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el otro tipo es \doxylink{class_lucha}{Lucha}, \doxylink{class_tierra}{Tierra} o \doxylink{class_planta}{Planta}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}{Library.\+Itipo}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_bicho_a45f3d3afcaa49a9c8b4821a5141f4f66}\index{Bicho@{Bicho}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Bicho@{Bicho}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{class_bicho_a45f3d3afcaa49a9c8b4821a5141f4f66} 
+string Bicho.\+Nombre\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del tipo de Pokémon. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}{Library.\+Itipo}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Tipos\+Pokemon/\mbox{\hyperlink{_bicho_8cs}{Bicho.\+cs}}\end{DoxyCompactItemize}

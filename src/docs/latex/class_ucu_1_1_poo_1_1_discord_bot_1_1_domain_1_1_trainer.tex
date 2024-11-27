@@ -1,0 +1,253 @@
+\doxysection{Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer Class Reference}
+\hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{}\label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+
+
+Clase que representa un entrenador en el juego Pokémon.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a0b8a1d15fffc0690501a855b1049845e}{Trainer}} (string nombre)
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a04ac2b134a8c530b7edae4abe771d966}{Atacar\+Basico}} (\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}} oponente, int ataque\+Seleccionado)
+\begin{DoxyCompactList}\small\item\em Realiza un ataque básico al Pokémon activo del oponente. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_adafaa0dc4181f2300723079b162971f7}{Atacar\+Especial}} (\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}} oponente, int ataque\+Seleccionado)
+\begin{DoxyCompactList}\small\item\em Realiza un ataque especial al Pokémon activo del oponente. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a9a0c5a11fb49f52257d9341aae3a845f}{Get\+Items}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene los ítems del entrenador. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a0d5bc098305865d6e63ad9fcc053e28b}{Usar\+Item}} (string opcion, string? nombre\+Pokemon=null)
+\begin{DoxyCompactList}\small\item\em Usa un ítem en un Pokémon del entrenador. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a7ea06f86e008a2c2feb36bbe0211cfc1}{Cambiar\+Pokemon\+Activo}} (string nombre\+Nuevo\+Pokemon, bool es\+Turno)
+\begin{DoxyCompactList}\small\item\em Cambia el Pokémon activo del entrenador. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_aa0bce4bad7b26c3669247672fe0613dc}{Obtener\+Estado\+Pokemons}} ()
+\begin{DoxyCompactList}\small\item\em Obtiene el estado de los Pokémon del entrenador. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a9d7e27bfa53597d0c0063da67ddddb12}{pokebolas\+Inventario}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} pokemon)
+\begin{DoxyCompactList}\small\item\em Agrega un Pokémon al inventario del entrenador. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_ad3e9edfedacf8c44fdf1632115aa53fb}{Cambiar\+Pokemon}} ()
+\begin{DoxyCompactList}\small\item\em Cambia automáticamente al primer Pokémon apto para la batalla. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_aa192a6e967ada36623c47e8ba25abfa1}{Display\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del entrenador. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{interface_library_1_1_i_item}{IItem}} $>$ \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_ad67fad91c1d0a7303b6c7958911e4b6a}{Items\+Jugador}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Obtiene o establece la lista de ítems del entrenador. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} $>$ \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_abebdc9ea9e3c73fdd0a22b0ea9aabed4}{Pokemons}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Obtiene o establece la lista de Pokémon del entrenador. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_abb9b7af8801ad15bf2a05ae549a28075}{Pokemon\+Activo}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Obtiene o establece el Pokémon activo del entrenador. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a95779bde9b0c85354c1e06959a02adfb}{Contador\+Turnos}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Clase que representa un entrenador en el juego Pokémon. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a0b8a1d15fffc0690501a855b1049845e}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!Trainer@{Trainer}}
+\index{Trainer@{Trainer}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{Trainer()}{Trainer()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a0b8a1d15fffc0690501a855b1049845e} 
+Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Trainer (\begin{DoxyParamCaption}\item[{string}]{nombre}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre} & El nombre del entrenador. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a04ac2b134a8c530b7edae4abe771d966}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!AtacarBasico@{AtacarBasico}}
+\index{AtacarBasico@{AtacarBasico}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{AtacarBasico()}{AtacarBasico()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a04ac2b134a8c530b7edae4abe771d966} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Atacar\+Basico (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}}]{oponente}{, }\item[{int}]{ataque\+Seleccionado}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realiza un ataque básico al Pokémon activo del oponente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em oponente} & El entrenador oponente. \\
+\hline
+{\em ataque\+Seleccionado} & El número del ataque seleccionado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje con el resultado del ataque. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_adafaa0dc4181f2300723079b162971f7}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!AtacarEspecial@{AtacarEspecial}}
+\index{AtacarEspecial@{AtacarEspecial}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{AtacarEspecial()}{AtacarEspecial()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_adafaa0dc4181f2300723079b162971f7} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Atacar\+Especial (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer}{Trainer}}}]{oponente}{, }\item[{int}]{ataque\+Seleccionado}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Realiza un ataque especial al Pokémon activo del oponente. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em oponente} & El entrenador oponente. \\
+\hline
+{\em ataque\+Seleccionado} & El número del ataque seleccionado. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje con el resultado del ataque. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_ad3e9edfedacf8c44fdf1632115aa53fb}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!CambiarPokemon@{CambiarPokemon}}
+\index{CambiarPokemon@{CambiarPokemon}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{CambiarPokemon()}{CambiarPokemon()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_ad3e9edfedacf8c44fdf1632115aa53fb} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Cambiar\+Pokemon (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cambia automáticamente al primer Pokémon apto para la batalla. 
+
+\begin{DoxyReturn}{Returns}
+Un mensaje con el resultado del cambio de Pokémon. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a7ea06f86e008a2c2feb36bbe0211cfc1}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!CambiarPokemonActivo@{CambiarPokemonActivo}}
+\index{CambiarPokemonActivo@{CambiarPokemonActivo}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{CambiarPokemonActivo()}{CambiarPokemonActivo()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a7ea06f86e008a2c2feb36bbe0211cfc1} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Cambiar\+Pokemon\+Activo (\begin{DoxyParamCaption}\item[{string}]{nombre\+Nuevo\+Pokemon}{, }\item[{bool}]{es\+Turno}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Cambia el Pokémon activo del entrenador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nombre\+Nuevo\+Pokemon} & El nombre del nuevo Pokémon activo. \\
+\hline
+{\em es\+Turno} & Indica si es el turno del entrenador. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje con el resultado del cambio de Pokémon. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a9a0c5a11fb49f52257d9341aae3a845f}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!GetItems@{GetItems}}
+\index{GetItems@{GetItems}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{GetItems()}{GetItems()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a9a0c5a11fb49f52257d9341aae3a845f} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Get\+Items (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene los ítems del entrenador. 
+
+\begin{DoxyReturn}{Returns}
+Una cadena con los ítems del entrenador. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_aa0bce4bad7b26c3669247672fe0613dc}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!ObtenerEstadoPokemons@{ObtenerEstadoPokemons}}
+\index{ObtenerEstadoPokemons@{ObtenerEstadoPokemons}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{ObtenerEstadoPokemons()}{ObtenerEstadoPokemons()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_aa0bce4bad7b26c3669247672fe0613dc} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Obtener\+Estado\+Pokemons (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Obtiene el estado de los Pokémon del entrenador. 
+
+\begin{DoxyReturn}{Returns}
+Una cadena con el estado de los Pokémon. 
+\end{DoxyReturn}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a9d7e27bfa53597d0c0063da67ddddb12}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!pokebolasInventario@{pokebolasInventario}}
+\index{pokebolasInventario@{pokebolasInventario}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{pokebolasInventario()}{pokebolasInventario()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a9d7e27bfa53597d0c0063da67ddddb12} 
+void Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+pokebolas\+Inventario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}}]{pokemon}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Agrega un Pokémon al inventario del entrenador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pokemon} & El Pokémon a agregar. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a0d5bc098305865d6e63ad9fcc053e28b}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!UsarItem@{UsarItem}}
+\index{UsarItem@{UsarItem}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{UsarItem()}{UsarItem()}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a0d5bc098305865d6e63ad9fcc053e28b} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Usar\+Item (\begin{DoxyParamCaption}\item[{string}]{opcion}{, }\item[{string?}]{nombre\+Pokemon}{ = {\ttfamily null}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Usa un ítem en un Pokémon del entrenador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em opcion} & La opción del ítem a usar. \\
+\hline
+{\em nombre\+Pokemon} & El nombre del Pokémon en el que se usará el ítem. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Un mensaje con el resultado del uso del ítem. 
+\end{DoxyReturn}
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a95779bde9b0c85354c1e06959a02adfb}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!ContadorTurnos@{ContadorTurnos}}
+\index{ContadorTurnos@{ContadorTurnos}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{ContadorTurnos}{ContadorTurnos}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_a95779bde9b0c85354c1e06959a02adfb} 
+int Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Contador\+Turnos\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_aa192a6e967ada36623c47e8ba25abfa1}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!DisplayName@{DisplayName}}
+\index{DisplayName@{DisplayName}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{DisplayName}{DisplayName}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_aa192a6e967ada36623c47e8ba25abfa1} 
+string Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Display\+Name\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del entrenador. 
+
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_ad67fad91c1d0a7303b6c7958911e4b6a}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!ItemsJugador@{ItemsJugador}}
+\index{ItemsJugador@{ItemsJugador}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{ItemsJugador}{ItemsJugador}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_ad67fad91c1d0a7303b6c7958911e4b6a} 
+List$<$\mbox{\hyperlink{interface_library_1_1_i_item}{IItem}}$>$ Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Items\+Jugador\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Obtiene o establece la lista de ítems del entrenador. 
+
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_abb9b7af8801ad15bf2a05ae549a28075}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!PokemonActivo@{PokemonActivo}}
+\index{PokemonActivo@{PokemonActivo}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{PokemonActivo}{PokemonActivo}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_abb9b7af8801ad15bf2a05ae549a28075} 
+\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Pokemon\+Activo\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Obtiene o establece el Pokémon activo del entrenador. 
+
+\Hypertarget{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_abebdc9ea9e3c73fdd0a22b0ea9aabed4}\index{Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}!Pokemons@{Pokemons}}
+\index{Pokemons@{Pokemons}!Ucu.Poo.DiscordBot.Domain.Trainer@{Ucu.Poo.DiscordBot.Domain.Trainer}}
+\doxysubsubsection{\texorpdfstring{Pokemons}{Pokemons}}
+{\footnotesize\ttfamily \label{class_ucu_1_1_poo_1_1_discord_bot_1_1_domain_1_1_trainer_abebdc9ea9e3c73fdd0a22b0ea9aabed4} 
+List$<$\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}}$>$ Ucu.\+Poo.\+Discord\+Bot.\+Domain.\+Trainer.\+Pokemons\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Obtiene o establece la lista de Pokémon del entrenador. 
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Domain/\mbox{\hyperlink{_trainer_8cs}{Trainer.\+cs}}\end{DoxyCompactItemize}

@@ -1,0 +1,145 @@
+\doxysection{Planta Class Reference}
+\hypertarget{class_planta}{}\label{class_planta}\index{Planta@{Planta}}
+
+
+Representa el tipo de Pokémon "{}\+Planta"{} y define sus interacciones con otros tipos.  
+
+
+Inheritance diagram for Planta\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_planta}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_planta_a47328de9f9761f6bd952f47a5bb638aa}{Planta}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_planta}{Planta}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_planta_a9386922d8acd0c1cc6724fc539e08c86}{Inmune\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_planta}{Planta} es inmune a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_planta_ac71111de6b629fba2a3b45fa3cec70b6}{Resistente\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_planta}{Planta} es resistente a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_planta_a4563fc4eeb99baeb921ed0e10d463fc7}{Debil\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_planta}{Planta} es débil a otro tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_planta_a54b8cc15ed43ad36657cb6586bcfad1f}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del tipo de Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_itipo}{Library.\+Itipo}}}
+
+
+\doxysubsection{Detailed Description}
+Representa el tipo de Pokémon "{}\+Planta"{} y define sus interacciones con otros tipos. 
+
+La clase \doxylink{class_planta}{Planta} implementa la interfaz Itipo y proporciona las propiedades y métodos para verificar las inmunidades, resistencias y debilidades del tipo \doxylink{class_planta}{Planta}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_planta_a47328de9f9761f6bd952f47a5bb638aa}\index{Planta@{Planta}!Planta@{Planta}}
+\index{Planta@{Planta}!Planta@{Planta}}
+\doxysubsubsection{\texorpdfstring{Planta()}{Planta()}}
+{\footnotesize\ttfamily \label{class_planta_a47328de9f9761f6bd952f47a5bb638aa} 
+Planta.\+Planta (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_planta}{Planta}. 
+
+Inicializa el nombre del tipo como "{}\+Planta"{}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_planta_a4563fc4eeb99baeb921ed0e10d463fc7}\index{Planta@{Planta}!DebilContra@{DebilContra}}
+\index{DebilContra@{DebilContra}!Planta@{Planta}}
+\doxysubsubsection{\texorpdfstring{DebilContra()}{DebilContra()}}
+{\footnotesize\ttfamily \label{class_planta_a4563fc4eeb99baeb921ed0e10d463fc7} 
+bool Planta.\+Debil\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_planta}{Planta} es débil a otro tipo. 
+
+El tipo \doxylink{class_planta}{Planta} es débil a \doxylink{class_fuego}{Fuego}, \doxylink{class_bicho}{Bicho}, \doxylink{class_veneno}{Veneno} y \doxylink{class_volador}{Volador}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la debilidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_fuego}{Fuego}, \doxylink{class_bicho}{Bicho}, \doxylink{class_veneno}{Veneno} o \doxylink{class_volador}{Volador}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}{Library.\+Itipo}}.
+
+\Hypertarget{class_planta_a9386922d8acd0c1cc6724fc539e08c86}\index{Planta@{Planta}!InmuneContra@{InmuneContra}}
+\index{InmuneContra@{InmuneContra}!Planta@{Planta}}
+\doxysubsubsection{\texorpdfstring{InmuneContra()}{InmuneContra()}}
+{\footnotesize\ttfamily \label{class_planta_a9386922d8acd0c1cc6724fc539e08c86} 
+bool Planta.\+Inmune\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_planta}{Planta} es inmune a otro tipo. 
+
+El tipo \doxylink{class_planta}{Planta} no es inmune a ningún tipo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la inmunidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} siempre, ya que el tipo \doxylink{class_planta}{Planta} no es inmune a ningún tipo. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}{Library.\+Itipo}}.
+
+\Hypertarget{class_planta_ac71111de6b629fba2a3b45fa3cec70b6}\index{Planta@{Planta}!ResistenteContra@{ResistenteContra}}
+\index{ResistenteContra@{ResistenteContra}!Planta@{Planta}}
+\doxysubsubsection{\texorpdfstring{ResistenteContra()}{ResistenteContra()}}
+{\footnotesize\ttfamily \label{class_planta_ac71111de6b629fba2a3b45fa3cec70b6} 
+bool Planta.\+Resistente\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_planta}{Planta} es resistente a otro tipo. 
+
+El tipo \doxylink{class_planta}{Planta} es resistente a Agua, Eléctrico, \doxylink{class_tierra}{Tierra} y \doxylink{class_planta}{Planta}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la resistencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es Agua, Eléctrico, \doxylink{class_tierra}{Tierra} o \doxylink{class_planta}{Planta}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}{Library.\+Itipo}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_planta_a54b8cc15ed43ad36657cb6586bcfad1f}\index{Planta@{Planta}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Planta@{Planta}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{class_planta_a54b8cc15ed43ad36657cb6586bcfad1f} 
+string Planta.\+Nombre\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del tipo de Pokémon. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}{Library.\+Itipo}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Tipos\+Pokemon/\mbox{\hyperlink{_planta_8cs}{Planta.\+cs}}\end{DoxyCompactItemize}

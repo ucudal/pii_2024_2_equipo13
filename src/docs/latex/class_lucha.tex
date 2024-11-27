@@ -1,0 +1,145 @@
+\doxysection{Lucha Class Reference}
+\hypertarget{class_lucha}{}\label{class_lucha}\index{Lucha@{Lucha}}
+
+
+Representa el tipo de Pokémon "{}\+Lucha"{} y define sus interacciones con otros tipos.  
+
+
+Inheritance diagram for Lucha\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_lucha}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_lucha_aa282d0a5a15f6a9b012dae0abb386daf}{Lucha}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_lucha}{Lucha}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_lucha_afa260a29577b49ed1b410b1a615187f7}{Inmune\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_lucha}{Lucha} es inmune a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_lucha_afc8c191c5fa49f70dd3201c7e1a9847a}{Resistente\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_lucha}{Lucha} es resistente a otro tipo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_lucha_a0ff3deb8013750172007f039bbc59b8b}{Debil\+Contra}} (\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} otro\+Tipo)
+\begin{DoxyCompactList}\small\item\em Verifica si el tipo \doxylink{class_lucha}{Lucha} es débil a otro tipo. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_lucha_ac93cced5f2acca6856fd4746d798b520}{Nombre}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del tipo de Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{interface_library_1_1_itipo}{Library.\+Itipo}}}
+
+
+\doxysubsection{Detailed Description}
+Representa el tipo de Pokémon "{}\+Lucha"{} y define sus interacciones con otros tipos. 
+
+La clase \doxylink{class_lucha}{Lucha} implementa la interfaz Itipo y proporciona las propiedades y métodos para verificar las inmunidades, resistencias y debilidades del tipo \doxylink{class_lucha}{Lucha}. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_lucha_aa282d0a5a15f6a9b012dae0abb386daf}\index{Lucha@{Lucha}!Lucha@{Lucha}}
+\index{Lucha@{Lucha}!Lucha@{Lucha}}
+\doxysubsubsection{\texorpdfstring{Lucha()}{Lucha()}}
+{\footnotesize\ttfamily \label{class_lucha_aa282d0a5a15f6a9b012dae0abb386daf} 
+Lucha.\+Lucha (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_lucha}{Lucha}. 
+
+Inicializa el nombre del tipo como "{}\+Lucha"{}. 
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_lucha_a0ff3deb8013750172007f039bbc59b8b}\index{Lucha@{Lucha}!DebilContra@{DebilContra}}
+\index{DebilContra@{DebilContra}!Lucha@{Lucha}}
+\doxysubsubsection{\texorpdfstring{DebilContra()}{DebilContra()}}
+{\footnotesize\ttfamily \label{class_lucha_a0ff3deb8013750172007f039bbc59b8b} 
+bool Lucha.\+Debil\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_lucha}{Lucha} es débil a otro tipo. 
+
+El tipo \doxylink{class_lucha}{Lucha} es débil a \doxylink{class_volador}{Volador}, Psíquico y \doxylink{class_hada}{Hada}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la debilidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_volador}{Volador}, Psíquico o \doxylink{class_hada}{Hada}, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_aa3337420a769259bb98af5245e75a890}{Library.\+Itipo}}.
+
+\Hypertarget{class_lucha_afa260a29577b49ed1b410b1a615187f7}\index{Lucha@{Lucha}!InmuneContra@{InmuneContra}}
+\index{InmuneContra@{InmuneContra}!Lucha@{Lucha}}
+\doxysubsubsection{\texorpdfstring{InmuneContra()}{InmuneContra()}}
+{\footnotesize\ttfamily \label{class_lucha_afa260a29577b49ed1b410b1a615187f7} 
+bool Lucha.\+Inmune\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_lucha}{Lucha} es inmune a otro tipo. 
+
+El tipo \doxylink{class_lucha}{Lucha} no es inmune a ningún tipo.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la inmunidad. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily false} siempre, ya que el tipo \doxylink{class_lucha}{Lucha} no es inmune a ningún tipo. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a5bec24f93df9449bcf91ff22f67fe02e}{Library.\+Itipo}}.
+
+\Hypertarget{class_lucha_afc8c191c5fa49f70dd3201c7e1a9847a}\index{Lucha@{Lucha}!ResistenteContra@{ResistenteContra}}
+\index{ResistenteContra@{ResistenteContra}!Lucha@{Lucha}}
+\doxysubsubsection{\texorpdfstring{ResistenteContra()}{ResistenteContra()}}
+{\footnotesize\ttfamily \label{class_lucha_afc8c191c5fa49f70dd3201c7e1a9847a} 
+bool Lucha.\+Resistente\+Contra (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}}}]{otro\+Tipo}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Verifica si el tipo \doxylink{class_lucha}{Lucha} es resistente a otro tipo. 
+
+El tipo \doxylink{class_lucha}{Lucha} es resistente a \doxylink{class_bicho}{Bicho} y Roca.
+
+
+\begin{DoxyParams}{Parameters}
+{\em otro\+Tipo} & El tipo contra el que se verificará la resistencia. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} si el tipo es \doxylink{class_bicho}{Bicho} o Roca, {\ttfamily false} de lo contrario. 
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a7fd3df41b9ab1bb149058bae5b842676}{Library.\+Itipo}}.
+
+
+
+\doxysubsection{Property Documentation}
+\Hypertarget{class_lucha_ac93cced5f2acca6856fd4746d798b520}\index{Lucha@{Lucha}!Nombre@{Nombre}}
+\index{Nombre@{Nombre}!Lucha@{Lucha}}
+\doxysubsubsection{\texorpdfstring{Nombre}{Nombre}}
+{\footnotesize\ttfamily \label{class_lucha_ac93cced5f2acca6856fd4746d798b520} 
+string Lucha.\+Nombre\hspace{0.3cm}{\ttfamily [get]}}
+
+
+
+Nombre del tipo de Pokémon. 
+
+
+
+Implements \mbox{\hyperlink{interface_library_1_1_itipo_a78a7132940a112112fd0b0a0f9905ac4}{Library.\+Itipo}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Tipos\+Pokemon/\mbox{\hyperlink{_lucha_8cs}{Lucha.\+cs}}\end{DoxyCompactItemize}

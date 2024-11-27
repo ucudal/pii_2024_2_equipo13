@@ -1,0 +1,107 @@
+\doxysection{Library.\+Pokemons.\+Marowak Class Reference}
+\hypertarget{class_library_1_1_pokemons_1_1_marowak}{}\label{class_library_1_1_pokemons_1_1_marowak}\index{Library.Pokemons.Marowak@{Library.Pokemons.Marowak}}
+
+
+Representa el Pokémon \doxylink{class_library_1_1_pokemons_1_1_marowak}{Marowak}, con sus atributos y ataques específicos.  
+
+
+Inheritance diagram for Library.\+Pokemons.\+Marowak\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_library_1_1_pokemons_1_1_marowak}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_pokemons_1_1_marowak_accae8045e78f01d900b6947c471cf2e4}{Marowak}} ()
+\begin{DoxyCompactList}\small\item\em Constructor de la clase \doxylink{class_library_1_1_pokemons_1_1_marowak}{Marowak}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_library_1_1_pokemon}{Library.\+Pokemon}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} \mbox{\hyperlink{class_library_1_1_pokemon_ade48fcd8c95154531f4ab118bd02d40f}{Clone}} ()
+\begin{DoxyCompactList}\small\item\em Muestra los ataques básicos del Pokémon en la consola. \end{DoxyCompactList}\item 
+string \mbox{\hyperlink{class_library_1_1_pokemon_ae6bf4a95f140f7d45411f3d4655ab00f}{Get\+Ataques\+Basicos}} ()
+\item 
+string \mbox{\hyperlink{class_library_1_1_pokemon_a3f48743d4561bc89f80d311930b01a10}{Get\+Ataque\+Especial}} ()
+\begin{DoxyCompactList}\small\item\em Muestra los ataques especiales del Pokémon en la consola. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_pokemon_a8b5d2b8f3667de4acead8ef0c09713aa}{Daño\+Recibido}} (double daño)
+\begin{DoxyCompactList}\small\item\em Aplica daño al Pokémon y verifica si ha sido derrotado. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_pokemon_abc977b1f1ae0fafbb93b86e05efa7538}{Curar}} ()
+\begin{DoxyCompactList}\small\item\em Cura al Pokémon una cantidad fija de salud. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_library_1_1_pokemon_a7ed41c56c9ae1483dfa56d6f21488b92}{Ataque\+Especial}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo, int ataque\+Elegido, out string mensaje)
+\begin{DoxyCompactList}\small\item\em Realiza un ataque especial al Pokémon objetivo. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_library_1_1_pokemon_a26a6b6d640dd8a5ad9310f4f0cd1fac9}{Ataque\+Basico}} (\mbox{\hyperlink{class_library_1_1_pokemon}{Pokemon}} objetivo, int ataque\+Elegido, out string mensaje)
+\begin{DoxyCompactList}\small\item\em Realiza un ataque básico al Pokémon objetivo. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_pokemon_a5455e0a1ee5f088776011d94899b9c87}{Esta\+Afectado\+Por\+Efecto}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si el Pokémon está afectado por algún efecto de estado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_pokemon_a17923cb455f1f54ce7e36caaf4471faf}{Puede\+Atacar\+Paralizado}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si el Pokémon paralizado puede atacar en este turno. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_pokemon_ac7edefb87454afcdf55bfa79c3ede766}{Puede\+Atacar\+Dormido}} ()
+\begin{DoxyCompactList}\small\item\em Verifica si el Pokémon dormido puede atacar en este turno. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_pokemon_a8a9402287a23a986a9e593c4325ebcc5}{Aplicar\+Daño\+Quemadura}} ()
+\begin{DoxyCompactList}\small\item\em Aplica daño al Pokémon debido a quemadura. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_pokemon_af90a12d06abc1ac369e9edc074a9b90f}{Aplicar\+Daño\+Veneno}} ()
+\begin{DoxyCompactList}\small\item\em Aplica daño al Pokémon debido a envenenamiento. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_pokemon_a906ad37b4a6547daf24e590a2a18c04a}{Remover\+Efectos}} ()
+\begin{DoxyCompactList}\small\item\em Remueve todos los efectos de estado del Pokémon. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_library_1_1_pokemon_a79b91bb6a429373e4162522727295a08}{Reducir\+Turno\+Dormido}} ()
+\begin{DoxyCompactList}\small\item\em Reduce los turnos del \doxylink{class_library_1_1_pokemon}{Pokemon} dormido. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_library_1_1_pokemon}{Library.\+Pokemon}}}
+\begin{DoxyCompactItemize}
+\item 
+Dictionary$<$ int, \mbox{\hyperlink{interface_library_1_1_i_ataque}{IAtaque}} $>$ \mbox{\hyperlink{class_library_1_1_pokemon_ad3bf4eacb373f0f1d6c69d5d658e0a9b}{Ataques\+Basicos}}
+\begin{DoxyCompactList}\small\item\em Diccionario de ataques básicos disponibles para el Pokémon. \end{DoxyCompactList}\item 
+Dictionary$<$ int, \mbox{\hyperlink{interface_library_1_1_i_ataque}{IAtaque}} $>$ \mbox{\hyperlink{class_library_1_1_pokemon_a2fc6e4912df443fc31beeeb5f0edd790}{Ataques\+Especiales}}
+\begin{DoxyCompactList}\small\item\em Diccionario de ataques especiales disponibles para el Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_library_1_1_pokemon}{Library.\+Pokemon}}}
+\begin{DoxyCompactItemize}
+\item 
+string \mbox{\hyperlink{class_library_1_1_pokemon_acb30cbec597b053841024176d5ac2aa9}{Pokemon\+Name}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Nombre del Pokémon. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_library_1_1_pokemon_ac23fe4aeaa6d979d751ee7b61a09b2b5}{Vida\+Actual}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Vida actual del Pokémon. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_library_1_1_pokemon_a8c3594ba79d34952ff5ef43a5b0c4188}{Vida\+Max}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Vida máxima del Pokémon. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_pokemon_a6dfab4fbe6b14f38d7b02364965e2e32}{Esta\+Dormido}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indica si el Pokémon está dormido. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_pokemon_adf17aa721a8c8d362d99a5ff8d43502a}{Esta\+Paralizado}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indica si el Pokémon está paralizado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_pokemon_a5c43ca50f33126a053dd1e5492043f9e}{Esta\+Envenenado}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indica si el Pokémon está envenenado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_pokemon_a997fa38d1a66475fb468110d81236c26}{Esta\+Quemado}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indica si el Pokémon está quemado. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_library_1_1_pokemon_ad9a017d7c50ea351036610a54624ad0e}{Apto\+Para\+Batalla}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Indica si el Pokémon está apto para la batalla. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_library_1_1_pokemon_a113881a5368c0ab0088ecff3fb3290c3}{Turnos\+Dormido}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\hyperlink{interface_library_1_1_itipo}{Itipo}} \mbox{\hyperlink{class_library_1_1_pokemon_a169714be5cb6b6722b52385513d24cd7}{Tipo}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, protected set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Tipo del Pokémon. \end{DoxyCompactList}\item 
+IRead\+Only\+Dictionary$<$ int, \mbox{\hyperlink{interface_library_1_1_i_ataque}{IAtaque}} $>$ \mbox{\hyperlink{class_library_1_1_pokemon_a070d0281e7413dc164bacd941d0240bc}{Ataques\+Basicos\+Publicos}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Acceso de solo lectura a los ataques básicos del Pokémon. \end{DoxyCompactList}\item 
+IRead\+Only\+Dictionary$<$ int, \mbox{\hyperlink{interface_library_1_1_i_ataque}{IAtaque}} $>$ \mbox{\hyperlink{class_library_1_1_pokemon_a0449434751ba273e22710ca63c9c578a}{Ataques\+Especiales\+Publicos}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Acceso de solo lectura a los ataques especiales del Pokémon. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Representa el Pokémon \doxylink{class_library_1_1_pokemons_1_1_marowak}{Marowak}, con sus atributos y ataques específicos. 
+
+La clase \doxylink{class_library_1_1_pokemons_1_1_marowak}{Marowak} hereda de la clase base \doxylink{class_library_1_1_pokemon}{Pokemon} y define los valores específicos de \doxylink{class_library_1_1_pokemons_1_1_marowak}{Marowak}, como su nombre, tipo, vida máxima y una lista de ataques básicos y especiales. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_library_1_1_pokemons_1_1_marowak_accae8045e78f01d900b6947c471cf2e4}\index{Library.Pokemons.Marowak@{Library.Pokemons.Marowak}!Marowak@{Marowak}}
+\index{Marowak@{Marowak}!Library.Pokemons.Marowak@{Library.Pokemons.Marowak}}
+\doxysubsubsection{\texorpdfstring{Marowak()}{Marowak()}}
+{\footnotesize\ttfamily \label{class_library_1_1_pokemons_1_1_marowak_accae8045e78f01d900b6947c471cf2e4} 
+Library.\+Pokemons.\+Marowak.\+Marowak (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor de la clase \doxylink{class_library_1_1_pokemons_1_1_marowak}{Marowak}. 
+
+Inicializa el Pokémon \doxylink{class_library_1_1_pokemons_1_1_marowak}{Marowak} con su nombre, tipo, vida máxima y una lista de ataques básicos y especiales disponibles. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+Library/\+Pokemons/\mbox{\hyperlink{_marowak_8cs}{Marowak.\+cs}}\end{DoxyCompactItemize}
