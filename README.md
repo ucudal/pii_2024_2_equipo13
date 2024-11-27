@@ -6,7 +6,7 @@ Grupo 13
 <img src="https://i.pinimg.com/originals/cb/65/84/cb65844f3256da34ab56b4c773e1fc4d.png" width="100" />
 
 
-## Documentation
+## Documentación
 
 [Diagrama de CRC - Documento word](https://correoucuedu-my.sharepoint.com/:w:/g/personal/constantino_lopez_correo_ucu_edu_uy/EaBbEkjXhjhKp9GzORs6cK4BdVNVZJhkPcsrcyOinupa0w?e=9lNIFy)
 
