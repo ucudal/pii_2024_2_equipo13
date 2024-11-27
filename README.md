@@ -1,5 +1,4 @@
-
-# Proyecto final - ChatBot Pokemon Battle
+Este es el repositorio donde realizamos el proyecto final: https://github.com/Serionen/PokemonEquipo13.git
 
 Grupo 13
 
