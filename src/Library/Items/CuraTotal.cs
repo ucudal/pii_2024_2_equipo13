@@ -15,7 +15,7 @@ public class CuraTotal : IItem
     public string Nombre { get; }
 
     /**
-     * @brief Descripción del ítem.
+     * @brief Descripción de los  ítem.
      */
     
     public string Descripcion { get; }
