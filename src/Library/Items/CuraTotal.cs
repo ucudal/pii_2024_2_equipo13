@@ -4,7 +4,7 @@
  * @class CuraTotal
  * @brief Representa un ítem que cura completamente la salud de un Pokémon y remueve los efectos de estado.
  *
- * La clase CuraTotal implementa la interfaz IItem y proporciona un ítem que restaura toda la vida
+ * La clase CuraTotal implementa la interfaz IItem y  también proporciona un ítem que restaura toda la vida
  * de un Pokémon y elimina cualquier efecto de estado especial que tenga.
  */
 public class CuraTotal : IItem
