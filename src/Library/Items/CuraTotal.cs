@@ -17,10 +17,11 @@ public class CuraTotal : IItem
     /**
      * @brief Descripción del ítem.
      */
+    
     public string Descripcion { get; }
 
     /**
-     * @brief Constructor de la clase CuraTotal.
+     * @brief  Es el Constructor de la clase CuraTotal.
      *
      * Inicializa el nombre y la descripción del ítem.
      */
